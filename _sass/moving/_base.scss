@@ -165,8 +165,8 @@ a {
   */
 blockquote {
   color: $grey-color-dark;
-  border-left: 4px solid $grey-color-dark;
-  background-color: rgba(128, 128, 128, 0.200);
+  border-left: 4px solid rgb(0, 225, 255);
+  background-color: rgba(0, 255, 255, 0.2);
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1);
   letter-spacing: -1px;
@@ -178,6 +178,11 @@ blockquote {
   > :last-child {
     margin-bottom: 0;
   }
+}
+
+.note_green {
+  border-left: 4px solid rgb(0, 255, 0);
+  background-color: rgba(0, 255, 0, 0.200);
 }
 
 .note_yellow {
