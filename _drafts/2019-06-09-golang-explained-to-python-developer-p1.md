@@ -14,7 +14,6 @@ permalink: /:categories/golang-explained-to-python-developer-p1
 Photo Credit : [https://github.com/ashleymcnamara/gophers](https://github.com/ashleymcnamara/gophers)
 
 > I wish there was just one universal programming language to learn!
-{: class="note_grey"}
 
 In theory such a language is possible but it has to be extremely well designed to cater every programmer's need. Each language was incepted out of frustration or limitation of some other language. For Example, out of an extremely verbose java was born some of the beloved languages - Kotlin and Scala.
 
@@ -34,6 +33,9 @@ So, here we go...
   - [Apple or Pineapple? - Logic](#apple-or-pineapple---logic)
   - [Eat. Sleep. Repeat. - Loops](#eat-sleep-repeat---loops)
   - [Reduce code footprint - Functions](#reduce-code-footprint---functions)
+  - [Bonus - Golang Tools](#bonus---golang-toolchain)
+  - [Bonus - Golang vs Java](#bonus---golang-vs-java)
+  - [Exercise](#exercise)
 - Part 2 (Yet to be uploaded)
   - [Wait, there's more variety! - Types #2](#wait-theres-more-variety---types-2)
   - [Is it a class? Is it an object? - It's Struct!](#is-it-a-class-is-it-an-object---its-struct)
@@ -46,7 +48,6 @@ So, here we go...
 Ok, Wait... Before we dive. We must know how deep the pool is, right?
 
 > Go picked some concepts from procedural programming, functional programming and object oriented programming, and put them together, and left out other concepts to create its own unique flavour of idiomatic programming style. [[source]](https://flaviocopes.com/golang-is-go-object-oriented/)
-{: class="note_grey"}
 
 Above expression is all it takes to understand the philosophy of Go. Go was publicly announced in 2009, time when most of the languages were already mature. So developers had a lot of reference to work with. This unique language with cherry-picked feature set, helps to circumvent most of the issues you have with other languages and solves some of them in it's own way. That in no way means Go is superior to any language. You are the judge here, understand and decide for yourself...
 
@@ -73,7 +74,7 @@ Some of the them implemented in Go,
 
 ## The boring stuff - Installation and Setup
 > It is recommended to have go installed in your system, but if you are here just to try it out then you may go ahead and skip this step. Go programs can be run online [here](https://play.golang.org/), but some examples might not work due to architectural limitations.
-{: class="note_yellow"}
+{: class="note-yellow"}
 Go Installation is as simple as any software installation can get,  
 Download appropriate package from here : [https://golang.org/dl/](https://golang.org/dl/)
 
@@ -83,28 +84,30 @@ Follow OS Specific Instructions as below,
 - Windows? - [http://golang.org/doc/install#windows](http://golang.org/doc/install#windows)  
 - Feeling adventurous? Install Go from source - [https://golang.org/doc/install/source](https://golang.org/doc/install/source)
 
-Just to make life easier, let's setup an IDE (completely optional though),  
+Just to make life easier, let's setup an IDE (completely optional),  
 - Coming from Pycharm? - [https://www.jetbrains.com/go/](https://www.jetbrains.com/go/)  
 - What about Visual Studio Code? - [https://code.visualstudio.com/docs/languages/go](https://code.visualstudio.com/docs/languages/go)  
 - Nah, I am more of a Sublime person... - [https://packagecontrol.io/packages/GoSublime](https://packagecontrol.io/packages/GoSublime)  
 
 > **Go 1.14** was the latest release, when this article was written.
-{: class="note_red"}
+{: class="note-yellow"}
 
 ## Dear, Hello World!
 Let's start with an all time favorite - **writing a hello world program**.  
 > For all the examples given below it is assumed that you are logged in to a terminal and have created a new directory. Also, It makes sense to create one in your home directory.  <br/>
 <!-- > Ok but, Where is my home though? - [Linux](https://askubuntu.com/questions/687267/where-is-the-home-folder-located) \| [Mac](https://apple.stackexchange.com/questions/51280/where-do-i-find-my-user-folder-in-the-os-x-folder-hierarchy) \| [Windows](https://askubuntu.com/questions/1180092/where-is-home-directory-on-windows) -->
-{: class="note_yellow"}
+{: class="note-yellow"}
 
 Python does it simple, too simple :
 
 ```python
+# writing a hello_world python program saved as,
 # hello_world.py
 print("Hello World")
 ```  
 Go is slightly verbose, yet clear in it's approach.
 ```go
+// writing a hello_world fo program saved as,
 // hello_world.go
 package main  // go programs are organised in packages, more on this later
 import "fmt"  // 'fmt' is the package containing Println method
@@ -122,7 +125,6 @@ While, Go gives you several ways to run your program,
 1. Compile to a binary and then execute
 ```bash
 # executing a go program
-# while inside your project directory
 go build hello_world.go # provides a compiled binary
 ./hello_world # runs the compiled binary
 ```
@@ -132,24 +134,101 @@ go build hello_world.go # provides a compiled binary
 go run main.py  # this is just a shortcut for above commands
 ```
 
-> It is important to note that, binary created by `go build` command is platform specific. Though, go provides toolsets to build binaries for any architecture or OS, refer [this](https://www.digitalocean.com/community/tutorials/building-go-applications-for-different-operating-systems-and-architectures).
-{: class="note_red"}
+> Binary created by `go build` command is platform specific. Though, go provides toolsets to build binaries for any architecture or OS, refer [this](https://www.digitalocean.com/community/tutorials/building-go-applications-for-different-operating-systems-and-architectures).
+{: class="note-red"}
 
-> `func main() {...}` acts as an entry point to your application. You must make sure that the file you are trying to build/run includes this function. 
-{: class="note_yellow"}
+> `package main` is required for a file to be recognised as a runnable. `func main() {...}` acts as an entry point to your application. You must make sure that the file you are trying to build/run includes both of them.  
+{: class="note-yellow"}
 
 Go also has an online playground [https://play.golang.org/](https://play.golang.org/) that allows you to run your code on browser (albeit some restrictions), without having to install go, SWEET!!!
 
-## Store your values fresh - Variables
+## Keep your values fresh - Variables
+Variables in python are a no brainer,
+```python
+fruit = "apple"
+fruit_count = 2
+fruit_cost = 199.99
+```
+In Go, variable declaration is in the format `var <name> <type>`,
+```go
+var fruit string = "apple"
+var fruit_count int = 2
+var fruit_cost float32 = 199.99 // more about float32 later
+```
+> Notice how **variable type** comes after **variable name**? That's how it's done in Go. This would take time to get used to, even if you are not from a python background.
+{: class="note-yellow"}
+&nbsp;  
+In python it's not possible to just declare a value and not assign to it (being a dynamic language, that's not even required), Go being a statically typed language alows to do so,
+```go
+var fruit string  // Initialized with empty string
+var fruit_count int // Initialized with 0 
+var fruit_cost float32 // Initialized with 0
+```
+&nbsp;  
+There's more to variable declaration in Go, each of them listed below -
+1. Do I always have to pass variable type, is **type inferrence** not a thing in Go?
+```go
+// If you are assigning a variable during declaration
+// below syntax works fine, due to type inferrence
+var fruit = "apple"
+var fruit_count = 2
+var fruit_cost = 199.99
+```
+2. What if I want to declare **multiple variables in a single line**, is there a shortcut?
+```go
+// both must be of same type, since type is explicitly passed
+var fruit_expensive, fruit_cheap string = "apple", "banana"
+// if no type is passed, different types of variable can be assigned
+// in a single line, due to type inferrence
+var fruit_expensive_count, fruit_expensive_cost = 2, 199.99
+var (
+  fruit_cheap_count, fruit_cheap_cost = 12, 9.99
+  // Adding more variable declarations here works fine in go
+)
+```
+3. Python is still simpler, I don't have to write `var` or `<type>` for every variable declaration...
+```go
+// you can drop all the keywords and use
+// := notation
+// this is a shorthand for above declarations
+fruit_expensive := "apple"
+fruit_cheap := "banana"
+fruit_expensive_count, fruit_expensive_cost := 2,199.99
+fruit_cheap_count, fruit_cheap_cost := 12, 9.99
+```
+4. That shorthand makes it feel dynamic, can I **overwrite a variable with a different type**?  
+```go
+fruit_name_or_count := "apple"
+fruit_name_or_count = "banana"
+// this is REASSIGNMENT, thus works
+// value of variable fruit_name_or_count is now banana
+fruit_name_or_count := "banana"
+// this is REDECLARATION, thus doesn't work, throws
+// ERROR: no new variables on left side of :=
+fruit_name_or_count := 2
+// same goes in this case, throws
+// ERROR: no new variables on left side of :=
+```
 
-
+> Golang tries to keep the code as minimal as required, thus **most of the warnings in other languages are errors in golang**. For Example, If you declare a variable and not use it anywhere, your code would never compile. You will instead get `ERROR: <var_name> declared but not used`
+{: class="note-red"}
+> All the above code examples would fail to compile if you try to run it as it is. You need to enclose them in `main` code block from [Dear, Hello World](#dear-hello-world) example above.  
+> Also, print each variable declared using `fmt.Println(fruit, fruit_count, fruit_cost)` so that go can understand that your variable is being used somewhere and not throw any compilation errors.
+{: class="note-yellow"}
 ## Anyone asked for variety? - Types #1
+
 
 ## Apple or Pineapple? - Logic
 
 ## Eat. Sleep. Repeat. - Loops
 
 ## Reduce code footprint - Functions
+
+## BONUS - Golang Toolset
+
+## BONUS - Golang vs Java | Part 1
+
+## EXERCISE
 
 ## Wait, there's more variety! - Types #2
 
