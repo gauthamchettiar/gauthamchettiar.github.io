@@ -23,6 +23,8 @@ This article should act as a goto reference for developers used to python or any
 
 So, here we go...
 
+<div class="tenor-gif-embed" data-postid="6905306" data-share-method="host" data-width="100%" data-aspect-ratio="1.7913669064748199"><a href="https://tenor.com/view/tim-gunn-come-on-everyone-waving-lets-go-gif-6905306">Let's Go GIF</a> from <a href="https://tenor.com/search/timgunn-gifs">Timgunn GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
 ## Index
 - Part 1
   - [Thinking in Go](#thinking-in-go)
@@ -166,10 +168,10 @@ var fruitCost float32 // Initialized with 0
 ```
 &nbsp;  
 There's more to variable declaration in Go, each of them listed below -
-1. Do I always have to pass variable type, is **type inferrence** not a thing in Go?
+1. Do I always have to pass variable type, is **type inference** not a thing in Go?
 ```go
 // If you are assigning a variable during declaration
-// below syntax works fine, due to type inferrence
+// below syntax works fine, due to type inference
 var fruit = "apple"
 var fruitCount = 2
 var fruitCost = 199.99
@@ -179,7 +181,7 @@ var fruitCost = 199.99
 // both must be of same type, since type is explicitly passed
 var fruitExpensive, fruitCheap string = "apple", "banana"
 // if no type is passed, different types of variable can be assigned
-// in a single line, due to type inferrence
+// in a single line, due to type inference
 var fruitExpensiveCount, fruitExpensiveCost = 2, 199.99
 var (
   fruitCheapCount, fruitCheapCost = 12, 9.99
@@ -237,14 +239,14 @@ Since there's a lot... here's a handy list,
 - [rune, an alias of int32](#rune-an-alias-of-int32)
 - [string, a collection of bytes](#string-a-collection-of-bytes)
 
-> Also, you might not even require to use all of them in your day-to-day programming so feel free to skim by the material. There's a [tldr](#types-tldr) at the end that summarises the same.
+> Also, you might not even require to use all of them in your day-to-day programming so feel free to skim by the material. There's a [tldr](#types-tldr) at the end of this section that summarises the same.
 {: class="note-yellow"}
 
 ### bool - boolean value
 ```go
 // explicit type assignment
 var isAppleCheap bool = false
-// with type inferrence
+// with type inference
 isBananaCheap := true
 ```
 AND/OR operations can be performed on boolean using `&&` and `||` operators respectively,
@@ -269,7 +271,7 @@ var minInt64Bit, maxInt64Bit int64 = -9223372036854775808, 9223372036854775807
 `int` is an alias to either `int32` or `int64`, this bit count depends on system type e,g: `int32` on 32bit system and `int64` on 64bit system.
 ```go
 var int32BitOr64Bit int = 12345 // can be either int32 or int64
-// above expression can be written with type inferrence as below
+// above expression can be written with type inference as below
 int32BitOr64Bit := 12345
 ```
 This kind of type system might raise some questions. I have few listed below,  
@@ -312,7 +314,7 @@ var minUint64Bit, maxUint64Bit uint64 = 0, 18446744073709551615
 `uint` is an alias to either `uint32` or `uint64`, this bit count depends on system type e,g: `uint32` on 32bit system and `uint64` on 64bit system.
 ```go
 var uint32BitOr64Bit uint = 12345 // can be either uint32 or uint64
-// above expression can be written with type inferrence as below
+// above expression can be written with type inference as below
 uint32BitOr64Bit := 12345
 ```
 
@@ -354,13 +356,13 @@ var smallestNonzeroComplex128Bit complex128 = 5e-324 + 5e-324i
 
 ### byte, an alias of uint8
 In computers, characters like `a` or `@` are converted to byte and stored in memory. A byte is 8 bits long which can store a total of 256 characters (0 to 255). All the characters that fall under this range are called ASCII characters.  
-A byte (1 byte = 8 bits) in Go is nothing but an alias of uint8 (8 bit). Then you might think what's the use of byte? Well, with respect to Go there's no real difference between the two. Both can be interchanged and used without any issues. It's just a convention that tells a programmer that a particular value is not an `uint8` but a `byte`. 
+A `byte` (1 byte = 8 bits) in Go is nothing but an alias of `uint8` (8 bit). Then you might think what's the use of `byte`? Well, with respect to Go there's no real difference between the two. Both can be interchangeably used without any issues. It's just a convention that tells a programmer that a particular value is not an `uint8` but a `byte`. 
 
 > Complete ASCII character code list that can be stored in 1 byte is available [here](https://theasciicode.com.ar/)
 {: class="note-yellow"}
 
 ### rune, an alias of int32
-All the characters cannot be assigned within the 256 character codes that `byte` provides, there are values that will occupy more than this space. A 2 byte character example is `ã` and a 3 byte example is `अ`. In Go they can be stored as `rune`.  Again `rune` is nothing but an alias to int32. They are just used to represent a character that is more than a byte long. Similar to a byte, `rune` and `int32` can be interchanged and used.
+All the characters cannot be assigned within the 256 character codes that `byte` provides, there are values that will occupy more than this space. A 2 byte character example is `ã` and a 3 byte example is `अ`. In Go they can be stored as `rune`.  Again `rune` is nothing but an alias to int32. They are just used to represent a character that is more than a byte long. Similar to a `byte`, `rune` and `int32` can be interchangeably used.
 
 > Complete character code list with [1 byte and 2 byte](https://design215.com/toolbox/ascii-utf8.php) along with [3 byte](https://design215.com/toolbox/utf8-3byte-characters.php) and [4 byte](https://design215.com/toolbox/utf8-4byte-characters.php) are there in the respective list.
 {: class="note-yellow"}
@@ -389,7 +391,7 @@ fmt.Println(string(fruit[0])) // this will return 'a'
 {: class="note-yellow"}
 
 ### types; tldr
-So here's the major out takes of the types in go,
+So here's the major takeaway from this section,
 1. For all integer type values use `int` and let Go take care of the storage size. Use storage size specific `int8`, `int16`, `int32`, `int64` only when you are keen on saving memory.
 2. If you are sure that a value can never become negative, like `appleCount` you may use `uint` instead of `int`. And again, use storage size specific `uint8`, `uint16`, `uint32`, `uint64` only when you are keen on saving memory.
 3. If you have a floating point value, you can use `float32` to store the same. `float64` is generally an overkill for most of the tasks, but if you are processing something that require extreme precision it's better to use `float64`.
@@ -400,13 +402,13 @@ So here's the major out takes of the types in go,
 8. With an effort to reduce unwanted code, Go throws an error if an import is not used or a variable is declared and not used. So if your code has unused imports or variables, it will never compile.
 
 ## Stubborn variables - Constants
-Constants are variables that cannot be changed once assigned. Constants in Go is slightly different other languages. `const` is used instead of `var` for creating a constant.   
+Constants are variables that cannot be changed once assigned. `const` is used instead of `var` for creating a constant.   
 In case of variables, when we do this:
 ```go
 var fruitCount = 2      // fruitCount is of type int
 var fruitCost = 199.99  // fruitCost is of type float32/float64
 ```
-type inferrence kicks in and variable type is assigned based on the value assigned.  
+type inference kicks in and variable type is assigned based on the value to the right side of `=`.  
 
 While in the case of constants, when we do this:
 ```go
@@ -427,9 +429,7 @@ fmt.Println(intVariable)      // prints 2
 fmt.Println(floatVariable)    // prints 2.0
 fmt.Println(complexVariable)  // prints 2+0i
 ```
-even though `2` was assigned to each variable, the actual variable declared was specific to the variable type and not the value assigned. Same rule applies for any constants.
-
-Consider below example,
+even though `2` was assigned to each variable, the actual variable declared was specific to the variable type and not the value assigned. Same rule applies for any constants. For example,
 ```go
 const untypedConst = 2
 var intVariable int = untypedConst
@@ -474,8 +474,63 @@ const intConstWithoutValue int32
 ```
 5. `:=` only declares a variable and thus cannot be used to declare constants.
 
-
 ## Apple or Pineapple? - Logic
+Finally let's discuss logic.
+<div class="tenor-gif-embed" data-postid="10734645" data-share-method="host" data-width="100%" data-aspect-ratio="1.7913669064748199"><a href="https://tenor.com/view/real-housewives-of-new-york-thats-all-iwanted-lying-down-on-the-floor-satisfied-gif-10734645">Finally At Peace GIF</a> from <a href="https://tenor.com/search/realhousewivesofnewyork-gifs">Realhousewivesofnewyork GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+I know it's been a long article. But we are almost 75% done... bear with me for a few more sections... and Part 2... and 3. 😜 
+
+Python has following construct for defining logic,
+```python
+# logic in python
+if boolean_value == True:
+  print("YES, This article is Fun!")
+else:
+  print("NO, This article is not boring!")
+```
+
+Go does it in a similar way but with curly braces,
+```go
+if booleanValue == true{
+  fmt.Println("YES, This article is fun!")
+} else {
+  fmt.Println("NO, This article is not boring!")
+}
+```
+
+`else if{...}` block can also be used which is similar to `elif:` in python.
+```go
+if age < 10 {
+  fmt.Println("Hello, Kid!")
+} else if age > 60 {
+  fmt.Println("Hello, Sir/Madam!")
+} else {
+  fmt.Println("Hello, Stranger!")
+}
+```
+> `else{...}` and `else if{...}` block must be started on the same line where `if {...}` or `else if{...}`block ends. Other wise Go would automatically insert a `;` and end the previous block, and throw `ERROR: unexpected else, expecting }`
+{: class="note-red"}
+&nbsp;  
+It's also possible to **initialize a variable along with condition**, that is only accessible in the `if{...}`, `else if{...}` and `else{...}` block.  
+```go
+someInt := 32
+if variableDeclaredInIf := 2; someInt > 40{
+  privateVariable := 0
+  fmt.Println(someInt + variableDeclaredInIf)
+} else if variableDeclaredInIf = 1; someInt < 30 {
+  // instead of re-assigning a variable a new variable can also be declared
+  fmt.Println(someInt + variableDeclaredInIf)
+} else {
+  fmt.Println(variableDeclaredInIf)
+  fmt.Println(privateVariable)  // this will fail
+  // ERROR: undefined: privateVariable
+}
+fmt.Println(variableDefinedInIf)  // this will fail
+// ERROR: undefined: variableDefinedInIf
+```
+
+### Switches
+
 
 ## Eat. Sleep. Repeat. - Loops
 
