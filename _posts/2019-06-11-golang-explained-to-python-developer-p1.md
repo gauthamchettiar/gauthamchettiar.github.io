@@ -39,7 +39,7 @@ So, here we go...
   - [Exercise](#exercise)
 - Part 2 (Yet to be uploaded)
 
-added ## Thinking in Go
+## Thinking in Go
 > Go picked some concepts from procedural programming, functional programming and object oriented programming, and put them together, and left out other concepts to create its own unique flavour of idiomatic programming style. [[source]](https://flaviocopes.com/golang-is-go-object-oriented/)
 
 Above expression is all it takes to understand the philosophy of Go. Go was publicly announced in 2009, time when most of the languages were already mature. So developers had a lot of reference to work with. This unique language with cherry-picked feature set, helps to circumvent most of the issues you have with other languages and solves some of them in it's own way. That in no way means Go is superior to any language. You are the judge here, understand and decide for yourself...
