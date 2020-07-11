@@ -846,7 +846,7 @@ func main(){
 }
 ```
 
-That truely ends Part 1 of the series.
+That truely concludes Part 1 of the series.
 
 I would love your feedback, find my details at the bottom of this page and feel free to contact me anytime!
 
