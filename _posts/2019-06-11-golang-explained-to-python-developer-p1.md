@@ -749,11 +749,12 @@ That's a lot to learn in a stretch! Go take a coffee break or something.
 Back already?
 
 Now you have got options...  
-1. Move ahead with Second Part (or if you are early and it's not published yet, revise this one again)
-2. Read the [BONUS](#bonus) material below (not required, but would be a cool to know)
-3. Solve [EXERCISE](#exercise) below that would help you gain some handson experience.
+1. Read the [BONUS](#bonus) material.
+2. Solve [EXERCISE](#exercise) and become a Golang NERD!
+<!-- 3. Move ahead with Second Part (or if you are early and it's not published yet, revise this one again) -->
 
 ## BONUS
+This section includes topics that can be skipped or just not that important. You may read this if you want to know, what functionalities does `go` command provide or who is the mascot of Golang.
 ### Golang Toolset
 Go along with compiling your code provides and array of different features that are quite useful in day-to-day programming scenarios. Complete featureset of go command can be found [here](https://golang.org/cmd/go/) I have listed some useful ones below for easy reference,
 1. `go help <command>` -  return details of any specific subcommand
@@ -775,6 +776,17 @@ go env -W GOBIN=C:\Users\gauthamchettiar\go\bin # will set the env variable
 4. `go install` - apart from generating your build in you current directory, it's also possible to generate it in a designated folder where all binaries should go. As name suggests, this can be used to install any application, if you set your path in your system's executables - you should pretty much have a running command. You can refer [this](https://www.digitalocean.com/community/tutorials/how-to-build-and-install-go-programs#installing-go-programs-with-go-install) article make `go install` to work correctly.
 5. `go fmt` - this command will automaticall format your code to make it more legible - super useful!
 6. `go vet` - without compiling your code, will printout any errors in your code that can lead to compilation errors.
+
+### Gopher
+We have a derpy little mascot for Golang,  
+![GOPHER](https://blog.golang.org/gopher/header.jpg)  
+
+He is called **Gopher** and was originally drawn by [Renee French](http://reneefrench.blogspot.com/).  
+Since then it has seen several redraws like these:  
+[https://github.com/ashleymcnamara/gophers](https://github.com/ashleymcnamara/gophers)  
+[https://github.com/egonelbre/gophers](https://github.com/egonelbre/gophers)  
+[https://github.com/MariaLetta/free-gophers-pack](https://github.com/MariaLetta/free-gophers-pack)
+
 
 ## EXERCISE
 Before we start with the exercise there's one more thing that I would like to provide for reference, i.e: **how to take user input?**
