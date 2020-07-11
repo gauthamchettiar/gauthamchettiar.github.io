@@ -35,7 +35,7 @@ So, here we go...
   - [Apple or Pineapple? - Logic](#apple-or-pineapple---logic)
   - [Eat. Sleep. Repeat. - Loops](#eat-sleep-repeat---loops)
   - [Reduce code footprint - Functions](#reduce-code-footprint---functions)
-  - [Bonus - Golang Tools](#bonus---golang-toolchain)
+  - [Bonus](#bonus)
   - [Exercise](#exercise)
 - Part 2 (Yet to be uploaded)
 
@@ -673,13 +673,181 @@ for i, character := range name {
 ```
 
 ## Reduce code footprint - Functions
+Functions in Go has certain distinct features. 
+```go
+// here's a function we have been using since the start
+func main() {...}
+```
+From the syntax it should be evident that `func` keyword creates a function followed by `<function-name>` and curly braces `{...}` that encloses the code block.  
 
+Some variations and possibilities with respect to functions in Go,
+1. Functions **with arguments** (input to any function),
+```go
+// function declaration
+func printSum(a int, b int) {
+    fmt.Println(a + b)
+}
+func main(){
+    // function call
+    printSum(1,2)
+}
+```
+Yes, even for function arguments, `<type>` comes after `<name>`.  
+Since **both arguments are of same `<type>`,** that is `int`, we can shorthand it to,  
+```go
+func printSum(a, b int) {...}
+```
+2. Functions with **return values** (output from a function)
+```go
+func getSum(a, b int) int {
+    return (a + b)
+}
+func main(){
+    // function call
+    sumVal := getSum(1,2)
+}
+```  
+3. Function with **multiple return values**. YES, that's a thing in Go!
+```go
+func getSumAndDifference(a, b int) (int, int) {
+    return (a + b), (a - b)
+}
+func main(){
+    // function call
+    sumVal, diffVal := getSumAndDifference(1,2)
+}
+```
 
+4. Named return values
+```go
+// sumVal and diffVal will be returned automatically
+func getSumAndDifference(a, b int) (sumVal int, diffVal int) {
+    sumVal, diffVal = a + b, a - b
+    return
+    // empty return statement must be used with named returns
+}
+func main(){
+    // function call
+    sumVal, diffVal := getSumAndDifference(1,2)
+    fmt.Println(sumVal, diffVal)
+}
+```
+Since both named returns are of type int, we can shorthand it
+```go
+func getSumAndDifference(a, b int) (sumVal, diffVal int) {...}
+```
 
+> Multi return statements are useful in situations where more than one value might be required. But, often in some usecases we might just need a single return value out of many that a function returns. Like suppose in the above example we just needed difference and and not the sum. In such cases, you can use blank identifiers - `_, diffVal := getSumAndDifference(1,2)`. Thus even if sumVal is returned it will thrown out and not saved in memory.
+{: class="note-red"}  
 &nbsp;  
-That's a lot to learn in a stretch! Go take a coffee break or something,
-<div class="tenor-gif-embed" data-postid="10692456" data-share-method="host" data-width="100%" data-aspect-ratio="2.5025125628140703"><a href="https://tenor.com/view/you-deserve-iit-worth-win-thanks-welcome-gif-10692456">You Deserve IIt Worth GIF</a> from <a href="https://tenor.com/search/youdeserveiit-gifs">Youdeserveiit GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+**Aaaand, that concludes this part!**
 
-## BONUS - Golang Toolset
+That's a lot to learn in a stretch! Go take a coffee break or something.
+<div class="tenor-gif-embed" data-postid="10692456" data-share-method="host" data-width="100%" data-aspect-ratio="2.5025125628140703"><a href="https://tenor.com/view/you-deserve-iit-worth-win-thanks-welcome-gif-10692456">You Deserve IIt Worth GIF</a> from <a href="https://tenor.com/search/youdeserveiit-gifs">Youdeserveiit GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+&nbsp;  
+Back already?
+
+Now you have got options...  
+1. Move ahead with Second Part (or if you are early and it's not published yet, revise this one again)
+2. Read the [BONUS](#bonus) material below (not required, but would be a cool to know)
+3. Solve [EXERCISE](#exercise) below that would help you gain some handson experience.
+
+## BONUS
+### Golang Toolset
+Go along with compiling your code provides and array of different features that are quite useful in day-to-day programming scenarios. Complete featureset of go command can be found [here](https://golang.org/cmd/go/) I have listed some useful ones below for easy reference,
+1. `go help <command>` -  return details of any specific subcommand
+2. `go build` - will provide a compiled binary and place it in the directory this command was triggered in. Refer ["Dear, Hello World"](#dear-hello-world)
+3. `go run` - will compile to a binary, save it in a temporary location and run the application
+4. `go env` - will list all the environment variables that is used by Go.  
+```bash
+go env # will display all environmet variables
+# set GOARCH=amd64
+# set GOBIN=C:\Users\gauthamchettiar\go\bin
+# set GOENV=C:\Users\gauthamchettiar\AppData\Roaming\go\env     
+# set GOPATH=C:\Users\gauthamchettiar\go
+# set GOROOT=c:\go
+# ... has been truncated to save space
+go env GOBIN # will display only the passed env variable
+go env -u GOBIN # will unset that env variable
+go env -W GOBIN=C:\Users\gauthamchettiar\go\bin # will set the env variable
+```
+4. `go install` - apart from generating your build in you current directory, it's also possible to generate it in a designated folder where all binaries should go. As name suggests, this can be used to install any application, if you set your path in your system's executables - you should pretty much have a running command. You can refer [this](https://www.digitalocean.com/community/tutorials/how-to-build-and-install-go-programs#installing-go-programs-with-go-install) article make `go install` to work correctly.
+5. `go fmt` - this command will automaticall format your code to make it more legible - super useful!
+6. `go vet` - without compiling your code, will printout any errors in your code that can lead to compilation errors.
 
 ## EXERCISE
+Before we start with the exercise there's one more thing that I would like to provide for reference, i.e: **how to take user input?**
+```go
+package main
+// multiple imports can be clubbed together as below
+import (
+    "fmt"
+    "bufio"
+    "os"
+)
+func main(){
+    // io reader has to be created 
+    reader := bufio.NewReader(os.Stdin)
+    // here's your prompt
+    fmt.Print("Enter your name : ")
+    // below statement would return user entered text
+    // this would wait for '\n' to exit - newline OR enter
+    text, _ := reader.ReadString('\n')
+    // print your returned text
+    fmt.Println("Hello",text)
+}
+```
+Do mind that, there's more than one way to accept input but this one's the most efficient.
+
+**Some Instructions / Good practices to follow:**
+1. Comment the heck out of it! (at this point it's okay to comment as much as possible to make it easier for your future self to understand).
+2. Give meaningful names to functions and variables that you would be creating, let it be as long as needed.
+3. Each exercise will have a skeleton code attached that can be used to get started with.
+4. Don't be too harsh on yourself. If something doesn't seem to work, GOOGLE! Still puzzled? You can always contact me!
+
+**And finally, here is your exercise,**  
+Create a calculator program that, (a) asks for [operation type] and [operand count]. (b) Then depending on [operand count] asks for [actual operands]. (c) Performs the user requested [operation type] on the [actual operands] and returns the [result]. *Operations can be (+, -, * and /)*
+```go
+// Sample output below,
+// What operation would you like to perform? +
+// How many number of operands do you have? 3
+// Input operand 1 : 1
+// Input operand 2 : 2
+// Input operand 3 : 3
+// Result : 6
+```
+```go
+// calculator app: code skeleton
+package main
+
+import (
+  "bufio"
+  "fmt"
+  "os"
+  "strconv"
+)
+
+func takeIntegerInput(displayString string) int {
+  text := takeStringInput(displayString)
+  // below function converts string to integer
+  intVal, _ := strconv.Atoi(text)
+  return intVal
+}
+
+func takeStringInput(displayString string) string {
+  reader := bufio.NewReader(os.Stdin)
+  fmt.Print(displayString)
+  text, _ := reader.ReadString('\n')
+  return text
+}
+
+func main(){
+
+}
+```
+
+That truely ends Part 1 of the series.
+
+I would love your feedback, find my details at the bottom of this page and feel free to contact me anytime!
+
+And, Thank you for reading through so patiently. ❤️
