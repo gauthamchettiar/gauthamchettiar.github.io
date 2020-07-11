@@ -1,7 +1,7 @@
 title: ./gauthamchettiar # The title of the blog
 author: Gautham Chettiar # Your name 
 email: gauthamchettiar@gmail.com # your email shown in the footer
-url: "" # this is your site's root address.
+url: "https://gauthamchettiar.github.io" # this is your site's root address.
 description: > # this means to ignore newlines until "show_excerpts:"
   Just some place to share a piece of my thought. I am trying to maintain it as a part technical, part personal blog. And yes, Have a good day! 
 favicon: "./favicon.ico" # set the favicon of the site 
