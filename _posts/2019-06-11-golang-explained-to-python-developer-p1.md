@@ -754,7 +754,7 @@ Now you have got options...
 <!-- 3. Move ahead with Second Part (or if you are early and it's not published yet, revise this one again) -->
 
 ## BONUS
-This section includes topics that can be skipped or just not that important. You may read this if you want to know, what functionalities does `go` command provide or who is the mascot of Golang.
+This section includes topics that has been categorized as *good to know*. You may go ahead and read this if you want to know like what functionalities does `go` command provide or who is the mascot of Golang!
 ### Golang Toolset
 Go along with compiling your code provides and array of different features that are quite useful in day-to-day programming scenarios. Complete featureset of go command can be found [here](https://golang.org/cmd/go/) I have listed some useful ones below for easy reference,
 1. `go help <command>` -  return details of any specific subcommand
