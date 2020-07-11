@@ -480,6 +480,7 @@ Finally let's discuss logic.
 
 I know it's been a long article. But we are almost 75% done... bear with me for a few more sections... and Part 2... and 3. 😜 
 
+### if {...} else if {...} else {...}
 Python has following construct for defining logic,
 ```python
 # logic in python
@@ -529,10 +530,84 @@ fmt.Println(variableDefinedInIf)  // this will fail
 // ERROR: undefined: variableDefinedInIf
 ```
 
-### Switches
+### switch{...} 
+Python lacks switches which might have forced you to use multiple `if`, `elif` statements in conjunction. Go does include a `switch {...}` that behaves differently than most of the languages.
+```go
+numericValue := 2
+// numericValue is your variable that would be
+// evaluated in each case statement
+switch numericValue {
+	case 1:
+		fmt.Println("One")
+	case 2:
+		fmt.Println("Two")
+	case 3:
+		fmt.Println("Three")
+	default:
+		fmt.Println("No Match")
+  }
+// above code prints Two
+```
 
+Above statment is your generic switch statement with `switch <variable> {...}`. If value from the `<variable>` equals any value from the enclosing case statement, in this case `1`, `2` or `3`, it would execute the statement within that matching block. Variable provided to `switch <variable>` could be of any type not just a numeric value. And finally, `default` is similar to your `else` block, if none of the condition matches `default` block will be executed - it is an optional statement.
+
+> In Java and C, a `break` has to be added after every case statement. Otherwise, along with the matching `case` block all the blocks under that is also executed. This is not required in Go, it would exit the case by itself on match.
+{: class="note-yellow"}
+
+Switches in Go has a bunch of behaviour that's unique to the language. I have listed them below,
+1. Just like `if <declaration>; <condition>` **a switch block can also include a declaration** as,
+```go
+switch variableAccessibleInsideSwitch := 0 ; variableToEvaluate { ... }
+```
+2. **Instead of passing a variable to switch, it can also be empty**. If no variable is provided then all the `case` statements must include a condition (just like an `if` statement). As shown below,
+```go
+age := 23
+switch {
+  case age < 10:
+    fmt.Println("Hello, Kid!")
+  case age > 60:
+    fmt.Println("Hello, Sir/Madam!")
+  default:
+    fmt.Println("Hello, Stranger!")
+}
+// In above case it's a replacement to a
+// long if{...} else if{...} block
+```
+3. So what if I need to **execute same `case` block for multiple matches**?
+```go
+letter = "z"
+switch letter {
+  case "a", "b", "c":
+    fmt.Println("You are just starting")
+  case "x", "y", "z":
+    fmt.Println("You have finished")
+  default:
+    fmt.Println("You are somewhere in the middle")
+}
+// will print, You have finished
+```
+4. What if I want the behaviour back from Java / C, **not break out of case but continue execution**?
+```go
+numericValue := 1   // should match the first case block
+switch numericValue {
+	case 1:
+    fmt.Println("One")
+    fallthrough
+	case 2:
+		fmt.Println("Two")
+	case 3:
+    fmt.Println("Three")
+	default:
+		fmt.Println("No Match")
+  }
+// it will print, 
+// One
+// Two
+```
+`fallthrough` is a special keyword that allows a case statement to go ahead and executes the immediate next case block and not break on match.
 
 ## Eat. Sleep. Repeat. - Loops
+
 
 ## Reduce code footprint - Functions
 
