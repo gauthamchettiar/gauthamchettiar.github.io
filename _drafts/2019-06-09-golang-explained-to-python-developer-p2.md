@@ -3,7 +3,7 @@ layout: post
 title:  "Golang Explained to a Python Developer | Part 2"
 # date:   2020-07-09 14:00:00 +0530
 categories: technical golang
-permalink: /:categories/golang-explained-to-python-developer-p2
+permalink: /golang-explained-to-python-developer-p2
 ---
 
 ## Wait, there's more variety! - Types #2
