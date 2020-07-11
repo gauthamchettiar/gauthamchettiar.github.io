@@ -36,18 +36,8 @@ So, here we go...
   - [Eat. Sleep. Repeat. - Loops](#eat-sleep-repeat---loops)
   - [Reduce code footprint - Functions](#reduce-code-footprint---functions)
   - [Bonus - Golang Tools](#bonus---golang-toolchain)
-  - [Bonus - Golang vs Java](#bonus---golang-vs-java)
   - [Exercise](#exercise)
 - Part 2 (Yet to be uploaded)
-  - [Wait, there's more variety! - Types #2](#wait-theres-more-variety---types-2)
-  - [Is it a class? Is it an object? - It's Struct!](#is-it-a-class-is-it-an-object---its-struct)
-  - [The todo list - Interface](#the-todo-list---interface)
-  - [It wasn't me, he did it! - Pointers](#it-wasnt-me-he-did-it---pointers)
-  - [To Err is Huuan- Error Handling](#to-err-is-huuan--error-handling)
-  - [I will do it later - Defer](#i-will-do-it-later---defer)
-
-## Thinking in Go
-Ok, Wait... Before we dive. We must know how deep the pool is, right?
 
 > Go picked some concepts from procedural programming, functional programming and object oriented programming, and put them together, and left out other concepts to create its own unique flavour of idiomatic programming style. [[source]](https://flaviocopes.com/golang-is-go-object-oriented/)
 
@@ -96,6 +86,8 @@ Just to make life easier, let's setup an IDE (completely optional),
 
 ## Dear, Hello World!
 Let's start with an all time favorite - **writing a hello world program**.  
+<div class="tenor-gif-embed" data-postid="4903969" data-share-method="host" data-width="100%" data-aspect-ratio="1.6666666666666667"><a href="https://tenor.com/view/typing-jim-carrey-fast-busy-gif-4903969">Typing Jim Carrey GIF</a> from <a href="https://tenor.com/search/typing-gifs">Typing GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+&nbsp;  
 > For all the examples given below it is assumed that you are logged in to a terminal and have created a new directory. Also, It makes sense to create one in your home directory.  <br/>
 <!-- > Ok but, Where is my home though? - [Linux](https://askubuntu.com/questions/687267/where-is-the-home-folder-located) \| [Mac](https://apple.stackexchange.com/questions/51280/where-do-i-find-my-user-folder-in-the-os-x-folder-hierarchy) \| [Windows](https://askubuntu.com/questions/1180092/where-is-home-directory-on-windows) -->
 {: class="note-yellow"}
@@ -417,6 +409,7 @@ const fruitCostConst = 199.99  // fruitCost is untyped
 ```
 every value is **untyped**, meaning `fruitCountConst` and `fruitCostConst` is just a value like `2` or `199.99`.  
 
+<div class="tenor-gif-embed" data-postid="4383019" data-share-method="host" data-width="100%" data-aspect-ratio="1.7777777777777777"><a href="https://tenor.com/view/huh-hu-gif-4383019">Excuse Me? GIF</a> from <a href="https://tenor.com/search/hu-gifs">Hu GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 That doesn't make sense, does that?  
 
 Let me give a different example,
@@ -537,14 +530,14 @@ numericValue := 2
 // numericValue is your variable that would be
 // evaluated in each case statement
 switch numericValue {
-	case 1:
-		fmt.Println("One")
-	case 2:
-		fmt.Println("Two")
-	case 3:
-		fmt.Println("Three")
-	default:
-		fmt.Println("No Match")
+  case 1:
+      fmt.Println("One")
+  case 2:
+      fmt.Println("Two")
+  case 3:
+      fmt.Println("Three")
+  default:
+      fmt.Println("No Match")
   }
 // above code prints Two
 ```
@@ -557,18 +550,18 @@ Above statment is your generic switch statement with `switch <variable> {...}`. 
 Switches in Go has a bunch of behaviour that's unique to the language. I have listed them below,
 1. Just like `if <declaration>; <condition>` **a switch block can also include a declaration** as,
 ```go
-switch variableAccessibleInsideSwitch := 0 ; variableToEvaluate { ... }
+switch variableOnlyAccessibleInsideSwitch := 0 ; variableToEvaluate { ... }
 ```
 2. **Instead of passing a variable to switch, it can also be empty**. If no variable is provided then all the `case` statements must include a condition (just like an `if` statement). As shown below,
 ```go
 age := 23
 switch {
   case age < 10:
-    fmt.Println("Hello, Kid!")
+        fmt.Println("Hello, Kid!")
   case age > 60:
-    fmt.Println("Hello, Sir/Madam!")
+        fmt.Println("Hello, Sir/Madam!")
   default:
-    fmt.Println("Hello, Stranger!")
+        fmt.Println("Hello, Stranger!")
 }
 // In above case it's a replacement to a
 // long if{...} else if{...} block
@@ -578,11 +571,11 @@ switch {
 letter = "z"
 switch letter {
   case "a", "b", "c":
-    fmt.Println("You are just starting")
+        fmt.Println("You are just starting")
   case "x", "y", "z":
-    fmt.Println("You have finished")
+        fmt.Println("You have finished")
   default:
-    fmt.Println("You are somewhere in the middle")
+        fmt.Println("You are somewhere in the middle")
 }
 // will print, You have finished
 ```
@@ -590,26 +583,98 @@ switch letter {
 ```go
 numericValue := 1   // should match the first case block
 switch numericValue {
-	case 1:
-    fmt.Println("One")
-    fallthrough
-	case 2:
-		fmt.Println("Two")
-	case 3:
-    fmt.Println("Three")
-	default:
-		fmt.Println("No Match")
+  case 1:
+        fmt.Println("One")
+        fallthrough
+  case 2:
+        fmt.Println("Two")
+  case 3:
+        fmt.Println("Three")
+  default:
+        fmt.Println("No Match")
   }
-// it will print, 
 // One
 // Two
 ```
 `fallthrough` is a special keyword that allows a case statement to go ahead and executes the immediate next case block and not break on match.
 
 ## Eat. Sleep. Repeat. - Loops
+<div class="tenor-gif-embed" data-postid="5894655" data-share-method="host" data-width="100%" data-aspect-ratio="1.7777777777777777"><a href="https://tenor.com/view/rollercoaster-infinite-loop-loop-looping-amusement-gif-5894655">Infinite Loop - Rollercoaster GIF</a> from <a href="https://tenor.com/search/rollercoaster-gifs">Rollercoaster GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+&nbsp;  
+Loops in python are one of the best thing that language offers. With simple yet effective syntax, it eliminates most of the bloated code from other languages. With Go you are in the control of code complexity. You can write your for loops as verbose as Java or as straightforward as Python.
+```go
+for i := 1; i <= 10; i++ {
+    fmt.Println(i)
+} // prints 1 to 10
+```
+Above is the verbose version, where all three parts of `for` - `<declaration>; <condition>; <post-statement>` has been defined. Here, `<declaration>` declares and initializes any new variale that's only accessible within the `for` block. `<condition>` is evaluated at the end of every loop, if it is evaluated to be `false` loop exits. `<post-statement>` is executed at the end of every loop, just before `<condition>` is evaluated. 
 
+What if you want to initialize multiple variables or say execute multiple post-statement?  
+```go
+// multi varable declaration & multi post-statements
+for i, j := 1, 10; i <= 10; i,j = i+1, j-1 {
+     fmt.Println(i+j)
+} // prints 11, ten times
+```
+
+Yes, that did complicate the statement. Now let's cut things out.
+1. Without `<post-statement>`
+```go
+// leave a ; at the end
+for i, j := 1, 10; i <= 10; {
+     fmt.Println(i+j)
+     i,j = i+1, j-1
+} // prints 11, ten times
+``` 
+2. Without `<declaration>`
+```go
+// leave a ; at the start
+i, j := 1, 10
+for ; i <= 10; i,j = i+1, j-1 {
+     fmt.Println(i+j)
+} // prints 11, ten times
+```
+3. With `<condition>` only, i.e: without `<declaration>` and `<post-statement>`
+```go
+i, j := 1, 10
+// no ; required
+for i <= 10 {
+    fmt.Println(i+j)
+    i,j = i+1, j-1
+} // prints 11, ten times
+```
+4. Infinite loop?
+```go
+i, j := 1, 10
+for {
+  fmt.Println(i+j)
+  i,j = i+1, j-1
+  if i > 10 {
+        break
+  }
+}
+```
+
+> There are no `while` loops in Go. Since it's possible to use `for` with just a `<condition>`, this effectively replaces `while` loop in Go.
+{: class="note-yellow"}
+
+
+### Range
+Go does have a `range` keyword which is helpful in iterating over collections. This is different from the `range()` function that you might be used to with python. We will get back to this keyword once we learn more advanced types like maps and slices. For now here's a simple implementation to iterate over any string,
+```go
+alphabets := "abcdefg"
+// range keyword returns 2 values, which is assigned to
+// i = iteration count
+// character = each character in string
+for i, character := range name {
+  fmt.Println(i, string(character))
+}
+// 0 a to 6 g will be printed in new line
+```
 
 ## Reduce code footprint - Functions
+
+
 
 &nbsp;  
 That's a lot to learn in a stretch! Go take a coffee break or something,
@@ -617,18 +682,4 @@ That's a lot to learn in a stretch! Go take a coffee break or something,
 
 ## BONUS - Golang Toolset
 
-## BONUS - Golang vs Java | Part 1
-
 ## EXERCISE
-
-## Wait, there's more variety! - Types #2
-
-## Is it a class? Is it an object? - It's Struct!
-
-## The todo list - Interface
-
-## It wasn't me, he did it! - Pointers
-
-## To Err is Huuan- Error Handling
-
-## I will do it later - Defer
