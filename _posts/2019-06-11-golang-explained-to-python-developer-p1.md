@@ -6,6 +6,7 @@ categories: technical golang
 permalink: /golang-explained-to-python-developer-p1
 ---
 
+This is Part 1 of "Golang Explained to Python Developer" Series.
 
 [Let's skip formality and just dive in >](#thinking-in-go)  
 [Jump to Index >](#index)  
@@ -815,7 +816,7 @@ Do mind that, there's more than one way to accept input but this one's the most 
 **Some Instructions / Good practices to follow:**
 1. Comment the heck out of it! (at this point it's okay to comment as much as possible to make it easier for your future self to understand).
 2. Give meaningful names to functions and variables that you would be creating, let it be as long as needed.
-3. Each exercise will have a skeleton code attached that can be used to get started with.
+3. Exercise will have a skeleton code attached that can be used to get started with.
 4. Don't be too harsh on yourself. If something doesn't seem to work, GOOGLE! Still puzzled? You can always contact me!
 
 **And finally, here is your exercise,**  
