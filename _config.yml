@@ -3,7 +3,7 @@ author: Gautham Chettiar # Your name
 email: gauthamchettiar@gmail.com # your email shown in the footer
 url: "https://gauthamchettiar.com" # this is your site's root address.
 description: > # this means to ignore newlines until "show_excerpts:"
-  Just some place to share a piece of my thought. I am trying to maintain it as a part technical, part personal blog.
+  Just some place to share a piece of my thought. I am trying to maintain it as a part technical, part personal blog. I will appreciate your feedback, my details at the bottom of this page.
 favicon: "./favicon.ico" # set the favicon of the site 
 
 show_excerpts: true # set to true to show excerpts on the homepage
