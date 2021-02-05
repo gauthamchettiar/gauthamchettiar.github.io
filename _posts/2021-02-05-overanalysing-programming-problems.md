@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "🧩 OPP | Nth Digit of an Integer | [EASY]"
-# date:   2020-07-09 14:00:00 +0530
 categories: python ovaranalysis programming problem
 permalink: /overanalysing-programming-problems-nth-digit-of-an-integer
 ---
@@ -21,9 +20,9 @@ A few notes about this article,
     - You are new to solving programming problems and would like to learn how to approach one.
     - You are new to Python and would like to learn it by doing.
 
-Also, For those who are wondering OPP just means, "Overanalyzing Programming Problems!"
+Also, For those who are wondering... OPP just means, "Overanalyzing Programming Problems!"
 
-Before getting to the actual problem, let's start small, really small. Here's a teeny tiny warm-up problem to get started with, if it seems too easy for your appetite, hold tight, upcoming ones would get gradually difficult -
+This problem is relatively easy, it's a teeny tiny warm-up problem to get started with, if it seems too easy for your appetite, hold tight, upcoming ones would get gradually difficult!
 
 &nbsp;  
 
