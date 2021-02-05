@@ -106,7 +106,7 @@ def nth_digit_of_integer(integer, n):
         return nth_digit_of_integer(integer // 10, n-1)
 ```
 Recursion works in ways similar to loops. Just instead of reducing inside a loop, we reduce and re-call the same function. Again an illustration to simplify this,
-![Problem 1 - Solution 2 : Reduce by 10 (Recursion)](/assets/image/2021-01-07-overanalysing-programming-problems/Problem1-Solution3_Recursion.PNG)
+![Problem 1 - Solution 2 : Reduce by 10 (Recursion)](/assets/image/2021-01-07-overanalysing-programming-problems/Problem1-Solution3_Recursion.png)
 
 ## Solution 4 : Mathematically
 Usually the ones that is not easy to come up with, but also the ones that are the most efficient of all. If this is what you used to solve this problem, then kudos - "You are a mathematical Nerd!"
