@@ -1,0 +1,24 @@
+machine:
+  environment:
+    USER_NAME: gauthamchettiar
+    USER_EMAIL: gauthamchettiar@gmail.com
+  ruby:
+    version: 2.5.1
+  node:
+    version: 8.10.0
+
+dependencies:
+  pre:
+    - ./bin/setup
+
+test:
+  post:
+    - bundle exec jekyll build
+    - rm -R ./_site/node_modules
+    - bundle exec htmlproofer ./_site --only-4xx --allow-hash-href --assume-extension --check-opengraph --url-ignore "feed.xml"
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./bin/automated
