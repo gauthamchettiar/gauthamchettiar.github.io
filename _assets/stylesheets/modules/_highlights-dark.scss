@@ -3,9 +3,9 @@
 // =============================================================================
 
 .highlight {
-  padding: 25px;
+  padding: 10px;
   margin: 0;
-  margin: 30px 0;
+  margin: 5px 0;
   overflow: auto;
   font-weight: 400;
   background-color: darken($gray-darkest, 5);
@@ -13,6 +13,13 @@
   pre {
     margin: 0;
   }
+}
+
+::selection {
+  background: #f62459; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #f62459; /* Gecko Browsers */
 }
 
 // Inline highlighting
@@ -24,6 +31,7 @@
   background: darken($gray-darkest, 5);
   border: 1px solid $base-border-color;
   border-radius: 1px;
+  margin: 25px 0px;
 }
 
 // Responsive
