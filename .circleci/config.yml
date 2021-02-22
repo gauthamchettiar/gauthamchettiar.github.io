@@ -10,11 +10,12 @@ jobs:
       BUNDLE_PATH: ~/repo/vendor/bundle
     steps:
       - checkout
-      - run:
-          name: Setup
-          command: chown -R $USER:$USER ./bin; \
-            ls -l; \
-            ./bin/setup
+      
+      - run: |
+          chown -R $USER:$USER ./bin
+          chmod 777 ./bin/*
+          ls -l
+          ./bin/setup
       # - run:
       #     name: Bundle Install
       #     command: bundle check || bundle install
