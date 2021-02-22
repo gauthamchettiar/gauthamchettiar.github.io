@@ -163,8 +163,6 @@ That concludes this article. Thanks for your patience! ❤️
 
 Any mistakes I made? Constructive criticism is welcome! Feel free to contact me on [LinkedIn](https://www.linkedin.com/in/gauthamchettiar)
 
-&nbsp;  
-
 # Appendix
 ## Python : Strings and Indices
 Some Python features are really unique to the language, Strings can be traversed like a list and there are negative indexes in python. Explained in detail below,
@@ -195,7 +193,6 @@ raise_to_2 = math.pow(10, 2)
 raise_ro_2_operator = 10 ** 2
 # (**) operator is alternative to math.pow()
 {% endhighlight %}
-&nbsp;  
 
 # Index
 - [Problem : Nth Digit of an Integer](#problem--nth-digit-of-an-integer)
