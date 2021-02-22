@@ -31,16 +31,16 @@ jobs:
           root: ./
           paths:
             - _site
-deploy:
-  machine: true
-  steps:
-    - run:
-        name: Deploy build to GitHub Pages
-        command:
-          ./bin/deploy
+  deploy:
+    machine: true
+    steps:
+      - run:
+          name: Deploy build to GitHub Pages
+          command:
+            ./bin/deploy
 workflows:
   version: 2
-  test-deploy:
+  build-and-deploy:
     jobs:
       - build
       - deploy:
