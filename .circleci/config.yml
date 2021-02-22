@@ -12,7 +12,8 @@ jobs:
       - checkout
       - run:
           name: Setup
-          command: ./bin/setup
+          command: chown -R $USER:$USER ./bin; \
+            ./bin/setup
       # - run:
       #     name: Bundle Install
       #     command: bundle check || bundle install
