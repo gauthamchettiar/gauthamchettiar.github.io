@@ -10,11 +10,13 @@ jobs:
       BUNDLE_PATH: ~/repo/vendor/bundle
     steps:
       - checkout
-      - run: |
-          chown -R $USER:$USER ./bin
-          chmod 777 ./bin/*
-          ls -l
-          ./bin/setup
+      - run:
+          name: Run Setup
+          command:  |
+            chown -R $USER:$USER ./bin
+            chmod 777 ./bin/*
+            ls -l
+            ./bin/setup
       - run:
           name: Jekyll build
           command: bundle exec jekyll build
@@ -33,10 +35,12 @@ jobs:
             - _site
   deploy:
     machine: true
+    working_directory: ~/repo
     steps:
       - run:
           name: Deploy build to GitHub Pages
-          command:
+          command: |
+            ls -l
             ./bin/deploy
 workflows:
   version: 2
