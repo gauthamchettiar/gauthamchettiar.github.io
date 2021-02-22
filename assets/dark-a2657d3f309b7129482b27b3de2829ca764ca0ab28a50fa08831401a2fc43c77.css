@@ -514,7 +514,7 @@ hr {
 img {
   display: block;
   max-width: 100%;
-  margin: 0; }
+  margin: 25px 0px; }
 
 .notfound-wrapper {
   margin-top: 100px;
@@ -923,9 +923,9 @@ img {
     .header-tags li {
       padding: 0 5px; } }
 .highlight {
-  padding: 25px;
+  padding: 10px;
   margin: 0;
-  margin: 30px 0;
+  margin: 5px 0;
   overflow: auto;
   font-weight: 400;
   background-color: #050505;
@@ -933,13 +933,26 @@ img {
   .highlight pre {
     margin: 0; }
 
+::-moz-selection {
+  background: #f62459;
+  /* WebKit/Blink Browsers */ }
+
+::selection {
+  background: #f62459;
+  /* WebKit/Blink Browsers */ }
+
+::-moz-selection {
+  background: #f62459;
+  /* Gecko Browsers */ }
+
 .highlighter-rouge {
   padding: 2px 4px;
   font-size: 14px;
   color: #f92672;
   background: #050505;
   border: 1px solid #393636;
-  border-radius: 1px; }
+  border-radius: 1px;
+  margin: 25px 0px; }
 
 @media all and (max-width: 767px) {
   .highlight {
