@@ -1,24 +1,49 @@
-machine:
-  environment:
-    USER_NAME: gauthamchettiar
-    USER_EMAIL: gauthamchettiar@gmail.com
-  ruby:
-    version: 2.5.1
-  node:
-    version: 8.10.0
-
-dependencies:
-  pre:
-    - ./bin/setup
-
-test:
-  post:
-    - bundle exec jekyll build
-    - rm -R ./_site/node_modules
-    - bundle exec htmlproofer ./_site --only-4xx --allow-hash-href --assume-extension --check-opengraph --url-ignore "feed.xml"
-
-deployment:
-  production:
-    branch: master
-    commands:
-      - ./bin/automated
+defaults: &defaults
+  working_directory: ~/repo
+version: 2
+jobs:
+  build:
+    <<: *defaults
+    docker:
+      - image: circleci/ruby:2.5
+    environment:
+      BUNDLE_PATH: ~/repo/vendor/bundle
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - rubygems-v1-{{ checksum "Gemfile.lock" }}
+            - rubygems-v1-fallback
+      - run:
+          name: Bundle Install
+          command: bundle check || bundle install
+      - save_cache:
+          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run:
+          name: Jekyll build
+          command: bundle exec jekyll build
+      - run:
+          name: HTMLProofer tests
+          command: |
+            bundle exec htmlproofer ./_site \
+              --allow-hash-href \
+              --check-favicon  \
+              --check-html \
+              --disable-external
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - _site
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
