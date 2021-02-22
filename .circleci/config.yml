@@ -18,19 +18,26 @@ jobs:
       - run:
           name: Jekyll build
           command: bundle exec jekyll build
-      - run:
-          name: HTMLProofer tests
-          command: |
-            bundle exec htmlproofer ./_site \
-              --only-4xx \
-              --allow-hash-href \
-              --assume-extension \
-              --check-opengraph \
-              --url-ignore "feed.xml"
+      # - run:
+      #     name: HTMLProofer tests
+      #     command: |
+      #       bundle exec htmlproofer ./_site \
+      #         --only-4xx \
+      #         --allow-hash-href \
+      #         --assume-extension \
+      #         --check-opengraph \
+      #         --url-ignore "feed.xml"
       - persist_to_workspace:
           root: ./
           paths:
             - _site
+deploy:
+  machine: true
+  steps:
+    - run:
+        name: Deploy build to GitHub Pages
+        command:
+          ./bin/deploy
 workflows:
   version: 2
   test-deploy:
