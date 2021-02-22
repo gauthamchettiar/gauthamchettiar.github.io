@@ -20,6 +20,15 @@ jobs:
             yarn install --modules-folder ./_assets/yarn
             bundle exec jekyll build
       - run:
+          name: HTMLProofer tests
+          command: |
+            bundle exec htmlproofer _site \
+              --only-4xx \
+              --allow-hash-href \
+              --assume-extension \
+              --check-opengraph \
+              --url-ignore "feed.xml"
+      - run:
           name: Deploy to gh-pages Branch
           command: |
             echo "COPY REQUIRED FILES TO '../_site' FOLDER"
@@ -48,15 +57,7 @@ jobs:
             git push -f -q origin gh-pages
             git tag -a "release_${CIRCLE_BRANCH}_${CIRCLE_BUILD_NUM}" -m "Release based on build ${CIRCLE_BUILD_NUM}"
             git push -q --tags https://${GITHUB_TOKEN}@github.com/gauthamchettiar/gauthamchettiar.github.io.git
-      - run:
-          name: HTMLProofer tests
-          command: |
-            bundle exec htmlproofer . \
-              --only-4xx \
-              --allow-hash-href \
-              --assume-extension \
-              --check-opengraph \
-              --url-ignore "feed.xml"
+      
       # - persist_to_workspace:
       #     root: ./
       #     paths:
