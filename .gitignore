@@ -4,5 +4,7 @@
 .sass-cache
 _site
 Gemfile.lock
-
+yarn.lock
 .DS_Store
+npm-debug.log
+_assets/yarn
