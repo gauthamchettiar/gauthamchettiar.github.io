@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Gautham Chettiar | 🧩 OPP | Nth Digit of an Integer | [EASY]</title>
+  <meta name="description" content="OPP or Overanalyzing Programming Problems is a Series that explores different ways to solve a programming problem, this article explores - 'Nth Digit of an Integer'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="🧩 OPP | Nth Digit of an Integer | [EASY]">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gauthamchettiar.com/posts/overanalyzing-programming-problems-nth-digit-of-an-integer">
+  <meta property="og:description" content="OPP or Overanalyzing Programming Problems is a Series that explores different ways to solve a programming problem, this article explores - 'Nth Digit of an Integer'">
+  <meta property="og:site_name" content="Gautham Chettiar">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://gauthamchettiar.com/posts/overanalyzing-programming-problems-nth-digit-of-an-integer">
+  <meta name="twitter:title" content="🧩 OPP | Nth Digit of an Integer | [EASY]">
+  <meta name="twitter:description" content="OPP or Overanalyzing Programming Problems is a Series that explores different ways to solve a programming problem, this article explores - 'Nth Digit of an Integer'">
+
+  
+    
+      <meta property="og:image" content="https://gauthamchettiar.com/assets/overanalysing-programming-problems-nth-digit-of-an-integer/undraw_counting_stars_rrnl-a7deda9e6e7210a430109c19b89afdf440b42137b7969ff2e762e3468dbcd5f6.png">
+      <meta name="twitter:image" content="https://gauthamchettiar.com/assets/overanalysing-programming-problems-nth-digit-of-an-integer/undraw_counting_stars_rrnl-a7deda9e6e7210a430109c19b89afdf440b42137b7969ff2e762e3468dbcd5f6.png">
+    
+  
+
+  <link href="https://gauthamchettiar.com/feed.xml" type="application/rss+xml" rel="alternate" title="Gautham Chettiar Last 10 blog posts" />
+
+  
+
+  
+
+    
+      <link rel="icon" type="image/x-icon" href="/assets/favicon-dark-11327753546b2135c989eee5cd83497a2734b702928d016839d795f6c706e3d5.ico">
+      <link rel="apple-touch-icon" href="/assets/apple-touch-icon-dark-d161409442b7e523089f24d08d0a55951549ece7504207c376d53b020713494d.png">
+      <link rel="stylesheet" type="text/css" href="/assets/dark-989506f4d2f80b67af6780ebd60f9c3e0e5a668dce81303ba9ff8b00696b8646.css">
+    
+
+  
+
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav ">
+  <a href="/" class="header-logo" title="Gautham Chettiar">Gautham Chettiar</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-about">
+  <use href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about" xlink:href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://github.com/gauthamchettiar" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/in/gauthamchettiar" rel="noreferrer noopener" target="_blank" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-linkedin">
+  <use href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin" xlink:href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://instagram.com/gautham_chettiar" rel="noreferrer noopener" target="_blank" title="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-instagram">
+  <use href="/assets/instagram-37f85bc75b43ecc4c114d9a46f846327fe13c5893787c6afbcfef9d30d58bd9e.svg#icon-instagram" xlink:href="/assets/instagram-37f85bc75b43ecc4c114d9a46f846327fe13c5893787c6afbcfef9d30d58bd9e.svg#icon-instagram"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="/feed.xml" rel="noreferrer noopener" target="_blank" title="RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-rss">
+  <use href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss" xlink:href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+  </ul>
+</nav>
+
+
+
+        <article class="article ">
+          <header class="article-header">
+            <h1>🧩 OPP | Nth Digit of an Integer | [EASY]</h1>
+            <p>OPP or Overanalyzing Programming Problems is a Series that explores different ways to solve a programming problem, this article explores - 'Nth Digit of an Integer'</p>
+            <div class="article-list-footer">
+  <span class="article-list-date">
+    February 20, 2021
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      8 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/python" title="See all posts with tag 'Python'">Python</a>
+    
+      
+      <a href="/tag/opp" title="See all posts with tag 'Overanalysing Programming Problems'">Overanalysing Programming Problems</a>
+    
+  </div>
+</div>
+          </header>
+
+          <div class="article-content">
+            <p><img src="/assets/overanalysing-programming-problems-nth-digit-of-an-integer/undraw_counting_stars_rrnl-a7deda9e6e7210a430109c19b89afdf440b42137b7969ff2e762e3468dbcd5f6.png" alt="Cover - Counting Stars" />
+<em>Illustration Source: “Counting Stars” from <a href="https://undraw.co/">https://undraw.co</a></em><br />
+ </p>
+
+<p>Just as I submitted my problem and got a green check across all the tests, I wondered - “How I could have improved it?”</p>
+
+<p>There are often several ways to solve a problem. The most efficient problem is not the easiest for humans to understand and vice versa. So the best bet is finding a middle ground. One that would not make you go “What the heck does this do?” - When you get back to it after a year or so. Also, one that would probably not suck your CPU dry.</p>
+
+<p>A few notes about this article,</p>
+<ol>
+  <li>You can find <a href="#index">Index</a> at the bottom of this article, but I would suggest go blind and discover topics as discussed.</li>
+  <li>Although all code snippets are written in Python, concepts that are specific to Language are explained in the <a href="#appendix">Appendix</a> below, just to keep this article generic.</li>
+  <li>This article is useful in one of the below scenarios,
+    <ul>
+      <li>You are new to solving programming problems and would like to learn how to approach one.</li>
+      <li>You are new to Python and would like to learn it by doing.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>This problem is relatively easy, it’s a teeny tiny warm-up problem to get started with, if it seems too easy for your appetite, hold tight, upcoming ones would get gradually difficult!</p>
+
+<p> </p>
+
+<h1 id="problem--nth-digit-of-an-integer">Problem : Nth Digit of an Integer</h1>
+<blockquote>
+  <p><strong>Statement :</strong> Given an integer find the digit at Nth place from right, assuming 1 is the Units place. E.g: If <code class="highlighter-rouge">Integer=1975</code> and <code class="highlighter-rouge">N=3</code>, then the output should be <code class="highlighter-rouge">9</code>. (This example would be considered in all the examples and illustrations below)</p>
+</blockquote>
+
+<blockquote>
+  <p>Here’s a simple illustration to understand the above problem statement,
+<a href="/assets/overanalysing-programming-problems-nth-digit-of-an-integer/Nth_digit_of_an_Integer_Illustration-10c54ae405e3943943a59fee43430330ee480c81a8bf8ff66ddf4c6ddd612302.png">
+  <img src="/assets/overanalysing-programming-problems-nth-digit-of-an-integer/Nth_digit_of_an_Integer_Illustration-10c54ae405e3943943a59fee43430330ee480c81a8bf8ff66ddf4c6ddd612302.png" alt="Nth Digit Of an Integer" class="zooming" data-rjs="/assets/overanalysing-programming-problems-nth-digit-of-an-integer/Nth_digit_of_an_Integer_Illustration-10c54ae405e3943943a59fee43430330ee480c81a8bf8ff66ddf4c6ddd612302.png" data-zooming-width="682" data-zooming-height="236" />
+</a></p>
+</blockquote>
+
+<p>Before we start solving this problem, here’s an empty method description in python to get you started with. Just copy it over to your preferred editor, code in your solution and RUN IT!</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="k">def</span> <span class="nf">nth_digit_of_integer</span><span class="p">(</span><span class="n">integer</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="c1"># write your logic here
+</span>    <span class="c1"># start with the simplest thing that comes to your mind
+</span>    <span class="c1"># it doesn't have to be fast, it doesn't have to be short
+</span>    <span class="c1"># rather focus on getting the correct answer
+</span>
+
+<span class="c1"># you may ignore the test definition below
+</span><span class="k">class</span> <span class="nc">TestNthDigitOfInteger</span><span class="p">(</span><span class="n">unittest</span><span class="p">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_with_proper_inputs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="mi">9</span> <span class="o">==</span> <span class="n">nth_digit_of_integer</span><span class="p">(</span><span class="mi">1975</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="mi">5</span> <span class="o">==</span> <span class="n">nth_digit_of_integer</span><span class="p">(</span><span class="mi">1975</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="mi">6</span> <span class="o">==</span> <span class="n">nth_digit_of_integer</span><span class="p">(</span><span class="mi">654321</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="p">.</span><span class="n">main</span><span class="p">()</span></code></pre></figure>
+
+<p><em>Before committing to continue reading this article I would recommend you to pause and solve this yourself. Maybe this article includes and analyses one of your solutions or maybe you came up with a better solution. As some wise man once said - The best way to learn to code is to DIY!</em></p>
+
+<h2 id="solution-1--pythonic-way">Solution 1 : Pythonic way</h2>
+<p>The most pythonic way to do it would be to convert integers to strings and get the negative Nth index. If you are not that familiar with Python you can find more on it here, <a href="#python--strings-and-indices">Appendix - Python : Strings and Indices</a>.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># S1 - Pythonic Way
+</span><span class="k">def</span> <span class="nf">nth_digit_of_integer</span><span class="p">(</span><span class="n">integer</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="c1"># str() converts integer to string to make it traversable
+</span>    <span class="c1"># [-n] negative index allows to traverse that string backwards
+</span>    <span class="c1"># int() converts the fetched character string back to integer
+</span>    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">integer</span><span class="p">)[</span><span class="o">-</span><span class="n">n</span><span class="p">])</span></code></pre></figure>
+
+<p>Wow! That’s a fancy one-line solution for sure. But the thing is it’s not the most efficient way to do it, neither it’s a generic solution.</p>
+
+<h2 id="solution-2--using-loop">Solution 2 : Using Loop</h2>
+<p>Getting the last digit of any number is as simple as dividing the number by 10 and getting the remainder. Using this, every digit in an integer can be traversed by constantly reducing the integer (divide it by 10) and getting the last digit each time.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># S2 - Using Loop
+</span><span class="kn">import</span> <span class="nn">math</span>
+<span class="k">def</span> <span class="nf">nth_digit_of_integer</span><span class="p">(</span><span class="n">integer</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="c1"># logic can be understood better in the illustration below
+</span>    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># mod (%) operator returns remainder after
+</span>        <span class="c1">#   dividing by the number to it's right - here it's 10
+</span>        <span class="n">last_digit</span> <span class="o">=</span> <span class="n">integer</span> <span class="o">%</span> <span class="mi">10</span>
+        <span class="c1"># math.floor() rounds any foating point value to
+</span>        <span class="c1">#   an integer, such that integer is lower than the given float
+</span>        <span class="c1">#   e.g: 
+</span>        <span class="c1">#   math.floor(8.99) == 8
+</span>        <span class="c1">#   math.floor(2.12) == 2
+</span>        <span class="n">integer</span> <span class="o">=</span> <span class="n">math</span><span class="p">.</span><span class="n">floor</span><span class="p">(</span><span class="n">integer</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">last_digit</span></code></pre></figure>
+
+<p>Here is an illustration detailing the logic above,
+<a href="/assets/overanalysing-programming-problems-nth-digit-of-an-integer/Problem1-Solution2_While_loop-800cc0b8aed9fcc17f98ad171e49066930eef113d329ffcd6f36fca4dc3e98bc.png">
+  <img src="/assets/overanalysing-programming-problems-nth-digit-of-an-integer/Problem1-Solution2_While_loop-800cc0b8aed9fcc17f98ad171e49066930eef113d329ffcd6f36fca4dc3e98bc.png" alt="Problem 1 - Solution 2 : Reduce by 10 (Loop)" class="zooming" data-rjs="/assets/overanalysing-programming-problems-nth-digit-of-an-integer/Problem1-Solution2_While_loop-800cc0b8aed9fcc17f98ad171e49066930eef113d329ffcd6f36fca4dc3e98bc.png" data-zooming-width="661" data-zooming-height="941" />
+</a></p>
+
+<p>This is a possible solution. It does get solved in O(n) time but there is an even better solution out there (no it’s not recursion).</p>
+
+<h2 id="solution-3--using-recursion">Solution 3 : Using Recursion</h2>
+<p>Often recursion is not the best way to go by for solving problems, as they do more harm than good. This is due to the fact that, with each call there is a stack call made, which adds overhead to the solution. Still, they are extremely fun to implement. Same problem can also be solved using recursion as,</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># S3 - Using Recursion
+</span><span class="k">def</span> <span class="nf">nth_digit_of_integer</span><span class="p">(</span><span class="n">integer</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">integer</span> <span class="o">%</span> <span class="mi">10</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">nth_digit_of_integer</span><span class="p">(</span><span class="n">integer</span> <span class="o">//</span> <span class="mi">10</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span></code></pre></figure>
+
+<p>Recursion works in ways similar to loops. Just instead of reducing inside a loop, we reduce and re-call the same function. Again an illustration to simplify this,
+<a href="/assets/overanalysing-programming-problems-nth-digit-of-an-integer/Problem1-Solution3_Recursion-5dec9b94d71fb89c39ca3dce0690df096cb66103b07a229545fec82b7007a91e.png">
+  <img src="/assets/overanalysing-programming-problems-nth-digit-of-an-integer/Problem1-Solution3_Recursion-5dec9b94d71fb89c39ca3dce0690df096cb66103b07a229545fec82b7007a91e.png" alt="Problem 1 - Solution 2 : Reduce by 10 (Recursion)" class="zooming" data-rjs="/assets/overanalysing-programming-problems-nth-digit-of-an-integer/Problem1-Solution3_Recursion-5dec9b94d71fb89c39ca3dce0690df096cb66103b07a229545fec82b7007a91e.png" data-zooming-width="692" data-zooming-height="422" />
+</a></p>
+
+<h2 id="solution-4--mathematically">Solution 4 : Mathematically</h2>
+<p>Usually the ones that is not easy to come up with, but also the ones that are the most efficient of all. If this is what you used to solve this problem, then kudos - “You are a mathematical Nerd!”</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># S4 - Mathematically
+</span><span class="kn">import</span> <span class="nn">math</span>
+<span class="k">def</span> <span class="nf">nth_digit_of_integer</span><span class="p">(</span><span class="n">integer</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="c1"># below solution might seem complex at first but it is
+</span>    <span class="c1">#   actually a lot simpler
+</span>    <span class="c1"># here's an explainer, 
+</span>    <span class="c1">#   math.pow(10, 3-1) -&gt; returns 10 raise to 2 = 100
+</span>    <span class="c1">#   1975 / 100 -&gt; returns 19.75
+</span>    <span class="c1">#   math.floor(19.75) -&gt; returns 19
+</span>    <span class="c1">#   19 % 10 -&gt; returns 9
+</span>    <span class="k">return</span> <span class="n">math</span><span class="p">.</span><span class="n">floor</span><span class="p">(</span><span class="n">integer</span> <span class="o">/</span> <span class="n">math</span><span class="p">.</span><span class="nb">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="o">%</span> <span class="mi">10</span></code></pre></figure>
+
+<p>Also, these type of solutions are the most boring and requires you to have a really good mathematical fundamentals!</p>
+
+<p>That actually concludes Problem 1, but we still have issues in all our solutions. We never thought about error handlings…</p>
+
+<h2 id="error-handling">Error Handling</h2>
+
+<p>Now,</p>
+<ol>
+  <li>What if <code class="highlighter-rouge">n</code> provided is greater than our integer’s digit size?</li>
+  <li>What if <code class="highlighter-rouge">n</code> is <code class="highlighter-rouge">0</code> or a negative number like <code class="highlighter-rouge">-3</code></li>
+</ol>
+
+<p>Some of our solutions would certainly fail for them right? I will add a few more test-cases to cater to this scenario. Also since it’s not clearly given in problem statement as to what to do in such cases, let’s just return <code class="highlighter-rouge">-1</code>.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># Nth Digit of an Integer
+</span><span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="k">def</span> <span class="nf">nth_digit_of_integer</span><span class="p">(</span><span class="n">integer</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="c1"># write your logic here
+</span>
+<span class="k">class</span> <span class="nc">TestNthDigitOfInteger</span><span class="p">(</span><span class="n">unittest</span><span class="p">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_with_proper_inputs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="mi">9</span> <span class="o">==</span> <span class="n">nth_digit_of_integer</span><span class="p">(</span><span class="mi">1975</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="mi">5</span> <span class="o">==</span> <span class="n">nth_digit_of_integer</span><span class="p">(</span><span class="mi">1975</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="mi">6</span> <span class="o">==</span> <span class="n">nth_digit_of_integer</span><span class="p">(</span><span class="mi">654321</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="o">-</span><span class="mi">1</span> <span class="o">==</span> <span class="n">nth_digit_of_integer</span><span class="p">(</span><span class="mi">654321</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="o">-</span><span class="mi">1</span> <span class="o">==</span> <span class="n">nth_digit_of_integer</span><span class="p">(</span><span class="mi">654321</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="o">-</span><span class="mi">1</span> <span class="o">==</span> <span class="n">nth_digit_of_integer</span><span class="p">(</span><span class="mi">654321</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span> </code></pre></figure>
+
+<p>Take this up like an assignment, pick one of your favorite solution from above (or your own solution) and try to cater to newly added test-cases.</p>
+
+<h2 id="bonus-problems">Bonus Problems</h2>
+
+<h3 id="problem--nth-digit-of-an-integer-counted-from-left">Problem : Nth digit of an Integer (counted from left)</h3>
+<blockquote>
+  <p><strong>Statement :</strong> Given an integer find the digit at Nth place from left, with index starting from 1. E.g: If <code class="highlighter-rouge">Integer=1975</code> and <code class="highlighter-rouge">N=3</code>, then the output should be <code class="highlighter-rouge">7</code>.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Illustration :</strong>
+<a href="/assets/overanalysing-programming-problems-nth-digit-of-an-integer/Nth_digit_of_an_Integer_Reverse_Illustration-abf7844869481d14909b5610a4b784081e121adfecf0919672fc642f56c57647.png">
+  <img src="/assets/overanalysing-programming-problems-nth-digit-of-an-integer/Nth_digit_of_an_Integer_Reverse_Illustration-abf7844869481d14909b5610a4b784081e121adfecf0919672fc642f56c57647.png" alt="Nth Digit Of an Integer (Counted From Left)" class="zooming" data-rjs="/assets/overanalysing-programming-problems-nth-digit-of-an-integer/Nth_digit_of_an_Integer_Reverse_Illustration-abf7844869481d14909b5610a4b784081e121adfecf0919672fc642f56c57647.png" data-zooming-width="721" data-zooming-height="236" />
+</a></p>
+</blockquote>
+
+<p>That concludes this article. Thanks for your patience! ❤️</p>
+
+<p>Any mistakes I made? Constructive criticism is welcome! Feel free to contact me on <a href="https://www.linkedin.com/in/gauthamchettiar">LinkedIn</a></p>
+
+<p> </p>
+
+<h1 id="appendix">Appendix</h1>
+<h2 id="python--strings-and-indices">Python : Strings and Indices</h2>
+<p>Some Python features are really unique to the language, Strings can be traversed like a list and there are negative indexes in python. Explained in detail below,</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">integer</span> <span class="o">=</span> <span class="mi">1975</span>
+<span class="c1"># string conversion in python is simple, just call str() function
+</span><span class="n">integer_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">integer</span><span class="p">)</span> <span class="c1"># integer_str containes '1975' string
+# characters in strings can be accessed just like an array
+</span><span class="n">integer_str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># this would return -&gt; 1
+</span><span class="n">integer_str</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># this would return -&gt; 9
+# unlike other languages, python include negative indexes
+# negative indexes are used to traverse an array/list/string in reverse
+</span><span class="n">integer_str</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># this would return -&gt; 5
+</span><span class="n">integer_str</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># this would return -&gt; 7</span></code></pre></figure>
+
+<h2 id="python--mathfloor-and-mathpow-shortcuts">Python : math.floor() and math.pow() shortcuts</h2>
+<p>Python does have some nifty tricks up it’s sleeve. One of them are 2 commonly used operators that are unique to the language,</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">floored_float</span> <span class="o">=</span> <span class="n">math</span><span class="p">.</span><span class="n">floor</span><span class="p">(</span><span class="mi">1975</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">floored_float_2</span> <span class="o">=</span> <span class="mi">1975</span> <span class="o">//</span> <span class="mi">10</span>
+<span class="c1"># (//) operator is similar to (/) division operator but
+#   instead of returning a float, it returns a floored integer
+#   this is quite useful in scenarios where only
+#   quotient is expected out of a division
+</span><span class="n">raise_to_2</span> <span class="o">=</span> <span class="n">math</span><span class="p">.</span><span class="nb">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">raise_ro_2_operator</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="c1"># (**) operator is alternative to math.pow()</span></code></pre></figure>
+
+<p> </p>
+
+<h1 id="index">Index</h1>
+<ul>
+  <li><a href="#problem--nth-digit-of-an-integer">Problem : Nth Digit of an Integer</a>
+    <ul>
+      <li><a href="#solution-1--pythonic-way">Solution 1 : Pythonic way</a></li>
+      <li><a href="#solution-2--using-loop">Solution 2 : Using Loop</a></li>
+      <li><a href="#solution-3--using-recursion">Solution 3 : Using Recursion</a></li>
+      <li><a href="#solution-4--mathematically">Solution 4 : Mathematically</a></li>
+      <li><a href="#error-handling">Error Handling</a></li>
+    </ul>
+  </li>
+  <li><a href="#appendix">Appendix</a>
+    <ul>
+      <li><a href="#python--strings-and-indices">Python : Strings and Indices</a></li>
+      <li><a href="#python--mathfloor-and-mathpow-shortcuts">Python : math.floor() and math.pow() shortcuts</a></li>
+    </ul>
+  </li>
+</ul>
+
+          </div>
+          <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=%F0%9F%A7%A9+OPP+%7C+Nth+Digit+of+an+Integer+%7C+[EASY]%20-%20https://gauthamchettiar.com/posts/overanalyzing-programming-problems-nth-digit-of-an-integer" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://gauthamchettiar.com/posts/overanalyzing-programming-problems-nth-digit-of-an-integer" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a>
+          </div>
+
+          
+        </article>
+        <footer class="footer ">
+  <p>
+    Sribbled with 💙 !
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  
+
+<script type="text/javascript" src="/assets/vendor-130c9c254effc51f3283620bc635851da7b99c20901216948f11ba72ee13317f.js"></script>
+
+
+  <script type="text/javascript" src="/assets/webfonts-96493456d319d1bf419afdf8701552d4d486fee6afd304897d4fd81eb4e0cc0b.js"></script>
+
+
+
+
+<script type="text/javascript" src="/assets/application-cfde13ac81ddaf4351b2e739603e2baf688d0fcc9aba613fe62bbb1c7b037fb9.js"></script>
+
+
+</body>
+</html>
