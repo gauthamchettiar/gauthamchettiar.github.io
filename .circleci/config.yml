@@ -30,12 +30,13 @@ jobs:
             find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
             mv _site/* .
             rm -R _site/
+            ls -l
             git config credential.helper 'cache --timeout=120'
             git config user.email "${GITHUB_EMAIL}"
             git config user.name "${GITHUB_USERNAME}"
             git add -fA
             git commit --allow-empty -m "Page release ${CIRCLE_BUILD_NUM} from ${CIRCLE_BRANCH}"
-            git push -q --tags https://${GITHUB_TOKEN}@github.com/gauthamchettiar/gauthamchettiar.github.io.git
+            git push -f -q origin gh-pages
             git checkout -
             yarn install --modules-folder ./_assets/yarn
 
@@ -74,9 +75,12 @@ workflows:
   build-and-deploy:
     jobs:
       - build
-      - deploy:
-          requires:
-            - build
-          filters:
+        filters:
             branches:
               only: master
+      # - deploy:
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only: master
