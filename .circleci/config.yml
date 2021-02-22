@@ -20,13 +20,13 @@ jobs:
             yarn install --modules-folder ./_assets/yarn
             bundle exec jekyll build
       - run:
-          name: Deploy to gh-pages
+          name: Deploy to gh-pages Branch
           command: |
             mkdir ../_site
 
             cp -r _site/* .git .gitignore ../_site
             
-            rm -R _site/
+            rm -rf _site/ _assets/yarn/
             
             ls -l
 
@@ -36,10 +36,15 @@ jobs:
             git remote set-url origin https://${GITHUB_TOKEN}@github.com/gauthamchettiar/gauthamchettiar.github.io.git
             
             git checkout gh-pages
+            
+            rm -rf *
+            mv ../_site/* .
 
             git add -fA
             git commit --allow-empty -m "Page release ${CIRCLE_BUILD_NUM} from ${CIRCLE_BRANCH}"
             git push -f -q origin gh-pages
+            git tag -a "release_${CIRCLE_BRANCH}_${CIRCLE_BUILD_NUM}" -m "Release based on build ${CIRCLE_BUILD_NUM}"
+            git push -q --tags https://${GITHUB_TOKEN}@github.com/gauthamchettiar/gauthamchettiar.github.io.git
 
             # git config credential.helper 'cache --timeout=120'
             # git config user.email "${GITHUB_EMAIL}"
