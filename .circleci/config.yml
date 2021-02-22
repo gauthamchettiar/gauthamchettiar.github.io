@@ -19,9 +19,6 @@ jobs:
           name: Jekyll build
           command: bundle exec jekyll build
       - run:
-          name: Remove Site Node Modules
-          command: rm -R ./_site/node_modules
-      - run:
           name: HTMLProofer tests
           command: |
             bundle exec htmlproofer ./_site \
