@@ -4,6 +4,9 @@ version: 2
 jobs:
   build:
     <<: *defaults
+    branches:
+      only:
+        - master
     docker:
       - image: starefossen/ruby-node
     environment:
