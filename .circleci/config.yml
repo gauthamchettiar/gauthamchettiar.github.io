@@ -18,20 +18,14 @@ jobs:
             bundle update
             npm install -g yarn
             yarn install --modules-folder ./_assets/yarn
-      # - run:
-      #     name: Jekyll build
-      #     command: bundle exec jekyll build
+            bundle exec jekyll build
       - run:
           name: Deploy to gh-pages
           command: |
-            ls -l
-            git checkout -b gh-pages
-            yarn install --modules-folder ./_assets/yarn
-            
-            bundle exec jekyll build
+            mkdir ../_site
 
-            find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
-            mv _site/* .
+            cp -r _site/* .git .gitignore ../_site
+            
             rm -R _site/
             
             ls -l
@@ -40,6 +34,8 @@ jobs:
             git config user.email "${GITHUB_EMAIL}"
             git config user.name "${GITHUB_USERNAME}"
             git remote set-url origin https://${GITHUB_TOKEN}@github.com/gauthamchettiar/gauthamchettiar.github.io.git
+            
+            git checkout gh-pages
 
             git add -fA
             git commit --allow-empty -m "Page release ${CIRCLE_BUILD_NUM} from ${CIRCLE_BRANCH}"
