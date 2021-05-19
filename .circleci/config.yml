@@ -19,15 +19,15 @@ jobs:
             npm install -g yarn
             yarn install --modules-folder ./_assets/yarn
             bundle exec jekyll build
-      - run:
-          name: HTMLProofer tests
-          command: |
-            bundle exec htmlproofer _site \
-              --only-4xx \
-              --allow-hash-href \
-              --assume-extension \
-              --check-opengraph \
-              --url-ignore "feed.xml"
+      # - run:
+      #     name: HTMLProofer tests
+      #     command: |
+      #       bundle exec htmlproofer _site \
+      #         --only-4xx \
+      #         --allow-hash-href \
+      #         --assume-extension \
+      #         --check-opengraph \
+      #         --url-ignore "feed.xml"
       - run:
           name: Deploy to gh-pages Branch
           command: |
