@@ -1,5 +1,5 @@
 ---
-title:  "🙋‍♂️ Game | I Made a 'Guess the Song' Quiz For Fun!"
+title:  "🎮 Game | I Made a 'Guess the Song' Quiz For Fun!"
 layout: post
 categories: [game]
 description: "A fun game that can be hosted at any party, ideal for those who loves 90s Bollywood songs."
