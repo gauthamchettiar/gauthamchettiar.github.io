@@ -7,6 +7,14 @@
     <atom:link href="https://gauthamchettiar.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>🙋‍♂️ Game | I Made a 'Guess the Song' Quiz For Fun!</title>
+        <description>That is themed off 90s Bollywood Songs.</description>
+        <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+        <link>https://gauthamchettiar.com/posts/i-made-a-guess-the-song-quiz-for-fun</link>
+        <guid isPermaLink="true">https://gauthamchettiar.com/posts/i-made-a-guess-the-song-quiz-for-fun</guid>
+      </item>
+    
+      <item>
         <title>🧩 OPP | Nth Digit of an Integer | [EASY]</title>
         <description>OPP or Overanalysing Programming Problems is a Series that explores different ways to solve a programming problem, this article explores - 'Nth Digit of an Integer'</description>
         <pubDate>Sun, 21 Feb 2021 00:00:00 +0000</pubDate>
