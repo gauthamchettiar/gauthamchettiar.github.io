@@ -1,13 +1,13 @@
 ---
 title:  "🧩 OPP | Nth Digit of an Integer | [EASY]"
 layout: post
-categories: [python, opp]
+categories: [python]
 image: /assets/img/P001/cover.png
 description: "OPP or Overanalysing Programming Problems is a Series that explores different ways to solve a programming problem, this article explores - 'Nth Digit of an Integer'"
 customexcerpt: "OPP or Overanalysing Programming Problems is a Series that explores different ways to solve a programming problem, this article explores - 'Nth Digit of an Integer'"
 ---
 ![Cover - Counting Stars](/assets/img/P001/cover.png)
-Illustration Source: "Counting Stars" from [https://undraw.co](https://undraw.co/)
+Illustration Source: "Counting Stars" from [https://undraw.co](https://undraw.co/){:target="_blank"}
 
 Just as I submitted my problem and got a green check across all the tests, I wondered - "How I could have improved it?"
 
@@ -32,7 +32,7 @@ Here's a simple illustration to understand the above problem statement,
 
 Before we start solving this problem, here's an empty method description in python to get you started with. Just copy it over to your preferred editor, code in your solution and RUN IT! 
 
-*Feeling Lazy? Same problem is available on [codewars.com - Find the nth Digit of a Number](https://www.codewars.com/kata/577b9960df78c19bca00007e) with well defined test-cases.*
+*Feeling Lazy? Same problem is available on [codewars.com - Find the nth Digit of a Number](https://www.codewars.com/kata/577b9960df78c19bca00007e){:target="_blank"} with well defined test-cases.*
 
 
 ```python

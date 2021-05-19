@@ -4,10 +4,10 @@ layout: post
 categories: [game]
 description: "A fun game that can be hosted at any party, ideal for those who loves 90s Bollywood songs."
 customexcerpt: "A fun game that can be hosted at any party, ideal for those who loves 90s Bollywood songs."
-image: "/assets/img/cover.jpg"
+image: "/assets/img/cover.png"
 ---
-![Cover](/assets/img/P002/cover.jpg)
-Photo by <a href="https://unsplash.com/@metelevan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andrey Metelev</a> on <a href="https://unsplash.com/s/photos/game?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+![Cover](/assets/img/P002/cover.png)
+Illustration Source: "Happy Music" from [https://undraw.co](https://undraw.co/){:target="_blank"}
 
 <p style='color:grey'>Disclaimer: I am always against using copyrighted images, but this project would have been incomplete without those. Feel free to ask me to take any image down or provide credit against any, I would be more than happy to oblige. This is more like a hobby project and won't and shouldn't be used for any commercial purpose.</p>
 
@@ -54,11 +54,11 @@ Hope that example would have given you a taste of the game, now let me dump ever
 <br><br><br><br><br><br><br>
 
 ## Link to Songs:
-1. [Tip Tip Barsa Paani](https://www.youtube.com/watch?v=BtlnpBb4O8E)
-2. [Dhak Dhak Karne Laga](https://www.youtube.com/watch?v=wWuqJI_kOLQ)
-3. [Chaiyya Chaiyya](https://www.youtube.com/watch?v=0v1It89cKxY)
-4. [Gore Gore Mukhde Pe Kala Kala Chasma](https://www.youtube.com/watch?v=Q_fpEt216FA)
-5. [Chehra Hai Ya Chand Khila](https://www.youtube.com/watch?v=_mzdkxnU4mU)
-6. [Yeh Haseen Wadiyan](https://www.youtube.com/watch?v=z-vcE-UTc-0)
-7. [Tu Hi Re](https://www.youtube.com/watch?v=R3J3IDgKOLM)
-8. [Tum Mile Dil Khile](https://www.youtube.com/watch?v=GtslrDs3RWY)
+1. [Tip Tip Barsa Paani](https://www.youtube.com/watch?v=BtlnpBb4O8E){:target="_blank"}
+2. [Dhak Dhak Karne Laga](https://www.youtube.com/watch?v=wWuqJI_kOLQ){:target="_blank"}
+3. [Chaiyya Chaiyya](https://www.youtube.com/watch?v=0v1It89cKxY){:target="_blank"}
+4. [Gore Gore Mukhde Pe Kala Kala Chasma](https://www.youtube.com/watch?v=Q_fpEt216FA){:target="_blank"}
+5. [Chehra Hai Ya Chand Khila](https://www.youtube.com/watch?v=_mzdkxnU4mU){:target="_blank"}
+6. [Yeh Haseen Wadiyan](https://www.youtube.com/watch?v=z-vcE-UTc-0){:target="_blank"}
+7. [Tu Hi Re](https://www.youtube.com/watch?v=R3J3IDgKOLM){:target="_blank"}
+8. [Tum Mile Dil Khile](https://www.youtube.com/watch?v=GtslrDs3RWY){:target="_blank"}
