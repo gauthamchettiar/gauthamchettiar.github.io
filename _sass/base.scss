@@ -7,6 +7,17 @@ $light-grey: #FDC975;;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: $light-grey;
+}
+
+::selection {
+  color: black;
+  background: $light-grey;
+}
+
 html{
   scroll-behavior: smooth;
 }
