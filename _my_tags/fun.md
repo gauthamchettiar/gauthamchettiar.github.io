@@ -1,0 +1,4 @@
+---
+slug: fun
+name: fun
+---
