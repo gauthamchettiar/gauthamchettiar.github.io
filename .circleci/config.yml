@@ -36,7 +36,7 @@ jobs:
             cp -r _site/* .git .gitignore ../_site
             rm -rf _site/ _assets/yarn/
             mkdir ../_site/.circleci
-            cp .circleci/dummy.yml ../_site/.circleci/config.yml
+            cp dummy.yml ../_site/.circleci/config.yml
             pwd
             ls -la
 
@@ -82,5 +82,4 @@ workflows:
       build:
         filters:
           branches:
-            only: 
-              - master
+            only: master
