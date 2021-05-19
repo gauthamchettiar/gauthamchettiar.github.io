@@ -1,4 +1,0 @@
----
-slug: game
-name: game
----

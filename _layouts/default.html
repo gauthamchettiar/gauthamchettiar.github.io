@@ -1,16 +1,18 @@
 <!doctype html>
-<html lang="en">
-{% include head.html %}
+<html>
+<head>
+  {% include head.html %}
+</head>
 <body>
-  <main>
-    <div class="grid grid-centered">
-      <div class="grid-cell">
-        {% include navigation.html %}
-        {{ content }}
-        {% include footer.html %}
-      </div>
+
+  <div class="container">
+    {% include header.html %}
+
+    <div class="post-container">
+      {{ content }}
     </div>
-  </main>
-  {% include javascripts.html %}
+  </div>
+
+{%- include footer.html -%}
 </body>
 </html>
