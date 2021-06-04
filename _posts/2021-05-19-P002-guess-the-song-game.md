@@ -57,10 +57,13 @@ Hope that example would have given you a taste of the game, now let me dump ever
 ![Guess the song Image 10](/assets/img/P002/guess_the_song_10.png)
 {% include spoiler.html head="Reveal Answer!" text="Song : Sach Keh Raha hai Deewana" sub-text="How? : Sach - Keh - Ra - Ha - Hi - Diva - Na"%}
 
+<br><br>
+
 That's it for now! I will keep adding as and when I find time to create one. 
 
-Have a nice day All! 
-<br><br><br><br><br><br><br>
+Till then, Sayonara~! 
+
+<br><br>
 
 ## Link to Songs:
 1. [Tip Tip Barsa Paani](https://www.youtube.com/watch?v=BtlnpBb4O8E){:target="_blank"}
