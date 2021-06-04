@@ -26,38 +26,40 @@ Below Example would actually make it clear,
 ## Game Begins
 Hope that example would have given you a taste of the game, now let me dump everything I got -
 
-![](/assets/img/P002/guess_the_song_1.png)
+![Guess the song Image 01](/assets/img/P002/guess_the_song_01.png)
 {% include spoiler.html head="Reveal Answer!" text="Song : Chura Ke Dil Mera Goriya Chali" sub-text="How? : Chura - Key - Dil - Mera - Go - Rhea (she is 'Rhea Chakraborty') - Chali"%}
 <br>
-![](/assets/img/P002/guess_the_song_2.png)
+![Guess the song Image 02](/assets/img/P002/guess_the_song_02.png)
 {% include spoiler.html head="Reveal Answer!" text="Song : Dhak Dhak Karne Laga" sub-text="How? : Dhak - Dhak - Car - Knee - Laga') - Chali" %}
 <br>
-![](/assets/img/P002/guess_the_song_3.png)
+![Guess the song Image 03](/assets/img/P002/guess_the_song_03.png)
 {% include spoiler.html head="Reveal Answer!" text="Song : Chal Chaiya Chiaya" sub-text="How? : Chal - Chai - Yah (he is 'Yahya Yahya Bootwala') - Chai - Yah" %}
 <br>
-![](/assets/img/P002/guess_the_song_4.png)
+![Guess the song Image 04](/assets/img/P002/guess_the_song_04.png)
 {% include spoiler.html head="Reveal Answer!" text="Song : Gore Gore Mukhde Pe Kala Kala Chashma" sub-text="How? : Gore - Gore - Mukhde - Pay - Kala - Kala - Chass - Maa"%}
 <br>
-![](/assets/img/P002/guess_the_song_5.png)
+![Guess the song Image 05](/assets/img/P002/guess_the_song_05.png)
 {% include spoiler.html head="Reveal Answer!" text="Song : Chehra Hai Ya Chand Khila" sub-text="How? : Chehra - Hi -Yah - Chand - Killa"%}
 <br>
-![](/assets/img/P002/guess_the_song_6.png)
+![Guess the song Image 06](/assets/img/P002/guess_the_song_06.png)
 {% include spoiler.html head="Reveal Answer!" text="Song : Yeh Haseen Wadiyan Yeh Khula Aasman" sub-text="How? : Yeh - Hass - Seen - Vaad(a) - Diya - Yeh - Khula - Aasmaan"%}
 <br>
-![](/assets/img/P002/guess_the_song_7.png)
+![Guess the song Image 07](/assets/img/P002/guess_the_song_07.png)
 {% include spoiler.html head="Reveal Answer!" text="Song : Zara Zara Behekta Hai" sub-text="How? : Zz - Ra - Zz - Ra - Behekta (Wander) - Hi - Smell (Mehekta) - Hi
 "%}
 <br>
-![](/assets/img/P002/guess_the_song_8.png)
+![Guess the song Image 08](/assets/img/P002/guess_the_song_08.png)
 {% include spoiler.html head="Reveal Answer!" text="Song : Tu Mile Dil Khile Aur Jeene Ko Kya Chahiye" sub-text="How? : Tu - Mile - Dill - Khile - Aur - Gene - Ko - Kya - Chai - Yay"%}
 <br>
-![](/assets/img/P002/guess_the_song_9.png)
+![Guess the song Image 09](/assets/img/P002/guess_the_song_09.png)
 {% include spoiler.html head="Reveal Answer!" text="Song : Tu Hi Re Tu Hi Re" sub-text="How? : Tu - Heere - Tu - Heere"%}
 <br>
-![](/assets/img/P002/guess_the_song_10.png)
+![Guess the song Image 10](/assets/img/P002/guess_the_song_10.png)
 {% include spoiler.html head="Reveal Answer!" text="Song : Sach Keh Raha hai Deewana" sub-text="How? : Sach - Keh - Ra - Ha - Hi - Diva - Na"%}
 
-<br><br><br><br><br><br><br>
+That's it for now! I will keep adding as and when I find time to create one. 
+
+Have a nice day All! 
 <br><br><br><br><br><br><br>
 
 ## Link to Songs:
