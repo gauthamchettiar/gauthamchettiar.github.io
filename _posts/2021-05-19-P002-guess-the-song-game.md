@@ -2,9 +2,9 @@
 title:  "🎮 Game | I Made a 'Guess the Song' Quiz For Fun!"
 layout: post
 categories: [game]
+image: /assets/img/P002/cover.png
 description: "A fun game that can be hosted at any party, ideal for those who loves 90s Bollywood songs."
 customexcerpt: "A fun game that can be hosted at any party, ideal for those who loves 90s Bollywood songs."
-image: "/assets/img/cover.png"
 ---
 ![Cover](/assets/img/P002/cover.png)
 Illustration Source: "Happy Music" from [https://undraw.co](https://undraw.co/){:target="_blank"}
@@ -45,10 +45,17 @@ Hope that example would have given you a taste of the game, now let me dump ever
 {% include spoiler.html head="Reveal Answer!" text="Song : Yeh Haseen Wadiyan Yeh Khula Aasman" sub-text="How? : Yeh - Hass - Seen - Vaad(a) - Diya - Yeh - Khula - Aasmaan"%}
 <br>
 ![](/assets/img/P002/guess_the_song_7.png)
-{% include spoiler.html head="Reveal Answer!" text="Song : Tu Hi Re Tu Hi Re" sub-text="How? : Tu - Heere - Tu - Heere"%}
+{% include spoiler.html head="Reveal Answer!" text="Song : Zara Zara Behekta Hai" sub-text="How? : Zz - Ra - Zz - Ra - Behekta (Wander) - Hi - Smell (Mehekta) - Hi
+"%}
 <br>
 ![](/assets/img/P002/guess_the_song_8.png)
 {% include spoiler.html head="Reveal Answer!" text="Song : Tu Mile Dil Khile Aur Jeene Ko Kya Chahiye" sub-text="How? : Tu - Mile - Dill - Khile - Aur - Gene - Ko - Kya - Chai - Yay"%}
+<br>
+![](/assets/img/P002/guess_the_song_9.png)
+{% include spoiler.html head="Reveal Answer!" text="Song : Tu Hi Re Tu Hi Re" sub-text="How? : Tu - Heere - Tu - Heere"%}
+<br>
+![](/assets/img/P002/guess_the_song_10.png)
+{% include spoiler.html head="Reveal Answer!" text="Song : Sach Keh Raha hai Deewana" sub-text="How? : Sach - Keh - Ra - Ha - Hi - Diva - Na"%}
 
 <br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br>
@@ -60,5 +67,7 @@ Hope that example would have given you a taste of the game, now let me dump ever
 4. [Gore Gore Mukhde Pe Kala Kala Chasma](https://www.youtube.com/watch?v=Q_fpEt216FA){:target="_blank"}
 5. [Chehra Hai Ya Chand Khila](https://www.youtube.com/watch?v=_mzdkxnU4mU){:target="_blank"}
 6. [Yeh Haseen Wadiyan](https://www.youtube.com/watch?v=z-vcE-UTc-0){:target="_blank"}
-7. [Tu Hi Re](https://www.youtube.com/watch?v=R3J3IDgKOLM){:target="_blank"}
+7. [Zara Zara Behekta Hai](https://www.youtube.com/watch?v=a71xD6RyOok){:target="_blank"}
 8. [Tum Mile Dil Khile](https://www.youtube.com/watch?v=GtslrDs3RWY){:target="_blank"}
+9. [Tu Hi Re](https://www.youtube.com/watch?v=R3J3IDgKOLM){:target="_blank"}
+10. [Sach Keh Raha hai Deewana](https://www.youtube.com/watch?v=nya9D8kluE0){:target="_blank"} 
