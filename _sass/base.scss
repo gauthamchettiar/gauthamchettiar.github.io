@@ -1,6 +1,6 @@
 //Colors
 $base: #a2a2a2;
-$light-grey: #FDC975;;
+$light-grey: #FDC975;
 
 * {
   -webkit-box-sizing: border-box;
@@ -8,15 +8,6 @@ $light-grey: #FDC975;;
           box-sizing: border-box;
 }
 
-::-moz-selection { /* Code for Firefox */
-  color: black;
-  background: $light-grey;
-}
-
-::selection {
-  color: black;
-  background: $light-grey;
-}
 
 html{
   scroll-behavior: smooth;
@@ -120,4 +111,33 @@ blockquote {
 .archive-link:hover{
   text-decoration: underline;
 }
-//End Archive
+
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: $light-grey;
+}
+
+::selection {
+  color: black;
+  background: $light-grey;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 24px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
