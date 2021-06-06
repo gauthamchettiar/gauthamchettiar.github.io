@@ -13,7 +13,7 @@ I had decided to attempt AWS Solutions Architect Exam. So, after doing some init
 
 VPC being one of the most important sections of AWS, I had to learn it as thoroughly as I could. I read through every material I had and created my own little paper notes. This post includes those notes, just digitalized!
 
-*To read through this, you might have to know the basics of AWS - at least an overview of all the services offered. Also, feel free to save any diagrams given here, it's for your reference!*
+*To read through this, you might have to know the basics of AWS. At least an overview of all the services offered. Also, feel free to save any diagrams given here, it's for your reference!*
 
 <br>
 
@@ -41,9 +41,9 @@ There are several benefits of this...
 
 Let's say a massive cyclone hit an *AZ*, what do you think will happen? 
 
-Well, the location for each *AZ* has been chosen such that they are at least 60 miles apart! So even if an *AZ* goes down due to some catastrophe, there is a very low chance that same would hit another *AZ*. Thus, there are multiple *AZs* to act as a backup for any failed *AZ*.
+Well, the location for each *AZ* has been chosen such that they are at least 60 miles (96.56 km) apart! So even if an *AZ* goes down due to some catastrophe, there is a very low chance that same would hit another *AZ*. Thus, there are multiple *AZs* to act as a backup for any failed *AZ*.
 
-This hierarchy of *Regions, AZs, and Datacenters* can be seen in the below illustration,
+This hierarchy of *Regions, AZs, and Data Centers* can be seen in the below illustration,
 ![](assets/img/P004/01_01.png)
 
 ---
@@ -87,11 +87,11 @@ Association between *Subnets* and AZ is similar to that of *VPC* and Regions, **
 {:style="border: 4px solid #FDC975"}
 
 ## What should I take care of before deploying any resource?
-Here's a beautiful diagram of AWS resources and how they interact at various levels of networking -
+Here's a beautiful diagram of AWS resources and how they interact at various levels of networking –
 
 ![](assets/img/P004/03_01.png)
 
-If you haven't heard of all the services yet, that's okay. Just revisit this once you go through them later. But do remember, it's important to know - where your resource is getting deployed.
+If you haven't heard of all the services yet, that's okay. Just revisit this once you go through them later. But do remember, it's important to know – where your resource is getting deployed.
 
 From the above diagram,
 1. **EC2 Instances** and **RDS Instances** are deployed on an *AZ*. So when you create one, you need to choose *one VPC* and *one Subnet* for both.
@@ -99,10 +99,10 @@ From the above diagram,
 3. **SNS, S3, Lambda, API Gateway, DynamoDB, and SQS** are all managed services by AWS, that is deployed on a *Region*. You only need to choose a *Region* and are not required to choose any *VPC*.
 4. **IAM and Route53** are global services, that can be accessed from any *Region*.
 
-AWS offers a lot of services, but I have only included the most important ones here. Before you go through any service, just try to read - how it interacts with various networking components of AWS. This can immensely help you in cracking your certification exam.
+AWS offers a lot of services, but I have only included the most important ones here. Before you go through any service, just try to read – how it interacts with various networking components of AWS. This can immensely help you in cracking your certification exam.
 
 ## How to identify my resource?
-Usually, any computer which is connected over a network has an IP Address assigned to it. Using this IP Address it's possible to identify and communicate with it. Similarly in AWS, every EC2 instance has an IP Address associated with it. In fact, there are 2 IP addresses, Private IP (for when communication is required to be done within VPC) and Public IP (for when an instance has to be accessed over the internet).
+Usually, any computer which is connected over a network has an IP Address assigned to it. Using this IP Address it's possible to identify and communicate with it. Similarly, in AWS, every EC2 instance has an IP Address associated with it. In fact, there are 2 IP addresses, Private IP (for when communication is required to be done within VPC) and Public IP (for when an instance has to be accessed over the internet).
 
 When you create your VPC you are asked to assign a CIDR block to it. Wondering what's that? Let me explain.
 
@@ -116,19 +116,19 @@ In the above example, your first 16 bits are assigned for the network (they act 
 
 Here are some examples to get started with,
 
-- **`10.10.0.0/16`**  - `10.10.0.0` to `10.10.255.255` (65,536 Total IPs)
+- **`10.10.0.0/16`**  – `10.10.0.0` to `10.10.255.255` (65,536 Total IPs)
 
 ![](assets/img/P004/04_02.png)
 
-- **`172.16.0.0/12`** - `172.16.0.0` to `172.31.255.255` (1,048,576 Total IPs)
+- **`172.16.0.0/12`** – `172.16.0.0` to `172.31.255.255` (1,048,576 Total IPs)
 
 ![](assets/img/P004/04_03.png)
 
-- **`192.168.0.0/28`** - `192.168.0.0` to `192.168.0.15` (16 Total IPs)
+- **`192.168.0.0/28`** – `192.168.0.0` to `192.168.0.15` (16 Total IPs)
 
 ![](assets/img/P004/04_04.png)
 
-Hopefully, that made it clear. In case you are bad at calculations (like me 😜), you can use this nifty tool - [Subnet Calculator](https://mxtoolbox.com/subnetcalculator.aspx). This makes it easier to calculate the range of your CIDR block.
+Hopefully, that made it clear. In case you are bad at calculations (like me 😜), you can use this nifty tool – [Subnet Calculator](https://mxtoolbox.com/subnetcalculator.aspx). This makes it easier to calculate the range of your CIDR block.
 
 As I was previously said, when you create a VPC, you are asked to assign a CIDR block. Every subnet that you create will also require a CIDR block, as you might have guessed. **Subnet's CIDR block should be within its parent VPC's CIDR block range**. 
 
@@ -137,9 +137,9 @@ As I was previously said, when you create a VPC, you are asked to assign a CIDR 
 
 ### ✍ Remember
 1. The allowed CIDR Range in AWS is anywhere between `/16` and `/28`, which corresponds between `65,536` IPs and `16` IPs.
-2. The above CIDR range is only for IPv4 addresses. It's also possible to set an IPv6 CIDR range, but it's not mandatory to create a VPC. In case you are new to networking, here's a nice video explaining it for you - [Internet Protocol - IPv4 vs IPv6 as Fast As Possible](https://www.youtube.com/watch?v=aor29pGhlFE).
+2. The above CIDR range is only for IPv4 addresses. It's also possible to set an IPv6 CIDR range, but it's not mandatory to create a VPC. In case you are new to networking, here's a nice video explaining it for you – [Internet Protocol - IPv4 vs IPv6 as Fast As Possible](https://www.youtube.com/watch?v=aor29pGhlFE).
 3. Once a VPC is created with a certain CIDR range, you cannot modify it later. The only option you have is to create a new VPC as per the new requirement and migrate your application from an older VPC to a newer one.
-4. **IMPORTANT:** Whenever you create a **Subnet**, AWS reserves **the first four IPs** and **last IP** for internal networking purposes. So whenever you calculate the total available IPs you might have to **reduce 5 IPs** from that count, as those are reserved. (e.g: for `10.0.0.0/24`, following IPs are reserved - `10.0.0.1`, `10.0.0.2`, `10.0.0.3`, `10.0.0.4` and `10.0.0.255`, thus out of `256 IPs` only `251 IPs` are actually available.)
+4. **IMPORTANT:** Whenever you create a **Subnet**, AWS reserves **the first four IPs** and **last IP** for internal networking purposes. So whenever you calculate the total available IPs you might have to **reduce 5 IPs** from that count, as those are reserved. (e.g: for `10.0.0.0/24`, following IPs are reserved – `10.0.0.1`, `10.0.0.2`, `10.0.0.3`, `10.0.0.4` and `10.0.0.255`, thus out of `256 IPs` only `251 IPs` are actually available.)
 
 ---
 {:style="border: 4px solid #FDC975"}
@@ -162,7 +162,7 @@ So, how does a *Route Table* look like?
 
 If you had created a VPC with CIDR `10.10.0.0/16`, its route table will look like the one above.
 
-As you can see, *Route Table* only consists of 2 columns - **Destination** and **Target**. Whenever any instance tries to access any IP address from the given CIDR range, it will forward the request to a local network (i.e: within your VPC).
+As you can see, *Route Table* only consists of 2 columns – **Destination** and **Target**. Whenever any instance tries to access any IP address from the given CIDR range, it will forward the request to a local network (i.e: within your VPC).
 
 Here's a simple diagram on how routing will happen between 2 instances inside a VPC, For the below example let's consider that instance with IP `10.10.0.12` is trying to access an instance with IP `10.10.1.8`.
 
@@ -170,7 +170,7 @@ Here's a simple diagram on how routing will happen between 2 instances inside a 
 
 Given Router is invisible to us, whenever you make a request from one of your instances to another, the request goes through the Router that in turn refers to the *Route Table* created by you or the default one in this case. Then as per *Route Table* traffic will be routed to the destination, which is `local` in this example.
 
-*Route Table* may not look very useful now, that is because we are yet to discuss various components that would require a *Route Table* entry to work. which mostly include gateway services like - Internet Gateway (service that allows instances in VPC to access the internet), VPC Peering (service that allows instances to connect to your local infrastructure), and NAT Gateway (service that again allows instances to access the internet but without assigning a Public IP to instances).
+*Route Table* may not look very useful now, that is because we are yet to discuss various components that would require a *Route Table* entry to work. Which mostly include gateway services like – Internet Gateway (service that allows instances in VPC to access the internet), VPC Peering (service that allows instances to connect to your local infrastructure), and NAT Gateway (service that again allows instances to access the internet but without assigning a Public IP to instances).
 
 
 ---
@@ -192,10 +192,10 @@ The Only way to remember the concepts given here is to get your hands dirty.
 
 AWS's interface keeps changing from time to time so it's pointless to include screenshots for creating a VPC or a Subnet, as it may get outdated in few months.
 
-Instead, I would suggest going through this, [VPC Getting Started](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html) - Here you will learn to create a VPC, launch an instance into your VPC, assign Elastic IP to your instance and access your instance. I know we haven't discussed Elastic IP yet, still, there's no harm in going through the link and trying it out.
+Instead, I would suggest going through this, [VPC Getting Started](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html) – Here you will learn to create a VPC, launch an instance into your VPC, assign Elastic IP to your instance and access your instance. I know we haven't discussed Elastic IP yet, still, there's no harm in going through the link and trying it out.
 
 ## That's it?
-Yes, VPC is a lot more than what's covered in this article. We still haven't looked into networking services that enable internet connectivity like - Internet Gateway (IGW), Network Address Translation (NAT), Elastic IP Address (EIP), etc. And also services that allow you to connect VPC to your local network, allowing you to securely access any resource. Well, those are topics for another day. 
+Yes, VPC is a lot more than what's covered in this article. We still haven't looked into networking services that enable internet connectivity like – Internet Gateway (IGW), Network Address Translation (NAT), Elastic IP Address (EIP), etc. And also services that allow you to connect VPC to your local network, allowing you to securely access any resource. Well, those are topics for another day. 
 
 I promise to cover VPC in its entirety any time in the future!
 
