@@ -3,8 +3,8 @@ title:  "☁️ AWS | Dabbling with VPC"
 layout: post
 categories: [aws]
 image: /assets/img/P004/cover.png
-description: "This is a beginner article, that focuses on AWS's VPC. If you just got into AWS and would like to crack any AWS Certification Exam, this could be extremely useful for you."
-customexcerpt: "This is a beginner article, that focuses on AWS's VPC. If you just got into AWS and would like to crack any AWS Certification Exam, this could be extremely useful for you."
+description: "This is a beginner article, that focuses on AWS's VPC. If you are looking to crack AWS Associate Certification Exams, this could be useful to you."
+customexcerpt: "This is a beginner article, that focuses on AWS's VPC. If you are looking to crack AWS Associate Certification Exams, this could be useful to you."
 ---
 ![Cover](assets/img/P004/cover.png)
 Illustration Source: "Connected World" from [https://undraw.co](https://undraw.co/){:target="_blank"}
