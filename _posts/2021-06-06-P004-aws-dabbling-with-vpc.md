@@ -3,8 +3,8 @@ title:  "☁️ AWS | Dabbling with VPC"
 layout: post
 categories: [aws]
 image: /assets/img/P004/cover.png
-description: "This is a beginner article, that focuses on AWS's VPC. If you are looking to crack AWS Associate Certification Exams, this could be useful to you."
-customexcerpt: "This is a beginner article, that focuses on AWS's VPC. If you are looking to crack AWS Associate Certification Exams, this could be useful to you."
+description: ""
+customexcerpt: "Learn about VPCs and networking around it, useful if you are trying to crack AWS-SAA-C02 Exam"
 ---
 ![Cover](assets/img/P004/cover.png)
 Illustration Source: "Connected World" from [https://undraw.co](https://undraw.co/){:target="_blank"}
@@ -35,13 +35,13 @@ Okay, Just Kidding! I don't expect you to fall for that. You must be at a level 
 
 AWS has logically clustered all its data centers. 
 1. One or Multiple **data centers** that are closely located are being called an **Availability Zone (AZ)** (N Data Centers 🔗 1 Availability Zone).
-2. Two or More **Availability Zones (AZ)** that are located in the same general location are being called **Regions** (N Availability Zones 🔗 1 Region)
+2. Two or More **Availability Zones (AZ)** that are located in the same general location are being called *Regions* (N Availability Zones 🔗 1 Region)
 
 There are several benefits of this... 
 
-Let's say a massive cyclone hit an *AZ*, what do you think will happen? 
+Let's say a massive cyclone hit an AZ, what do you think will happen? 
 
-Well, the location for each *AZ* has been chosen such that they are at least 60 miles (96.56 km) apart! So even if an *AZ* goes down due to some catastrophe, there is a very low chance that same would hit another *AZ*. Thus, there are multiple *AZs* to act as a backup for any failed *AZ*.
+Well, the location for each AZ has been chosen such that they are at least 60 miles (96.56 km) apart! So even if an AZ goes down due to some catastrophe, there is a very low chance that same would hit another AZ. Thus, there are multiple AZs to act as a backup for any failed AZ.
 
 This hierarchy of *Regions, AZs, and Data Centers* can be seen in the below illustration,
 ![](assets/img/P004/01_01.png)
@@ -50,26 +50,26 @@ This hierarchy of *Regions, AZs, and Data Centers* can be seen in the below illu
 {:style="border: 4px solid #FDC975"}
 
 ### ✍ Remember
-1. Costs associated with resources differ from *Region* to *Region*, because AWS generally discounts in *Regions* where it's cheaper to operate a data center. 
+1. Costs associated with resources differ from Region to Region, because AWS generally discounts in Regions where it's cheaper to operate a data center. 
 2. Not all services are available in all the Regions.
 3. Any resource spread across multiple AZs are considered to be Highly Available (i.e: even if an AZ goes down resource will continue working)
-4. AWS has separate *Regions* called `GovCloud` to be used by the US, only US Government organizations are allowed to use data centers in those *Regions*.
+4. AWS has separate Regions called `GovCloud` to be used by the US, only US Government organizations are allowed to use data centers in those Regions.
 5. When you choose a region for provisioning your resources, just keep following parameters in your mind,
-   - **Optimize Latency:** Make sure Users who will be primarily accessing your applications are closer to the region where you are provisioning your resource so that latency can be minimized. 
-   - **Minimize Costs:** As previously said, some services are cheaper in certain Regions. While this difference is not significant, it should be one of your deciding factors.
-   - **Address Regulatory Requirements:** Some governments have regulations that do not allow their citizen's data to be stored outside their country, such regulatory requirements must be considered as well.
+   - *Optimize Latency:* Make sure Users who will be primarily accessing your applications are closer to the region where you are provisioning your resource so that latency can be minimized. 
+   - *Minimize Costs:* As previously said, some services are cheaper in certain Regions. While this difference is not significant, it should be one of your deciding factors.
+   - *Address Regulatory Requirements:* Some governments have regulations that do not allow their citizen's data to be stored outside their country, such regulatory requirements must be considered as well.
 
 ---
 {:style="border: 4px solid #FDC975"}
 
 ## How to make sure my resources are isolated?
-It's possible to isolate your instances from others with the help of **Virtual Private Cloud (VPC)**. Consider *VPC* as a networking layer above your AWS resources, most of your AWS resources have to be assigned a *VPC*. With *VPC*, it's easier to govern how each of these resources communicates with each other and the world.
+It's possible to isolate your instances from others with the help of **VPC (Virtual Private Cloud)**. Consider VPC as a networking layer above your AWS resources, most of your AWS resources have to be assigned a VPC. With VPC, it's easier to govern how each of these resources communicates with each other and the world.
 
-*VPC* has a boundary, **you cannot span *VPCs* across multiple Regions** (1 VPC 🔗 1 Region). All resources provisioned within a VPC will be created in the same Region only. Since a Region may include multiple AZs, a *VPC* may include multiple AZs (1 VPC 🔗 N AZ). Also, **a Region itself can have multiple *VPCs* under it** (1 Region 🔗 N VPC).
+VPC has a boundary, *you cannot span VPCs across multiple Regions* (1 VPC 🔗 1 Region). All resources provisioned within a VPC will be created in the same Region only. Since a Region may include multiple AZs, a VPC may include multiple AZs (1 VPC 🔗 N AZ). Also, *a Region itself can have multiple VPCs under it* (1 Region 🔗 N VPC).
 
-If VPC is not enough for logical isolation of your resources, you can also create **Subnets** within any *VPC*. *Subnets* or subnetworks are just *VPCs* divided into smaller networks. 
+If VPC is not enough for logical isolation of your resources, you can also create Subnets within any VPC. Subnets or subnetworks are just VPCs divided into smaller networks. 
 
-Association between *Subnets* and AZ is similar to that of *VPC* and Regions, **you cannot span *Subnet* across multiple AZs** (1 Subnet 🔗 1 AZ), all resources provisioned within a *subnet* will be created in the same AZ. Also, **an AZ itself can have multiple *Subnets* under it** (1 AZ 🔗 N Subnets)
+Association between Subnets and AZ is similar to that of VPC and Regions, *you cannot span Subnet across multiple AZs* (1 Subnet 🔗 1 AZ), all resources provisioned within a Subnet will be created in the same AZ. Also, *an AZ itself can have multiple Subnets under it* (1 AZ 🔗 N Subnets)
 
 ![](assets/img/P004/02_01.png)
 
@@ -94,10 +94,10 @@ Here's a beautiful diagram of AWS resources and how they interact at various lev
 If you haven't heard of all the services yet, that's okay. Just revisit this once you go through them later. But do remember, it's important to know – where your resource is getting deployed.
 
 From the above diagram,
-1. **EC2 Instances** and **RDS Instances** are deployed on an *AZ*. So when you create one, you need to choose *one VPC* and *one Subnet* for both.
-2. **Elastic Load Balancers** are deployed in a *Region* but confined within a *VPC*, it can route traffic to multiple AZs at once. So when you create one, you need to choose *one VPC* and *multiple Subnets*.
-3. **SNS, S3, Lambda, API Gateway, DynamoDB, and SQS** are all managed services by AWS, that is deployed on a *Region*. You only need to choose a *Region* and are not required to choose any *VPC*.
-4. **IAM and Route53** are global services, that can be accessed from any *Region*.
+1. *EC2 Instances* and *RDS Instances* are deployed on an AZ. So when you create one, you need to choose one VPC and one Subnet for both.
+2. *Elastic Load Balancers* are deployed in a Region but confined within a VPC, it can route traffic to multiple AZs at once. So when you create one, you need to choose one VPC and multiple Subnets.
+3. *SNS, S3, Lambda, API Gateway, DynamoDB, and SQS* are all managed services by AWS, that is deployed on a Region. You only need to choose a Region and are not required to choose any VPC.
+4. *IAM and Route53* are global services, that can be accessed from any Region.
 
 AWS offers a lot of services, but I have only included the most important ones here. Before you go through any service, just try to read – how it interacts with various networking components of AWS. This can immensely help you in cracking your certification exam.
 
@@ -130,56 +130,56 @@ Here are some examples to get started with,
 
 Hopefully, that made it clear. In case you are bad at calculations (like me 😜), you can use this nifty tool – [Subnet Calculator](https://mxtoolbox.com/subnetcalculator.aspx). This makes it easier to calculate the range of your CIDR block.
 
-As I was previously said, when you create a VPC, you are asked to assign a CIDR block. Every subnet that you create will also require a CIDR block, as you might have guessed. **Subnet's CIDR block should be within its parent VPC's CIDR block range**. 
+As I said, while creating a VPC you have to assign a CIDR block to it. This block decides the IP Addresses of hosts that will be provisioned within that VPC. Similarly, when you create a Subnet, you will be asked to provide a CIDR block, this must be within the CIDR range of its parent VPC.
 
 ---
 {:style="border: 4px solid #FDC975"}
 
 ### ✍ Remember
-1. The allowed CIDR Range in AWS is anywhere between `/16` and `/28`, which corresponds between `65,536` IPs and `16` IPs.
+1. The allowed CIDR Range in AWS is anywhere between `/16` and `/28`, which corresponds between 65,536 IPs and 16 IPs.
 2. The above CIDR range is only for IPv4 addresses. It's also possible to set an IPv6 CIDR range, but it's not mandatory to create a VPC. In case you are new to networking, here's a nice video explaining it for you – [Internet Protocol - IPv4 vs IPv6 as Fast As Possible](https://www.youtube.com/watch?v=aor29pGhlFE).
 3. Once a VPC is created with a certain CIDR range, you cannot modify it later. The only option you have is to create a new VPC as per the new requirement and migrate your application from an older VPC to a newer one.
-4. **IMPORTANT:** Whenever you create a **Subnet**, AWS reserves **the first four IPs** and **last IP** for internal networking purposes. So whenever you calculate the total available IPs you might have to **reduce 5 IPs** from that count, as those are reserved. (e.g: for `10.0.0.0/24`, following IPs are reserved – `10.0.0.1`, `10.0.0.2`, `10.0.0.3`, `10.0.0.4` and `10.0.0.255`, thus out of `256 IPs` only `251 IPs` are actually available.)
+4. **IMPORTANT:** Whenever you create a Subnet, AWS reserves *the first four IPs* and *last IP* for internal networking purposes. So whenever you calculate the total available IPs you might have to *reduce 5 IPs* from that count, as those are reserved. (e.g: for `10.0.0.0/24`, following IPs are reserved – `10.0.0.1`, `10.0.0.2`, `10.0.0.3`, `10.0.0.4` and `10.0.0.255`, thus out of `256 IPs` only `251 IPs` are actually available.)
 
 ---
 {:style="border: 4px solid #FDC975"}
 
 
 ## How to reach my resource?
-In networking, there are devices called `Routers`. 
+In networking, there are devices called Routers. 
 
-Routers are like Maps 🗺️, they help machines discover other machines by providing the whereabouts of each other. Routers hold a table called `Route Table`, which acts exactly like an address book. When any machine tries to communicate with another machine, it looks into *Route Table* and gets directions.
+Routers are like Maps 🗺️, they help machines discover other machines by providing the whereabouts of each other. Routers hold a table called Route Table, which acts exactly like an address book. When any machine tries to communicate with another machine, it looks into Route Table and gets directions.
 
-AWS tries to hide this complexity, it does not expose any of its Routers for us to access. Instead, it does allow us to create and modify *Route Tables* to handle routing within our VPC. 
+AWS tries to hide this complexity, it does not expose any of its Routers for us to access. Instead, it does allow us to create and modify Route Tables to handle routing within our VPC. 
 
-Whenever a VPC is created a *Route Table* is created along with it, this is usually known as `Main Route Table`. This Table by default includes an entry that allows traffic within VPC. This default entry is immutable, meaning that it cannot be modified or removed.
+Whenever a VPC is created a Route Table is created along with it, this is usually known as Main Route Table. This Table by default includes an entry that allows traffic within VPC. This default entry is immutable, meaning that it cannot be modified or removed.
 
-Whenever a Subnet is created, that Subnet is by default associated with parent VPC's *Route Table*. You can instead create a separate *Route Table* just for a certain Subnet as well. **Subnet inherits all Routes added to VPC's *Route Table***.
+Whenever a Subnet is created, that Subnet is by default associated with parent VPC's Route Table. You can instead create a separate Route Table just for a certain Subnet as well. Subnet inherits all Routes added to VPC's Route Table.
 
-So, how does a *Route Table* look like?
+So, how does a Route Table look like?
 
 ![](assets/img/P004/05_01.png)
 
 If you had created a VPC with CIDR `10.10.0.0/16`, its route table will look like the one above.
 
-As you can see, *Route Table* only consists of 2 columns – **Destination** and **Target**. Whenever any instance tries to access any IP address from the given CIDR range, it will forward the request to a local network (i.e: within your VPC).
+As you can see, Route Table only consists of 2 columns – Destination and Target. Whenever any instance tries to access any IP address from the given CIDR range, it will forward the request to a local network (i.e: within your VPC).
 
 Here's a simple diagram on how routing will happen between 2 instances inside a VPC, For the below example let's consider that instance with IP `10.10.0.12` is trying to access an instance with IP `10.10.1.8`.
 
 ![](assets/img/P004/05_02.png)
 
-Given Router is invisible to us, whenever you make a request from one of your instances to another, the request goes through the Router that in turn refers to the *Route Table* created by you or the default one in this case. Then as per *Route Table* traffic will be routed to the destination, which is `local` in this example.
+Given Router is invisible to us, whenever you make a request from one of your instances to another, the request goes through the Router that in turn refers to the Route Table created by you or the default one in this case. Then as per Route Table traffic will be routed to the destination, which is local in this example.
 
-*Route Table* may not look very useful now, that is because we are yet to discuss various components that would require a *Route Table* entry to work. Which mostly include gateway services like – Internet Gateway (service that allows instances in VPC to access the internet), VPC Peering (service that allows instances to connect to your local infrastructure), and NAT Gateway (service that again allows instances to access the internet but without assigning a Public IP to instances).
+Route Table may not look very useful now, that is because we are yet to discuss various components that would require a Route Table entry to work. Which mostly include gateway services like – Internet Gateway (service that allows instances in VPC to access the internet), VPC Peering (service that allows instances to connect to your local infrastructure), and NAT Gateway (service that again allows instances to access the internet but without assigning a Public IP to instances).
 
 
 ---
 {:style="border: 4px solid #FDC975"}
 
 ### ✍ Remember
-1. It is not possible to block access from one Subnet to another using *Route Tables*.
-2. As discussed previously, You might also assign IPv6 CIDR to any VPC. Since this has to be separately configured, it also has to be separately present in your *Route Table* for internal routing with IPv6 address to work.
-3. **Best Practice:** Keep the default *Main Route Table* with the local-only route. Each Subnet in that VPC should have its own *Route Table* with specific routes required for any particular use-case.
+1. It is not possible to block access from one Subnet to another using Route Tables.
+2. As discussed previously, You might also assign IPv6 CIDR to any VPC. Since this has to be separately configured, it also has to be separately present in your Route Table for internal routing with IPv6 address to work.
+3. **Best Practice:** Keep the default Main Route Table with the local-only route. Each Subnet in that VPC should have its own Route Table with specific routes required for any particular use-case.
 
 
 ---
