@@ -4,7 +4,7 @@ layout: post
 categories: [python]
 image: /assets/img/P001/cover.png
 description: "OPP or Overanalysing Programming Problems is a Series that explores different ways to solve a programming problem, this article explores - 'Nth Digit of an Integer'"
-customexcerpt: "OPP or Overanalysing Programming Problems is a Series that explores different ways to solve a programming problem, this article explores - 'Nth Digit of an Integer'"
+customexcerpt: "A series where I unnecessarily complicate a simple problem."
 ---
 ![Cover - Counting Stars](/assets/img/P001/cover.png)
 Illustration Source: "Counting Stars" from [https://undraw.co](https://undraw.co/){:target="_blank"}

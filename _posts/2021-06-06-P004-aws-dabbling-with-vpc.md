@@ -11,9 +11,13 @@ Illustration Source: "Connected World" from [https://undraw.co](https://undraw.c
 
 I had decided to attempt AWS Solutions Architect Exam. So, after doing some initial learning, I went ahead and gave my first practice test. And... I bombed the VPC section! 
 
-VPC being one of the most important sections of AWS, I had to learn it as thoroughly as I could. I read through every material I had and created my own little paper notes. This post includes those notes, just digitalized!
+Then, I took it personally and read through every material I had. During this process I created my own little paper notes. This post includes those notes, just digitalized!
 
-*To read through this, you might have to know the basics of AWS. At least an overview of all the services offered. Also, feel free to save any diagrams given here, it's for your reference!*
+*To read through this, you might have to know the basics of AWS. At least an overview of all the services offered. I have tried to write it from a novice's perspective as much as possible. If you are reading this and could not understand any part, do contact me! I will try to improve it as much as possible.* 
+
+*Also, feel free to save any diagrams given here, it's for your reference!*
+
+*Any AWS Console Screenshots provided below might change in future, do keep that in mind.*
 
 <br>
 
@@ -29,19 +33,28 @@ VPC being one of the most important sections of AWS, I had to learn it as thorou
 <br>
 
 ## Where is my data being stored?
-Amazon stores your data in blimps soaring through the sky, hence they are called Cloud Storage... 
+Amazon stores your data in blimps soaring through the sky, hence they are called cloud storage... 
 
-Okay, Just Kidding! I don't expect you to fall for that. You must be at a level to understand that Cloud is nothing but data centers managed by a third party (Amazon in this case). Amazon rents out these data centers for other companies to use. This service offering is called AWS. You already knew that right... RIGHT?
+Okay, Just Kidding! I don't expect you to fall for that. You must be at a level to understand that "cloud" is nothing but data centers managed by a third party (Amazon in this case). Amazon rents out these data centers for other companies to use. This service offering is called AWS. 
 
-AWS has logically clustered all its data centers. 
+*You already knew that right... RIGHT?*
+
+Renting out doesn't exactly mean allowing customers to manage a certain data center. AWS does it by running "Virtual Machines" over their physical machines. This allows them to provide a level of isolation that otherwise would not have been possible. In simple terms, they provide you storage and compute power over a network, while maintaining the actual infrastructure themselves. They do this in exchange for a fee, based on pay-as-you-go model!
+
+Let's say, You want to run your application "Meme Generator" on AWS, you will need something called an EC2 Instance. In AWS, an EC2 instance is a computational unit, just like your own computer. Each instance has its own Memory and CPU, that enables you to run any job/application on it easily. This virtual machine could be running on any machine from AWS's data center. Your instance could even be running on the same hardware that is calculating a rocket's trajectory to Mars!
+
+That's the power of Cloud!
+
+Now, when you have a customer base like AWS, a single datacenter is not enough. So AWS has hundreds of them, spread across multiple continents. In order to make it easier to organize those datacenters, AWS has logically clustered them based on location -
+
 1. One or Multiple **data centers** that are closely located are being called an **Availability Zone (AZ)** (N Data Centers 🔗 1 Availability Zone).
 2. Two or More **Availability Zones (AZ)** that are located in the same general location are being called *Regions* (N Availability Zones 🔗 1 Region)
 
 There are several benefits of this... 
 
-Let's say a massive cyclone hit an AZ, what do you think will happen? 
+Let's say a massive cyclone hit a particular AZ, what do you think will happen? 
 
-Well, the location for each AZ has been chosen such that they are at least 60 miles (96.56 km) apart! So even if an AZ goes down due to some catastrophe, there is a very low chance that same would hit another AZ. Thus, there are multiple AZs to act as a backup for any failed AZ.
+Well, the location for each AZ has been chosen such that they are at least 60 miles (~96 km) apart! So even if an AZ goes down due to some catastrophe, there is a very low chance that some other AZ would be affected. Thus, there are multiple AZs to act as a backup for any failed AZ. So as long as your application is using services that are spread across multiple AZs you can say that your application is highly available.
 
 This hierarchy of *Regions, AZs, and Data Centers* can be seen in the below illustration,
 ![](assets/img/P004/01_01.png)
@@ -52,9 +65,8 @@ This hierarchy of *Regions, AZs, and Data Centers* can be seen in the below illu
 ### ✍ Remember
 1. Costs associated with resources differ from Region to Region, because AWS generally discounts in Regions where it's cheaper to operate a data center. 
 2. Not all services are available in all the Regions.
-3. Any resource spread across multiple AZs are considered to be Highly Available (i.e: even if an AZ goes down resource will continue working)
-4. AWS has separate Regions called `GovCloud` to be used by the US, only US Government organizations are allowed to use data centers in those Regions.
-5. When you choose a region for provisioning your resources, just keep following parameters in your mind,
+3. AWS has separate Regions called *GovCloud* to be used by the US, only US Government organizations are allowed to use data centers in those Regions.
+4. When you choose a region for provisioning your resources, just keep following parameters in your mind,
    - *Optimize Latency:* Make sure Users who will be primarily accessing your applications are closer to the region where you are provisioning your resource so that latency can be minimized. 
    - *Minimize Costs:* As previously said, some services are cheaper in certain Regions. While this difference is not significant, it should be one of your deciding factors.
    - *Address Regulatory Requirements:* Some governments have regulations that do not allow their citizen's data to be stored outside their country, such regulatory requirements must be considered as well.
@@ -63,11 +75,13 @@ This hierarchy of *Regions, AZs, and Data Centers* can be seen in the below illu
 {:style="border: 4px solid #FDC975"}
 
 ## How to make sure my resources are isolated?
-It's possible to isolate your instances from others with the help of **VPC (Virtual Private Cloud)**. Consider VPC as a networking layer above your AWS resources, most of your AWS resources have to be assigned a VPC. With VPC, it's easier to govern how each of these resources communicates with each other and the world.
+When you are running an organization, there are often requirements for multiple isolated environments. And isolation in this case would mean - resources running on one environment should not be able to access resources from some another environment. Only if there was a possibility to draw a box around our resources, such that it is contained only within that boundary. Well... that's where VPCs come in.
 
-VPC has a boundary, *you cannot span VPCs across multiple Regions* (1 VPC 🔗 1 Region). All resources provisioned within a VPC will be created in the same Region only. Since a Region may include multiple AZs, a VPC may include multiple AZs (1 VPC 🔗 N AZ). Also, *a Region itself can have multiple VPCs under it* (1 Region 🔗 N VPC).
+*VPC (or Virtual Private Cloud)* is a networking layer above your AWS resources, most of your AWS resources have to be assigned a VPC. With VPC, it's easier to govern how each of these resources communicate with each other and the world.
 
-If VPC is not enough for logical isolation of your resources, you can also create Subnets within any VPC. Subnets or subnetworks are just VPCs divided into smaller networks. 
+VPC has a physical boundary, *you cannot span VPCs across multiple Regions* (1 VPC 🔗 1 Region). All resources provisioned within a VPC will be created in the same Region only. Since a Region may include multiple AZs, a VPC may include multiple AZs (1 VPC 🔗 N AZ). Also, *a Region itself can have multiple VPCs under it* (1 Region 🔗 N VPC).
+
+If VPC is not enough for logical isolation of your resources, you can also create Subnets within any VPC. Subnets (or subnetworks) are just VPCs divided into smaller networks. 
 
 Association between Subnets and AZ is similar to that of VPC and Regions, *you cannot span Subnet across multiple AZs* (1 Subnet 🔗 1 AZ), all resources provisioned within a Subnet will be created in the same AZ. Also, *an AZ itself can have multiple Subnets under it* (1 AZ 🔗 N Subnets)
 
@@ -87,17 +101,17 @@ Association between Subnets and AZ is similar to that of VPC and Regions, *you c
 {:style="border: 4px solid #FDC975"}
 
 ## What should I take care of before deploying any resource?
-Here's a beautiful diagram of AWS resources and how they interact at various levels of networking –
+AWS has a lot of services, and its really impossible to remember what each of them do. Consider below diagram –
 
 ![](assets/img/P004/03_01.png)
 
-If you haven't heard of all the services yet, that's okay. Just revisit this once you go through them later. But do remember, it's important to know – where your resource is getting deployed.
+If you haven't heard of all the services yet, that's okay. Just revisit this once you go through them later. But do remember, its important to know – where your resource is getting deployed and how they interact with various levels of networking.
 
 From the above diagram,
-1. *EC2 Instances* and *RDS Instances* are deployed on an AZ. So when you create one, you need to choose one VPC and one Subnet for both.
-2. *Elastic Load Balancers* are deployed in a Region but confined within a VPC, it can route traffic to multiple AZs at once. So when you create one, you need to choose one VPC and multiple Subnets.
-3. *SNS, S3, Lambda, API Gateway, DynamoDB, and SQS* are all managed services by AWS, that is deployed on a Region. You only need to choose a Region and are not required to choose any VPC.
-4. *IAM and Route53* are global services, that can be accessed from any Region.
+1. **EC2 Instances** and **RDS Instances** are deployed on an AZ. So when you create one, you need to choose one VPC and one Subnet for both.
+2. **Elastic Load Balancers** are deployed in a Region but confined within a VPC, it can route traffic to multiple AZs at once. So when you create one, you need to choose one VPC and multiple Subnets.
+3. **SNS, S3, Lambda, API Gateway, DynamoDB, and SQS** are all managed services by AWS, that is deployed on a Region. You only need to choose a Region and are not required to choose any VPC.
+4. **IAM and Route53** are global services, that can be accessed from any Region.
 
 AWS offers a lot of services, but I have only included the most important ones here. Before you go through any service, just try to read – how it interacts with various networking components of AWS. This can immensely help you in cracking your certification exam.
 
@@ -128,18 +142,24 @@ Here are some examples to get started with,
 
 ![](assets/img/P004/04_04.png)
 
-Hopefully, that made it clear. In case you are bad at calculations (like me 😜), you can use this nifty tool – [Subnet Calculator](https://mxtoolbox.com/subnetcalculator.aspx). This makes it easier to calculate the range of your CIDR block.
+Hopefully, that made it clear. In case you are bad at calculations, you can use this nifty tool – [Subnet Calculator](https://mxtoolbox.com/subnetcalculator.aspx). This makes it easier to calculate the range of your CIDR block.
 
-As I said, while creating a VPC you have to assign a CIDR block to it. This block decides the IP Addresses of hosts that will be provisioned within that VPC. Similarly, when you create a Subnet, you will be asked to provide a CIDR block, this must be within the CIDR range of its parent VPC.
+As I said, while creating a VPC you have to assign a CIDR block to it. This block decides the IP Addresses of hosts that will be provisioned within that VPC. 
+
+![](assets/img/P004/04_05.png)
+
+Similarly, when you create a Subnet, you will be asked to provide a CIDR block, this must be within the CIDR range of its parent VPC.
+
+![](assets/img/P004/04_06.png)
 
 ---
 {:style="border: 4px solid #FDC975"}
 
 ### ✍ Remember
 1. The allowed CIDR Range in AWS is anywhere between `/16` and `/28`, which corresponds between 65,536 IPs and 16 IPs.
-2. The above CIDR range is only for IPv4 addresses. It's also possible to set an IPv6 CIDR range, but it's not mandatory to create a VPC. In case you are new to networking, here's a nice video explaining it for you – [Internet Protocol - IPv4 vs IPv6 as Fast As Possible](https://www.youtube.com/watch?v=aor29pGhlFE).
+2. The above CIDR range is only for IPv4 addresses. It's also possible to set an IPv6 CIDR range, but it's not mandatory. In case you are new to networking, here's a nice video explaining it for you – [Internet Protocol - IPv4 vs IPv6 as Fast As Possible](https://www.youtube.com/watch?v=aor29pGhlFE).
 3. Once a VPC is created with a certain CIDR range, you cannot modify it later. The only option you have is to create a new VPC as per the new requirement and migrate your application from an older VPC to a newer one.
-4. **IMPORTANT:** Whenever you create a Subnet, AWS reserves *the first four IPs* and *last IP* for internal networking purposes. So whenever you calculate the total available IPs you might have to *reduce 5 IPs* from that count, as those are reserved. (e.g: for `10.0.0.0/24`, following IPs are reserved – `10.0.0.1`, `10.0.0.2`, `10.0.0.3`, `10.0.0.4` and `10.0.0.255`, thus out of `256 IPs` only `251 IPs` are actually available.)
+4. **Important:** Whenever you create a Subnet, AWS reserves *the first four IPs* and *last IP* for internal networking purposes. So whenever you calculate the total available IPs you might have to *reduce 5 IPs* from that count, as those are reserved. (e.g: for `10.0.0.0/24`, following IPs are reserved – `10.0.0.1`, `10.0.0.2`, `10.0.0.3`, `10.0.0.4` and `10.0.0.255`, thus out of `256 IPs` only `251 IPs` are actually available.)
 
 ---
 {:style="border: 4px solid #FDC975"}
@@ -160,18 +180,17 @@ So, how does a Route Table look like?
 
 ![](assets/img/P004/05_01.png)
 
-If you had created a VPC with CIDR `10.10.0.0/16`, its route table will look like the one above.
+If you had created a VPC with CIDR `173.31.0.0/16`, entries in its Route Table will look like the one above.
 
-As you can see, Route Table only consists of 2 columns – Destination and Target. Whenever any instance tries to access any IP address from the given CIDR range, it will forward the request to a local network (i.e: within your VPC).
+As you can see, Route Table only consists of 2 columns that's of importance – Destination and Target. Whenever any instance tries to communicate with any IP address, that IP Address is looked-up in Route Table. If IP Address falls within the given CIDR range, traffic will be routed appropriately. 
 
-Here's a simple diagram on how routing will happen between 2 instances inside a VPC, For the below example let's consider that instance with IP `10.10.0.12` is trying to access an instance with IP `10.10.1.8`.
+With above configuration, any traffic with destination IP within the given CIDR range `173.31.0.0/16` will be forwarded to `local` which means it will be routed within VPC. 
+
+With above configuration, let's say, an instance with IP `173.31.0.12` is trying to access an instance with IP `173.31.1.8` -
 
 ![](assets/img/P004/05_02.png)
 
-Given Router is invisible to us, whenever you make a request from one of your instances to another, the request goes through the Router that in turn refers to the Route Table created by you or the default one in this case. Then as per Route Table traffic will be routed to the destination, which is local in this example.
-
 Route Table may not look very useful now, that is because we are yet to discuss various components that would require a Route Table entry to work. Which mostly include gateway services like – Internet Gateway (service that allows instances in VPC to access the internet), VPC Peering (service that allows instances to connect to your local infrastructure), and NAT Gateway (service that again allows instances to access the internet but without assigning a Public IP to instances).
-
 
 ---
 {:style="border: 4px solid #FDC975"}
@@ -190,9 +209,7 @@ Route Table may not look very useful now, that is because we are yet to discuss 
 ## What to do next?
 The Only way to remember the concepts given here is to get your hands dirty. 
 
-AWS's interface keeps changing from time to time so it's pointless to include screenshots for creating a VPC or a Subnet, as it may get outdated in few months.
-
-Instead, I would suggest going through this, [VPC Getting Started](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html) – Here you will learn to create a VPC, launch an instance into your VPC, assign Elastic IP to your instance and access your instance. I know we haven't discussed Elastic IP yet, still, there's no harm in going through the link and trying it out.
+I would suggest going through this, [VPC Getting Started](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html) – Here you will learn to create a VPC, launch an instance into your VPC, assign Elastic IP to your instance and access your instance. I know we haven't discussed Elastic IP yet, still, there's no harm in going through the link and trying it out.
 
 ## That's it?
 Yes, VPC is a lot more than what's covered in this article. We still haven't looked into networking services that enable internet connectivity like – Internet Gateway (IGW), Network Address Translation (NAT), Elastic IP Address (EIP), etc. And also services that allow you to connect VPC to your local network, allowing you to securely access any resource. Well, those are topics for another day. 

@@ -3,7 +3,7 @@ title:  "🖐️ Listed | 5 Features Unique To Python"
 layout: post
 categories: [python]
 image: /assets/img/P003/cover.png
-description: "Including a list of language-specific features that I wish I knew when I had started using python for my projects."
+description: "Python's feature set had made it popular among people geting into programming. It's easier to understand and get into, I will explain 5 topics that are beginner friendly and easy to learn about."
 customexcerpt: "Including a list of language-specific features that I wish I knew when I had started using python for my projects."
 ---
 ![Cover](assets/img/P003/cover.png)

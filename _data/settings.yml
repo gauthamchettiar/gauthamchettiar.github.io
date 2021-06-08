@@ -32,7 +32,7 @@ mathjax:
 #Show related posts based on categories
 related-posts:
   active: false
-  title: "You May Also Enjoy"
+  title: "Similar Posts"
 
 #Comments
 comments: true
