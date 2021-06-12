@@ -116,17 +116,19 @@ Below 2 are my favorites, they took the longest to make but I feel the end resul
 
 It was now that I had started losing focus. 
 
-It was the end of september and Inktober was just around the corner, I had the prompt list and a bunch more portraits I could have drawn. I chose to do Inktober challenges, as I hoped it would give me more exposure. I guess that's where I messed up...
+It was the end of September and Inktober was just around the corner, I had the prompt list and a bunch more portraits I could have drawn. I choose to do Inktober challenges, as I hoped it would give me more exposure. I guess that's where I messed up!
 
-In fact, from some 18 drawings that I did during that duration, there's only 2 sketches that I loved...
+In fact, from some 18 drawings that I did during that duration, there are only 2 sketches that I loved,
 
 ![](assets/img/P005/13.png)
 
 Now, that I look back, I could see my phase going from - 
 
-I suck at it, but it's okay -> I still suck at it, now I am a bits frustrated -> Oh Colors! This looks good, maybe I am not that bad -> This looks good, but not as I imagined it to be -> Aaah, let me try something new -> Ok, this isn't working out -> Guess I am not made for this!
+I suck at it, but it's okay -> I still suck at it, now I am a bit frustrated -> Oh Colors! Maybe, I am not that bad -> This looks good, but not as I imagined it to be -> Aaah, let me try something new -> Ok, this isn't working out -> Guess I am not made for this!
 
-On that note, let me end this semi-long post of self-loathing! Actually wait, even though it looks like one, it isn't why I had started writing this. I just wanted to take a look back and see what went wrong and now I know... Also I learnt an important lesson -
+*That was a tl;dr of my entire journey!*
+
+On that note, let me end this semi-long post of self-loathing! Actually wait, even though it looks like one, it isn't why I had started writing this. I just wanted to take a look back and see what went wrong and now I know... Also, I learned an important lesson -
 
 `IT'S OKAY TO SUCK AT NEW THINGS!`
 
@@ -136,6 +138,6 @@ Will I start sketching again? That I am not sure of...
 
 Will I repeat the same mistake when I explore a new hobby? I will surely try not to!
 
-This post holds proof of what had happened, and hopefuly in future there would be a one to show how I rectified it!
+This post holds proof of what had happened, and hopefully in future, there would be a one to show how I rectified it!
 
-Till then... Have a good Day!!!
+Till then... Have a Good Day!!!
