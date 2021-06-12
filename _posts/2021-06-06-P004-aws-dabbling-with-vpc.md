@@ -142,7 +142,7 @@ Here are some examples to get started with,
 
 ![](assets/img/P004/04_04.png)
 
-Hopefully, that made it clear. In case you are bad at calculations, you can use this nifty tool – [Subnet Calculator](https://mxtoolbox.com/subnetcalculator.aspx). This makes it easier to calculate the range of your CIDR block.
+Hopefully, that made it clear. In case you are bad at calculations, you can use this nifty tool – [Subnet Calculator](https://mxtoolbox.com/subnetcalculator.aspx){:target="_blank"}. This makes it easier to calculate the range of your CIDR block.
 
 As I said, while creating a VPC you have to assign a CIDR block to it. This block decides the IP Addresses of hosts that will be provisioned within that VPC. 
 
@@ -157,7 +157,7 @@ Similarly, when you create a Subnet, you will be asked to provide a CIDR block, 
 
 ### ✍ Remember
 1. The allowed CIDR Range in AWS is anywhere between `/16` and `/28`, which corresponds between 65,536 IPs and 16 IPs.
-2. The above CIDR range is only for IPv4 addresses. It's also possible to set an IPv6 CIDR range, but it's not mandatory. In case you are new to networking, here's a nice video explaining it for you – [Internet Protocol - IPv4 vs IPv6 as Fast As Possible](https://www.youtube.com/watch?v=aor29pGhlFE).
+2. The above CIDR range is only for IPv4 addresses. It's also possible to set an IPv6 CIDR range, but it's not mandatory. In case you are new to networking, here's a nice video explaining it for you – [Internet Protocol - IPv4 vs IPv6 as Fast As Possible](https://www.youtube.com/watch?v=aor29pGhlFE){:target="_blank"}.
 3. Once a VPC is created with a certain CIDR range, you cannot modify it later. The only option you have is to create a new VPC as per the new requirement and migrate your application from an older VPC to a newer one.
 4. **Important:** Whenever you create a Subnet, AWS reserves *the first four IPs* and *last IP* for internal networking purposes. So whenever you calculate the total available IPs you might have to *reduce 5 IPs* from that count, as those are reserved. (e.g: for `10.0.0.0/24`, following IPs are reserved – `10.0.0.1`, `10.0.0.2`, `10.0.0.3`, `10.0.0.4` and `10.0.0.255`, thus out of `256 IPs` only `251 IPs` are actually available.)
 
@@ -209,7 +209,7 @@ Route Table may not look very useful now, that is because we are yet to discuss 
 ## What to do next?
 The Only way to remember the concepts given here is to get your hands dirty. 
 
-I would suggest going through this, [VPC Getting Started](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html) – Here you will learn to create a VPC, launch an instance into your VPC, assign Elastic IP to your instance and access your instance. I know we haven't discussed Elastic IP yet, still, there's no harm in going through the link and trying it out.
+I would suggest going through this, [VPC Getting Started](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html){:target="_blank"} – Here you will learn to create a VPC, launch an instance into your VPC, assign Elastic IP to your instance and access your instance. I know we haven't discussed Elastic IP yet, still, there's no harm in going through the link and trying it out.
 
 ## That's it?
 Yes, VPC is a lot more than what's covered in this article. We still haven't looked into networking services that enable internet connectivity like – Internet Gateway (IGW), Network Address Translation (NAT), Elastic IP Address (EIP), etc. And also services that allow you to connect VPC to your local network, allowing you to securely access any resource. Well, those are topics for another day. 
