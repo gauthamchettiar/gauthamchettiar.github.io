@@ -66,13 +66,13 @@ Till then, Sayonara~!
 <br><br>
 
 ## Link to Songs:
-1. [Tip Tip Barsa Paani](https://www.youtube.com/watch?v=BtlnpBb4O8E){:target="_blank"}
-2. [Dhak Dhak Karne Laga](https://www.youtube.com/watch?v=wWuqJI_kOLQ){:target="_blank"}
-3. [Chaiyya Chaiyya](https://www.youtube.com/watch?v=0v1It89cKxY){:target="_blank"}
-4. [Gore Gore Mukhde Pe Kala Kala Chasma](https://www.youtube.com/watch?v=Q_fpEt216FA){:target="_blank"}
-5. [Chehra Hai Ya Chand Khila](https://www.youtube.com/watch?v=_mzdkxnU4mU){:target="_blank"}
-6. [Yeh Haseen Wadiyan](https://www.youtube.com/watch?v=z-vcE-UTc-0){:target="_blank"}
-7. [Zara Zara Behekta Hai](https://www.youtube.com/watch?v=a71xD6RyOok){:target="_blank"}
-8. [Tum Mile Dil Khile](https://www.youtube.com/watch?v=GtslrDs3RWY){:target="_blank"}
-9. [Tu Hi Re](https://www.youtube.com/watch?v=R3J3IDgKOLM){:target="_blank"}
-10. [Sach Keh Raha hai Deewana](https://www.youtube.com/watch?v=nya9D8kluE0){:target="_blank"} 
+1. [Tip Tip Barsa Paani](https://music.youtube.com/watch?v=BsrDrv4NV7M&feature=share){:target="_blank"}
+2. [Dhak Dhak Karne Laga](https://music.youtube.com/watch?v=PriYgiqUOlE&feature=share){:target="_blank"}
+3. [Chaiyya Chaiyya](https://music.youtube.com/watch?v=PimKrn3XkuU&feature=share){:target="_blank"}
+4. [Gore Gore Mukhde Pe Kala Kala Chasma](https://music.youtube.com/watch?v=pMHydGL4URo&feature=share){:target="_blank"}
+5. [Chehra Hai Ya Chand Khila](https://music.youtube.com/watch?v=HbihcliOsIk&feature=share){:target="_blank"}
+6. [Yeh Haseen Wadiyan](https://music.youtube.com/watch?v=zf0YvFpBfxk&feature=share){:target="_blank"}
+7. [Zara Zara Behekta Hai](https://music.youtube.com/watch?v=IWjbBSMsQJg&feature=share){:target="_blank"}
+8. [Tum Mile Dil Khile](https://music.youtube.com/watch?v=nqTS7ngviwQ&feature=share){:target="_blank"}
+9. [Tu Hi Re](https://music.youtube.com/watch?v=P4NwOb39sTQ&feature=share){:target="_blank"}
+10. [Sach Keh Raha hai Deewana](https://music.youtube.com/watch?v=nya9D8kluE0&feature=share){:target="_blank"}
