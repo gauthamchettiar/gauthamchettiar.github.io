@@ -1,10 +1,10 @@
 ---
 title:  "🧩 OPP | Nth Digit of an Integer | [EASY]"
 layout: post
-categories: [python]
+categories: [python, opp]
 image: /assets/img/P001/cover.png
-description: "OPP or Overanalysing Programming Problems is a Series that explores different ways to solve a programming problem, this article explores - 'Nth Digit of an Integer'"
-customexcerpt: "A series where I unnecessarily complicate a simple problem."
+description: "OPP or Overanalysing Programming Problems is a Series, where I introduce a problem and we together discover how to solve it using different available techniques. Here we talk about - 'Nth Digit of an Integer'"
+customexcerpt: "Learn how to approach a programmimg problem. This article includes problems that require you to retrieve digits from an integer."
 ---
 ![Cover - Counting Stars](/assets/img/P001/cover.png)
 Illustration Source: "Counting Stars" from [https://undraw.co](https://undraw.co/){:target="_blank"}
@@ -22,17 +22,39 @@ Few notes about this article,
 
 This problem is relatively easy, it's a teeny tiny warm-up problem to get started with, if it seems too easy for your appetite, hold tight, upcoming ones would get gradually difficult!
 
-&nbsp;  
+While we go into depth of only one of the problem, I have provided an assorted set of problems that can be solved in a similar way.
+
+Here's a quick look at all problems that you will be able to solve once you are thorough with this article 👉
+
+1. [Nth Digit of an Integer](#problem--nth-digit-of-an-integer) **(Solution Provided Below)**
+2. [Nth Digit of an Integer (counted from left)](#problem--nth-digit-of-an-integer-counted-from-left)
+3. [Sum of Squares of all Digits](#problem--sum-of-squares-of-all-digits)
+4. [Is Reverse Greater than Given Number](#problem--is-reverse-greater-than-given-number)
+5. [Delete the Smallest Digit](#problem--delete-the-smallest-digit)
+6. [Is Given number Power of 10](#problem--is-given-number-power-of-10)
+7. [Implement Luhn Algorithm](#problem--implement-luhn-algorithm)
+
+🏃 Enough talk, let's get to the problem!
 
 # Problem : Nth Digit of an Integer
 **Statement :** Given an integer find the digit at Nth place from right, assuming 1 is the Units place. E.g: If `Integer=1975` and `N=3`, then the output should be `9`. (This example would be considered in all the examples and illustrations below)
 
 Here's a simple illustration to understand the above problem statement,
-![Nth Digit Of an Integer](/assets/img/P001/Nth_digit_of_an_Integer_Illustration.png)
+![Nth Digit Of an Integer](/assets/img/P001/Problem1-Nth_digit_of_an_Integer_Illustration.png)
 
-Before we start solving this problem, here's an empty method description in python to get you started with. Just copy it over to your preferred editor, code in your solution and RUN IT! 
+Some examples for you to better understand the problem,
 
-*Feeling Lazy? Same problem is available on [codewars.com - Find the nth Digit of a Number](https://www.codewars.com/kata/577b9960df78c19bca00007e){:target="_blank"} with well defined test-cases.*
+```markdown
+Input - Integer=`6382639` and N=`5`     | Output - `8`
+Input - Integer=`7473392834` and N=`1`  | Output - `4`
+Input - Integer=`69` and N=`2`          | Output - `6`
+```
+
+## Before We Start 
+Here's an empty method description in python to get you started with. Just copy it over to your preferred editor, code in your solution and RUN IT! 
+
+
+🦥 Feeling Lazy? Same problem is available on [codewars.com - Find the nth Digit of a Number](https://www.codewars.com/kata/577b9960df78c19bca00007e){:target="_blank"} with well defined test-cases.
 
 
 ```python
@@ -56,10 +78,22 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
+<br>
 
-*Before committing to continue reading this article I would recommend you to pause and solve this yourself. Maybe this article includes and analyses one of your solutions or maybe you came up with a better solution. As some wise man once said - The best way to learn to code is to DIY!*
+---
+{:style="border: 4px solid #FDC975"}
+## ⏸️ Pause
+Before reading the solutions, I would recommend you to pause and solve this yourself. Maybe this article includes and analyses one of your solutions or maybe you came up with a better solution. As some wise man once said - 
 
-## Solution 1 : Pythonic way
+*The best way to learn to code is to DIY!*
+
+---
+{:style="border: 4px solid #FDC975"}
+
+<br>
+
+## Solutions
+### Solution 1 : Pythonic way
 The most pythonic way to do it would be to convert integers to strings and get the negative Nth index. If you are not that familiar with Python you can find more on it here, [Appendix - Python : Strings and Indices](#python--strings-and-indices).
 ```python
 # S1 - Pythonic Way
@@ -71,7 +105,7 @@ def nth_digit_of_integer(integer, n):
 ```
 Wow! That's a fancy one-line solution for sure. But the thing is it's not the most efficient way to do it, neither it's a generic solution.
 
-## Solution 2 : Using Loop
+### Solution 2 : Using Loop
 Getting the last digit of any number is as simple as dividing the number by 10 and getting the remainder. Using this, every digit in an integer can be traversed by constantly reducing the integer (divide it by 10) and getting the last digit each time.
 ```python
 # S2 - Using Loop
@@ -96,7 +130,7 @@ Here is an illustration detailing the logic above,
 
 This is a possible solution. It does get solved in O(n) time but there is an even better solution out there (no it's not recursion).
 
-## Solution 3 : Using Recursion
+### Solution 3 : Using Recursion
 Often recursion is not the best way to go by for solving problems, as they do more harm than good. This is due to the fact that, with each call there is a stack call made, which adds overhead to the solution. Still, they are extremely fun to implement. Same problem can also be solved using recursion as, 
 ```python
 # S3 - Using Recursion
@@ -109,7 +143,7 @@ def nth_digit_of_integer(integer, n):
 Recursion works in ways similar to loops. Just instead of reducing inside a loop, we reduce and re-call the same function. Again an illustration to simplify this,
 ![Problem - Solution 2 : Reduce by 10 (Recursion)](/assets/img/P001/Problem1-Solution3_Recursion.png)
 
-## Solution 4 : Mathematically
+### Solution 4 : Mathematically
 Usually the ones that is not easy to come up with, but also the ones that are the most efficient of all. If this is what you used to solve this problem, then kudos - "You are a mathematical Nerd!"
 ```python
 # S4 - Mathematically
@@ -126,9 +160,9 @@ def nth_digit_of_integer(integer, n):
 ```
 Also, these type of solutions are the most boring and requires you to have a really good mathematical fundamentals!  
 
-That actually concludes this problem, but we still have issues in all our solutions. We never thought about error handlings...
+That actually concludes this problem, but we still have issues in all our solutions. There are some input cases where our solution might break...
 
-## Error Handling
+## Extra : Error Handling
 
 <p style='margin-bottom:5px;'>Now,</p> 
 1. What if `n` provided is greater than our integer's digit size? 
@@ -155,15 +189,94 @@ class TestNthDigitOfInteger(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 ```
-Take this up like an assignment, pick one of your favorite solution from above (or your own solution) and try to cater to newly added test-cases.
+Take this up like an assignment, pick one of your favorite solution from above (or your own solution) and try to cater to newly added test-cases. 
 
-## Bonus Problem
+*That concludes analysis of given problem.*
 
-### Problem : Nth digit of an Integer (counted from left)
-**Statement :** Given an integer find the digit at Nth place from left, with index starting from 1. E.g: If `Integer=1975` and `N=3`, then the output should be `7`.
+# Bonus Problems
+
+## Problem : Nth digit of an Integer (counted from left)
+**Statement :** Given an Integer find the digit at Nth place from left, with index starting from 1. E.g: If `Integer=1975` and `N=3`, then the output should be `7`.
 
 **Illustration :**
-![Nth Digit Of an Integer (Counted From Left)](/assets/img/P001/Nth_digit_of_an_Integer_Reverse_Illustration.png)
+![Nth Digit Of an Integer (Counted From Left)](/assets/img/P001/Problem2-Nth_digit_of_an_Integer_Reverse_Illustration.png)
+
+**Sample Inputs :**
+```markdown
+Input - Integer=`6382639` and N=`5`     | Output - `6`
+Input - Integer=`7473392834` and N=`1`  | Output - `7`
+Input - Integer=`69` and N=`2`          | Output - `9`
+```
+
+
+## Problem : Sum of Squares of all Digits
+**Statement :** Given an Integer find the sum of sqaures of all the Digits  E.g: If `Integer=1975`, then output should be `156` (`1` + `square(9)` + `square(7)` + `square(5)` = `1` + `81` + `49` + `25` = `156`)
+
+**Illustration :**
+![Sum of Squares of all Digits](/assets/img/P001/Problem3-Sum_of_Squares_of_all_Digits_Illustration.png)
+
+**Sample Inputs :**
+```markdown
+Input - Integer=`234`   | Output - `29`
+Input - Integer=`8492`  | Output - `165`
+Input - Integer=`69`    | Output - `117`
+```
+
+## Problem : Is Reverse Greater than Given Number
+**Statement :** Given an Integer, reverse the digits. If reversed integer is greater than original integer return true, else false. E.g: If `Integer=1975`, then reverse of it would be `5791`, which is greater than `1975` thus `True` should be returned. 
+
+**Illustration :**
+![Is Reverse Greater than Given Number](/assets/img/P001/Problem4-Is_Reverse_Greater_than_Given_Number_Illustration.png)
+
+**Sample Inputs :**
+```markdown
+Input - Integer=`6382636`   | Output - `false`
+Input - Integer=`12321`     | Output - `false`
+Input - Integer=`69`        | Output - `true`
+```
+
+## Problem : Delete the Smallest Digit
+**Statement :** Given an integer, delete the smallest digit and return the resulting integer. *In case of duplicates remove both.* E.g: If `Integer=1975`, smallest digit here is `1`, which should be removed. Thus `975` should be returned.
+
+**Illustration :**
+![Delete the smallest Digit](/assets/img/P001/Problem5-Delete_the_smallest_Digit_Illustration.png)
+
+**Sample Inputs :**
+```markdown
+Input - Integer=`6382636`   | Output - `638636`
+Input - Integer=`12321`     | Output - `232`
+Input - Integer=`99`        | Output - `0`
+```
+
+## Problem : Is Given number Power of 10
+**Statement :** Given an integer, check if it is a power of 10. E.g: If `Integer=1000000`, `10 power to 6` is `1000000`, thus `True` should be returned.
+
+**Illustration :**
+![Is Given number Power of 10](/assets/img/P001/Problem6-Is_Given_number_Power_of_10_Illustration.png)
+
+**Sample Inputs :**     
+```markdown
+Input - Integer=`10001000`  | Output - `false`
+Input - Integer=`10`        | Output - `true`
+Input - Integer=`69`        | Output - `false`
+```
+
+## Problem : Implement Luhn Algorithm
+**Statement :** Lugn Alogorithm is a check used to validate whether a credit card number is valid or not. 
+
+Luhn algorithm has been explained in below illustration 👉
+
+**Illustration :**
+![Implement Luhn Algorithm](/assets/img/P001/Problem7-Implement_Luhn_Algorithm_Illustration.png)
+
+**Sample Inputs :**
+```markdown
+Input - Integer=`4263982640269299`  | Output - `true`
+Input - Integer=`371449635398431`   | Output - `true`
+Input - Integer=`1234567890`        | Output - `false`
+```
+
+<br>
 
 That concludes this article. Thanks for your patience! ❤️
 
@@ -173,7 +286,7 @@ Any mistakes I made? Comment / Suggestion / Criticism is welcome! Visit [My Prof
 
 # Appendix
 ## Python : Strings and Indices
-Some Python features are really unique to the language, Strings can be traversed like a list and there are negative indexes in python. Explained in detail below,
+Some Python features are really unique to the language, Strings can be traversed like a list and there are [negative indexes](P003-features-that-define-python#list--negative-indexing) in python. Explained in detail below,
 ```python
 integer = 1975
 # string conversion in python is simple, just call str() function
@@ -202,13 +315,24 @@ raise_ro_2_operator = 10 ** 2
 # (**) operator is alternative to math.pow()
 ```
 
+<br>
+
 # Index
 - [Problem : Nth Digit of an Integer](#problem--nth-digit-of-an-integer)
-  - [Solution 1 : Pythonic way](#solution-1--pythonic-way)
-  - [Solution 2 : Using Loop](#solution-2--using-loop)
-  - [Solution 3 : Using Recursion](#solution-3--using-recursion)
-  - [Solution 4 : Mathematically](#solution-4--mathematically)
-  - [Error Handling](#error-handling)
+  - [Before We Start](#before-we-start)
+  - [Solutions](#solutions)
+    - [Solution 1 : Pythonic way](#solution-1--pythonic-way)
+    - [Solution 2 : Using Loop](#solution-2--using-loop)
+    - [Solution 3 : Using Recursion](#solution-3--using-recursion)
+    - [Solution 4 : Mathematically](#solution-4--mathematically)
+  - [Extra : Error Handling](#extra--error-handling)
+- [Bonus Problems](#bonus-problems)
+  - [Problem : Nth Digit of an Integer (counted from left)](#problem--nth-digit-of-an-integer-counted-from-left)
+  - [Problem : Sum of Squares of all Digits](#problem--sum-of-squares-of-all-digits)
+  - [Problem : Is Reverse Greater than Given Number](#problem--is-reverse-greater-than-given-number)
+  - [Problem : Delete the smallest Digit](#problem--delete-the-smallest-digit)
+  - [Problem : Is Given number Power of 10](#problem--is-given-number-power-of-10)
+  - [Problem : Implement Luhn Algorithm](#problem--implement-luhn-algorithm)
 - [Appendix](#appendix)
   - [Python : Strings and Indices](#python--strings-and-indices)
   - [Python : math.floor() and math.pow() shortcuts](#python--mathfloor-and-mathpow-shortcuts)
