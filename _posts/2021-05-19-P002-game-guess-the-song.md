@@ -1,7 +1,7 @@
 ---
 title:  "🎮 Game | I Made a 'Guess the Song' Quiz For Fun!"
 layout: post
-categories: [game]
+categories: [fun]
 image: /assets/img/P002/cover.png
 description: "While the game itself is pretty common, I just wanted to create one for others to have fun with."
 customexcerpt: "Just a game that I created in my free time. Feel free to read through if you are a 90s Bollywood fan!"

@@ -1,7 +1,7 @@
 ---
 title:  "🧩 OPP | Nth Digit of an Integer | [EASY]"
 layout: post
-categories: [python, opp]
+categories: [python]
 image: /assets/img/P001/cover.png
 description: "OPP or Overanalysing Programming Problems is a Series, where I introduce a problem and we together discover how to solve it using different available techniques. Here we talk about - 'Nth Digit of an Integer'"
 customexcerpt: "Learn how to approach a programmimg problem. This article includes problems that require you to retrieve digits from an integer."
@@ -262,7 +262,7 @@ Input - Integer=`69`        | Output - `false`
 ```
 
 ## Problem : Implement Luhn Algorithm
-**Statement :** Lugn Alogorithm is a check used to validate whether a credit card number is valid or not. 
+**Statement :** Luhn Alogorithm is a check used to validate whether a credit card number is valid or not. 
 
 Luhn algorithm has been explained in below illustration 👉
 

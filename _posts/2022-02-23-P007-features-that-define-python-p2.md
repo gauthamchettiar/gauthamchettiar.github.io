@@ -1,7 +1,7 @@
 ---
 title:  "🖐️ Listed | 5 More Features That Define Python"
 layout: post
-categories: [python, listed-series]
+categories: [python, python-listed-series]
 image: /assets/img/P005/cover.png
 description: "Python's feature set had made it popular among people geting into programming. It's easier to understand and get into, I will explain 5 topics that are beginner friendly and easy to learn about."
 customexcerpt: "[This is Part 2] Including a list of language-specific features that I wish I knew when I had started using python for my projects."
