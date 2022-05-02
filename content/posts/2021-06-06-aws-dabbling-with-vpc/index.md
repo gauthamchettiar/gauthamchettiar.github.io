@@ -3,7 +3,7 @@ title:  "☁️ AWS | Dabbling with VPC"
 slug: "aws-dabbling-with-vpc"
 date: 2021-06-06
 lastmod: 2022-05-01
-draft: true
+draft: false
 cover: images/cover.svg
 tags: [cloud, aws]
 categories: ["Tutorials"]
@@ -22,12 +22,18 @@ Then, I took it personally and read through every material I had. During this pr
 <br>
 
 # Index
-1. [Where is my data being stored?](#where-is-my-data-being-stored)
-2. [How to make sure my resources are isolated?](#how-to-make-sure-my-resources-are-isolated)
-3. [What should I take care of before deploying any resource?](#what-should-i-take-care-of-before-deploying-any-resource)
-4. [How to identify my resource?](#how-to-identify-my-resource)
-5. [How to reach my resource?](#how-to-reach-my-resource)
-6. [What to do next?](#what-to-do-next)
+- [Index](#index)
+  - [Where is my data being stored?](#where-is-my-data-being-stored)
+    - [✍ Remember](#-remember)
+  - [How to make sure my resources are isolated?](#how-to-make-sure-my-resources-are-isolated)
+    - [✍ Remember](#-remember-1)
+  - [What should I take care of before deploying any resource?](#what-should-i-take-care-of-before-deploying-any-resource)
+  - [How to identify my resource?](#how-to-identify-my-resource)
+    - [✍ Remember](#-remember-2)
+  - [How to reach my resource?](#how-to-reach-my-resource)
+    - [✍ Remember](#-remember-3)
+  - [What to do next?](#what-to-do-next)
+  - [That's it?](#thats-it)
 
 
 <br>

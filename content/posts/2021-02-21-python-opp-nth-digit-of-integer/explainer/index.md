@@ -3,7 +3,7 @@ title : "🧩 OPP | Nth Digit of an Integer - Explainer"
 slug : "opp-nth-digit-of-an-integer-explainer"
 date : 2021-02-21
 lastmod : 2022-04-30
-draft : true
+draft : false
 unlisted : true
 ---
 

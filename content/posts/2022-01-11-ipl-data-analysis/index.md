@@ -3,7 +3,7 @@ title:  "🗄️ Data Engineering | Analysing IPL Data From Day Zero"
 slug: analysing-ipl-data-from-day-zero
 date: 2022-01-11
 lastmod: 2022-05-02
-draft: true
+draft: false
 cover: images/cover.svg
 tags: [data-engineering, sql]
 categories: ["Challenges"]

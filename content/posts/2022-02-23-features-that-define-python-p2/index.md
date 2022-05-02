@@ -3,7 +3,7 @@ title:  "🖐️ Listed | 5 More Features That Define Python"
 slug: "features-that-define-python-p2"
 date: 2022-02-23
 lastmod: 2022-05-01
-draft: true
+draft: false
 cover: images/cover.svg
 tags: [python, python-listed-series]
 categories: ["Tutorials"]
@@ -17,11 +17,22 @@ Let's just dive in!
 # Index
 [Previous Part](/features-that-define-python#index)
 
-6. [List \| enumerate(), zip() and itertools.ziplongest() Functions](#list--enumerate-zip-and-itertoolsziplongest-functions)
-7. [Dictionary \| items(), keys() and values() Functions](#dictionary--items-keys-and-values-functions)
-8. [Dictionary \| Handling Key Errors](#dictionary--handling-key-errors)
-9. [Functions \| Positional and Named Arguments](#functions--positional-and-named-arguments)
-10. [Functions \| Variable Arguments](#functions--variable-arguments)
+- [Index](#index)
+- [List \| enumerate(), zip() and itertools.ziplongest() Functions](#list--enumerate-zip-and-itertoolsziplongest-functions)
+    - [Code Example:](#code-example)
+    - [Reference Material:](#reference-material)
+- [Dictionary \| items(), keys() and values() Functions](#dictionary--items-keys-and-values-functions)
+    - [Code Example:](#code-example-1)
+    - [Reference Material:](#reference-material-1)
+- [Dictionary \| Handling Key Errors](#dictionary--handling-key-errors)
+    - [Code Example:](#code-example-2)
+    - [Reference Material:](#reference-material-2)
+- [Functions \| Positional and Named Arguments](#functions--positional-and-named-arguments)
+    - [Code Example:](#code-example-3)
+    - [Reference Material:](#reference-material-3)
+- [Functions \| Variable Arguments](#functions--variable-arguments)
+    - [Code Example:](#code-example-4)
+    - [Reference Material:](#reference-material-4)
 
 <br>
 

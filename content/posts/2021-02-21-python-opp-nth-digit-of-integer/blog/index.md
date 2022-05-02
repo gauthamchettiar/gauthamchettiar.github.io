@@ -3,7 +3,7 @@ title : "🧩 OPP | Nth Digit of an Integer"
 slug : "opp-nth-digit-of-an-integer"
 date : 2021-02-21
 lastmod : 2022-04-30
-draft : true
+draft : false
 cover : "images/cover.svg"
 coveralt : "Counting Stars from undraw.co"
 tags : [
@@ -317,6 +317,7 @@ raise_ro_2_operator = 10 ** 2
 # Index
 - [Problem : Nth Digit of an Integer](#problem--nth-digit-of-an-integer)
   - [Before We Start](#before-we-start)
+  - [⏸️ Pause](#️-pause)
   - [Solutions](#solutions)
     - [Solution 1 : Pythonic way](#solution-1--pythonic-way)
     - [Solution 2 : Using Loop](#solution-2--using-loop)

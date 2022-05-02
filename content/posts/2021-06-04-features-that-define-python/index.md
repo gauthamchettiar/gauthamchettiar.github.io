@@ -3,7 +3,7 @@ title:  "🖐️ Listed | 5 Features that Define Python"
 slug: "features-that-define-python"
 date: 2021-06-04
 lastmod: 2022-05-01
-draft: true
+draft: false
 cover: images/cover.svg
 tags: [python, python-listed-series]
 categories: ["Tutorials"]
@@ -16,11 +16,24 @@ This article focuses on really simple but useful features of Python. You can use
 <br>
 
 # Index
-1. [Generic \| Interpolated f-strings](#generic--interpolated-f-strings)
-2. [Generic \| Multiple Assignment Unpacking](#generic--multiple-assignment-unpacking)
-3. [List \| Slicing and Striding](#list--slicing-and-striding)
-4. [List \| Negative Indexing](#list--negative-indexing)
-5. [List \| List Comprehension](#list--list-comprehension) 
+- [Index](#index)
+  - [Generic \| Interpolated f-strings](#generic--interpolated-f-strings)
+    - [Code Example:](#code-example)
+    - [Reference Material:](#reference-material)
+  - [Generic \| Multiple Assignment Unpacking](#generic--multiple-assignment-unpacking)
+    - [Code Example:](#code-example-1)
+    - [Reference Material:](#reference-material-1)
+  - [List \| Slicing and Striding](#list--slicing-and-striding)
+    - [Code Example:](#code-example-2)
+      - [✍ Things to remember,](#-things-to-remember)
+    - [Reference Material:](#reference-material-2)
+  - [List \| Negative Indexing](#list--negative-indexing)
+    - [Code Example:](#code-example-3)
+    - [Reference Material:](#reference-material-3)
+  - [List \| List Comprehension](#list--list-comprehension)
+    - [Code Example:](#code-example-4)
+      - [✍ Things to Remember,](#-things-to-remember-1)
+    - [Reference Material:](#reference-material-4)
 
 [Next Part](/features-that-define-python-p2)
 

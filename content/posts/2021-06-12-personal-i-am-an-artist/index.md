@@ -3,7 +3,7 @@ title:  "🎨 Personal | My 'I am an Artist!' Phase"
 slug: "my-i-am-an-artist-phase"
 date: 2021-06-12
 lastmod: 2022-05-01
-draft: true
+draft: false
 cover: images/cover.svg
 tags: ["creative"]
 categories: ["Personal"]
