@@ -1,0 +1,26 @@
+baseURL = 'http://gauthamchettiar.com/'
+languageCode = 'en-us'
+title = 'Gautham Chettiar'
+theme = "etch"
+enableInlineShortcodes = true
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+  description = "A Personal Blog, documentiong my experiences and learnings!"
+  copyright = "Have a Nice Day :)"
+  dark = "auto"
+  highlight = true
+
+[menu]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[permalinks]
+  posts = "/:slug/"
+
+[markup.goldmark.renderer]
+  # Allows HTML in Markdown
+  unsafe = true
