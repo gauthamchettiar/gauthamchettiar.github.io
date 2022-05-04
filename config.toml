@@ -8,7 +8,7 @@ pygmentsUseClasses = true
 
 [params]
   description = "A Personal Blog, documentiong my experiences and learnings!"
-  copyright = "Have a Nice Day :)"
+  copyright = 'Crafted with "Hugo" & "etch". Deployed with "Netlify".'
   dark = "auto"
   highlight = true
 
