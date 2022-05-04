@@ -1,8 +1,8 @@
 ---
 title:  "⛏️ Web Scraping | Scraping Jiomart For Daily Product Prices"
 slug: "scraping-jiomart-using-scrapy"
-date: 2022-05-02
-lastmod: 2022-05-02
+date: 2022-05-04
+lastmod: 2022-05-04
 draft: false
 cover: images/cover.svg
 tags: [python, web-scraping]
