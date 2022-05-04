@@ -253,6 +253,14 @@ main#content code {
     padding: 0 5px;
 }
 
+main#content p code,
+main#content li code{
+    color: #f92672
+}
+
+
+
+
 main#content pre {
     display: block;
     overflow-x: auto;
