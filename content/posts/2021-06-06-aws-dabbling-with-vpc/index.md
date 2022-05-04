@@ -147,7 +147,7 @@ Here are some examples to get started with,
 
 ![](images/04_04.svg)
 
-Hopefully, that made it clear. In case you want to quickly calculate this for any arbritary CIDR block, you can use this nifty tool – {{< newtabref title="Subnet Calculator" href="https://mxtoolbox.com/subnetcalculator.aspx" >}}. This makes it easier to calculate the range of your CIDR block.
+Hopefully, that made it clear. In case you want to quickly calculate this for any arbritary CIDR block, you can use this nifty tool – {{<newtabref title="Subnet Calculator" href="https://mxtoolbox.com/subnetcalculator.aspx" >}}. This makes it easier to calculate the range of your CIDR block.
 
 As I said, while creating a VPC you have to assign a CIDR block to it. This block decides the IP Addresses of hosts that will be provisioned within that VPC. 
 
@@ -214,7 +214,7 @@ Route Table may not look very useful now, that is because we are yet to discuss 
 ## What to do next?
 The Only way to remember the concepts given here is to get your hands dirty. 
 
-I would suggest going through this, {{< newtabref title="VPC Getting Started" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html">}} – Here you will learn to create a VPC, launch an instance into your VPC, assign Elastic IP to your instance and access your instance. I know we haven't discussed Elastic IP yet, still, there's no harm in going through the link and trying it out.
+I would suggest going through this, {{<newtabref title="VPC Getting Started" href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-getting-started.html">}} – Here you will learn to create a VPC, launch an instance into your VPC, assign Elastic IP to your instance and access your instance. I know we haven't discussed Elastic IP yet, still, there's no harm in going through the link and trying it out.
 
 ## That's it?
 Yes, VPC is a lot more than what's covered in this article. We still haven't looked into networking services that enable internet connectivity like – Internet Gateway (IGW), Network Address Translation (NAT), Elastic IP Address (EIP), etc. And also services that allow you to connect VPC to your local network, allowing you to securely access any resource. Well, those are topics for another day. 

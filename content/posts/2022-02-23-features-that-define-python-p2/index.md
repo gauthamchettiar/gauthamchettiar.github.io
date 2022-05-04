@@ -51,7 +51,7 @@ Iterating through elements of an array 👉
 for score in scores:
   print(score)
 ```
-{{< newtabref  href="https://docs.python.org/3/library/functions.html#enumerate" title="enumerate(iterable, start=0)">}} - Iterating through indexes and elements of an array 👉
+{{<newtabref  href="https://docs.python.org/3/library/functions.html#enumerate" title="enumerate(iterable, start=0)">}} - Iterating through indexes and elements of an array 👉
 ```python
 # parameter "start=N" governs where to 
 # start fetching the data from
@@ -59,7 +59,7 @@ for index, score in enumerate(scores):
   print(index, score)
 ```
 
-{{< newtabref  href="https://docs.python.org/3/library/functions.html#zip" title="zip(*iterables, strict=False)">}} - Iterating through multiple lists in the same loop 👉
+{{<newtabref  href="https://docs.python.org/3/library/functions.html#zip" title="zip(*iterables, strict=False)">}} - Iterating through multiple lists in the same loop 👉
 ```python
 # "strict=True" will throw an error if there is length mismatch 
 #   between two lists (available in python > 3.10)
@@ -78,7 +78,7 @@ While zip is pretty cool, it has a small gotcha. If one of the list is longer th
 
 In order to make sure there is no data loss, you can enable `strict=True` in zip, which will throw an error in such scenario. 
 
-Or you can use {{< newtabref  href="https://docs.python.org/3/library/itertools.html#itertools.zip_longest" title="itertools.zip_longest()">}} method that will instead use a default value to fill missing indexes. 
+Or you can use {{<newtabref  href="https://docs.python.org/3/library/itertools.html#itertools.zip_longest" title="itertools.zip_longest()">}} method that will instead use a default value to fill missing indexes. 
 ```python
 from itertools import zip_longest
 for name, score in zip_longest(names, scores, fillvalue=0):
@@ -95,8 +95,8 @@ This would now return `"Bear"` with fillvalue (i.e: 0).
 ```
 
 ### Reference Material:
-* {{< newtabref  href="https://docs.python.org/3/library/functions.html" title="https://docs.python.org/3/library/functions.html">}}
-* {{< newtabref  href="https://docs.python.org/3/library/itertools.html" title="https://docs.python.org/3/library/itertools.html">}}
+* {{<newtabref  href="https://docs.python.org/3/library/functions.html" title="https://docs.python.org/3/library/functions.html">}}
+* {{<newtabref  href="https://docs.python.org/3/library/itertools.html" title="https://docs.python.org/3/library/itertools.html">}}
 
 <br>
 
@@ -128,7 +128,7 @@ Iterate over both keys and values in a dictionary,
 for key, value in movie_ratings.items():
   print(key, value)  # will print keys & values in new line each
 ```
-🛑 CAUTION : Dictionary by default does not maintain order. So order in which keys/values are retrieved will not be same across systems. In case you need to maintain order for some reason, you should be using {{< newtabref  href="https://docs.python.org/3/library/collections.html#collections.OrderedDict" title="collections.OrderedDict()">}}.
+🛑 CAUTION : Dictionary by default does not maintain order. So order in which keys/values are retrieved will not be same across systems. In case you need to maintain order for some reason, you should be using {{<newtabref  href="https://docs.python.org/3/library/collections.html#collections.OrderedDict" title="collections.OrderedDict()">}}.
 ```python
 from collections import OrderedDict
 movie_ratings = OrderedDict({
@@ -141,8 +141,8 @@ movie_ratings = OrderedDict({
 Above object will retain order and thus return keys/values in order it was defined or added.
 
 ### Reference Material:
-* {{< newtabref  href="https://realpython.com/python-dicts/#built-in-dictionary-methods" title="https://realpython.com/python-dicts/#built-in-dictionary-methods">}}
-* {{< newtabref  href="https://docs.python.org/3/library/collections.html" title="https://docs.python.org/3/library/collections.html">}}
+* {{<newtabref  href="https://realpython.com/python-dicts/#built-in-dictionary-methods" title="https://realpython.com/python-dicts/#built-in-dictionary-methods">}}
+* {{<newtabref  href="https://docs.python.org/3/library/collections.html" title="https://docs.python.org/3/library/collections.html">}}
 
 <br>
 
@@ -162,7 +162,7 @@ In fact, there are 2 really good ways to handle this. One is defining a default 
 
 ### Code Example:
 
-Using {{< newtabref  href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict()">}} for assigning a default value during dictionary definition.
+Using {{<newtabref  href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict()">}} for assigning a default value during dictionary definition.
 ```python
 from collections import defaultdict
 release_year = defaultdict(
@@ -177,15 +177,15 @@ release_year["Shark Tale"]  # -> None
 ```
 First argument "lambda: None" of defaultdict() will set the default value as "None". This can be set to any arbritrary value instead.
 
-Using {{< newtabref  href="https://pythonexamples.org/python-dictionary-get/" title="get()">}} method to define a default value on access.
+Using {{<newtabref  href="https://pythonexamples.org/python-dictionary-get/" title="get()">}} method to define a default value on access.
 ```python
 movie_ratings.get("Toy Story", 0) # -> 8.3
 movie_ratings.get("Shark Tale", 0) # -> 0
 ```
 Second argument "0" is the default value that will be fetched in case first argument key is not found in dictionary.
 ### Reference Material:
-- {{< newtabref  href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="https://docs.python.org/3/library/collections.html#collections.defaultdict">}}
-- {{< newtabref  href="https://pythonexamples.org/python-dictionary-get/" title="https://pythonexamples.org/python-dictionary-get/">}}
+- {{<newtabref  href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="https://docs.python.org/3/library/collections.html#collections.defaultdict">}}
+- {{<newtabref  href="https://pythonexamples.org/python-dictionary-get/" title="https://pythonexamples.org/python-dictionary-get/">}}
 
 <br>
 
@@ -272,8 +272,8 @@ Quick reference,
 ![](images/01.svg)
 
 ### Reference Material:
-* {{< newtabref  href="https://www.python.org/dev/peps/pep-0570" title="https://www.python.org/dev/peps/pep-0570">}}
-* {{< newtabref  href="https://www.python.org/dev/peps/pep-3102" title="https://www.python.org/dev/peps/pep-3102">}}
+* {{<newtabref  href="https://www.python.org/dev/peps/pep-0570" title="https://www.python.org/dev/peps/pep-0570">}}
+* {{<newtabref  href="https://www.python.org/dev/peps/pep-3102" title="https://www.python.org/dev/peps/pep-3102">}}
 
 <br>
 
@@ -328,7 +328,7 @@ def movie_details(movie_name, *characters, **ratings):
 
 ```
 ### Reference Material:
-* {{< newtabref  href="https://realpython.com/python-kwargs-and-args/" title="https://realpython.com/python-kwargs-and-args/">}}
+* {{<newtabref  href="https://realpython.com/python-kwargs-and-args/" title="https://realpython.com/python-kwargs-and-args/">}}
 
 <br>
 

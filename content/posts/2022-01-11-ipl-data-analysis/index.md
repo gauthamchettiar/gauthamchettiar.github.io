@@ -21,9 +21,9 @@ This post is entirely focused on analysis of IPL Dataset. If you are already an 
 
 And for those who would like to skip reading wiki, here's a tldr; for you *(this is a very quick intro and will be no way enough for you to understand the entire format properly, I would strongly suggest to do your part of study before going ahead)* -
 
-The Indian Premier League (IPL) is a professional {{< newtabref title="Twenty20" href="https://www.youtube.com/watch?v=ktORZqRy-iM" >}} {{< newtabref title="cricket" href="https://www.youtube.com/watch?v=g-beFHld19c" >}} league, contested by eight to ten {{< newtabref title="teams based out of Indian cities" href="https://www.iplt20.com/teams/men" >}}. It is usually held between March and May of every year. There have been fourteen seasons of the IPL tournament so far, from {{< newtabref title="2008 to 2021" href="https://en.wikipedia.org/wiki/List_of_Indian_Premier_League_seasons_and_results" >}}. 
+The Indian Premier League (IPL) is a professional {{<newtabref title="Twenty20" href="https://www.youtube.com/watch?v=ktORZqRy-iM" >}} {{<newtabref title="cricket" href="https://www.youtube.com/watch?v=g-beFHld19c" >}} league, contested by eight to ten {{<newtabref title="teams based out of Indian cities" href="https://www.iplt20.com/teams/men" >}}. It is usually held between March and May of every year. There have been fourteen seasons of the IPL tournament so far, from {{<newtabref title="2008 to 2021" href="https://en.wikipedia.org/wiki/List_of_Indian_Premier_League_seasons_and_results" >}}. 
 
-In League Phase, each team plays in a {{< newtabref title="round-robin" href="https://en.wikipedia.org/wiki/Round-robin_tournament" >}} format, with each team playing other team exactly twice, one at home ground and one away. At the conclusion of the league phase, the top four teams will qualify for the playoffs. 
+In League Phase, each team plays in a {{<newtabref title="round-robin" href="https://en.wikipedia.org/wiki/Round-robin_tournament" >}} format, with each team playing other team exactly twice, one at home ground and one away. At the conclusion of the league phase, the top four teams will qualify for the playoffs. 
 
 In Playoff Phase, top two teams will play against each other in the first Qualifying match, with the winner going straight to the IPL final and the loser getting another chance to qualify for the IPL final by playing the second Qualifying match. Meanwhile, the third and fourth place teams from league phase play against each other in an eliminator match and the winner from that match will play the loser from the first Qualifying match. The winner of the second Qualifying match will move onto the final to play the winner of the first Qualifying match in the IPL Final match, where the winner will be crowned the Indian Premier League champions.
 
@@ -37,10 +37,10 @@ Now, it's okay even if it's not completely clear yet. Just having a basic unders
 
 Before we get to dataset, here are some rules to follow along while reading this blog -
 
-1. {{< newtabref title="https://github.com/gauthamchettiar/ipl-data-analysis" href="https://github.com/gauthamchettiar/ipl-data-analysis" >}} - clone this repository and keep it with you. 
+1. {{<newtabref title="https://github.com/gauthamchettiar/ipl-data-analysis" href="https://github.com/gauthamchettiar/ipl-data-analysis" >}} - clone this repository and keep it with you. 
 2. **Make sure to look at solutions only after you have written yours down.** 
-3. Code provided is written in PostgreSQL, while you are free to work with your prefered flavor of SQL. I would suggest you to install {{< newtabref title="PostgreSQL" href="https://www.postgresql.org/download/" >}} for comparing solutions.
-4. Dataset is available as part of above repositoy at {{< newtabref title="data/" href="https://github.com/gauthamchettiar/ipl-data-analysis/tree/main/data" >}} directory. Provided data is a cleaned version of dataset taken from {{< newtabref title="kaggle" href="https://www.kaggle.com/patrickb1912/ipl-complete-dataset-20082020" >}}
+3. Code provided is written in PostgreSQL, while you are free to work with your prefered flavor of SQL. I would suggest you to install {{<newtabref title="PostgreSQL" href="https://www.postgresql.org/download/" >}} for comparing solutions.
+4. Dataset is available as part of above repositoy at {{<newtabref title="data/" href="https://github.com/gauthamchettiar/ipl-data-analysis/tree/main/data" >}} directory. Provided data is a cleaned version of dataset taken from {{<newtabref title="kaggle" href="https://www.kaggle.com/patrickb1912/ipl-complete-dataset-20082020" >}}
 5. You are free to look at the dataset and make sense of it on your own.
 6. You will be able to setup your PostgresSQL with required tables by following instructions in above github readme.
 7. Bonus questions are just as important as main question, try to solve both.
@@ -74,7 +74,7 @@ Create a view that has all columns from `ipl_m` along with season information. N
 
 {{<collapsible-img "Expected Output - (Column = 1, Row = 1)" "images/05.png" "P1 Bonus Output" "75">}}
 
-**Solution :** {{< newtabref title="/solutions/problem_1.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_1.sql" >}}
+**Solution :** {{<newtabref title="/solutions/problem_1.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_1.sql" >}}
 
 ## Problem 2 : Get all teams who participated for a given season
 Teams have gone through several name changes and some teams didn't participate for certain seasons. Due to this, not all seasons have all the teams or there were some extra teams introduced midway. 
@@ -87,7 +87,7 @@ Define a variable called `season` initialize it with some year - say `2019`. Lis
 
 {{<collapsible-img "Expected Output - (Column = 2, Row = 13)" "images/07.png" "P2 Bonus Output">}}
 
-**Solution :** {{< newtabref title="/solutions/problem_2.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_2.sql" >}}
+**Solution :** {{<newtabref title="/solutions/problem_2.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_2.sql" >}}
 
 ## Problem 3 : Get the team who won the most number of times
 Retrieve the teams and their respective `win_count` in entirety of IPL. Also order by `win_count` so that it's clear, who won the most!
@@ -98,7 +98,7 @@ Retrieve the teams and their respective `win_count` in entirety of IPL. Also ord
 
 {{<collapsible-img "Expected Output - (Column = 3, Row = 111)" "images/09.png" "P3 Bonus Output">}}
 
-**Solution :** {{< newtabref title="/solutions/problem_3.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_3.sql" >}}
+**Solution :** {{<newtabref title="/solutions/problem_3.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_3.sql" >}}
 
 ## Problem 4 : Get teams and maximum run margins for each team
 Now, there are 2 columns which are of significance here - `result` and `result_margin`. Since we are looking for matches that has been won by defending *(winning team batted in 1st innings, put some runs on scoreboard and later in 2nd innings tried to defend that score)*, we should only focus on matches won by 'runs'.
@@ -109,7 +109,7 @@ Now, there are 2 columns which are of significance here - `result` and `result_m
 
 {{<collapsible-img "Expected Output - (Column = 2, Row = 10)" "images/11.png" "P4 Bonus Output" 400>}}
 
-**Solution :** {{< newtabref title="/solutions/problem_4.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_4.sql" >}}
+**Solution :** {{<newtabref title="/solutions/problem_4.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_4.sql" >}}
 
 ## Problem 5 : Get the count of bat/field toss_decision for every venue
 Cricket is a game where pitch condition and weather is as important as players of a team. This would act as one of factor in deciding whether to bat/field first. So winning a toss and making bat/field decision thereafter is equally important.
@@ -122,7 +122,7 @@ Get the Venue, Bat/Field Decision and corresponding win count for each decision 
 
 {{<collapsible-img "Expected Output - (Column = 4, Row = 63)" "images/13.png" "P5 Bonus Output" 320>}}
 
-**Solution :** {{< newtabref title="/solutions/problem_5.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_5.sql" >}}
+**Solution :** {{<newtabref title="/solutions/problem_5.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_5.sql" >}}
 
 ## Problem 6 : Get total matches played by each team
 While getting win_count for each team was easy, calculating total matches played by each team is slightly tricky. Each team has either played as team1 (home) or team2 (away). So you have to somehow combine data from 2 columns to aquire the required analytics.
@@ -133,7 +133,7 @@ While getting win_count for each team was easy, calculating total matches played
 
 {{<collapsible-img "Expected Output - (Column = 2, Row = 13)" "images/15.png" "P6 Bonus Output" 400>}}
 
-**Solution :** {{< newtabref title="/solutions/problem_6.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_6.sql" >}}
+**Solution :** {{<newtabref title="/solutions/problem_6.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_6.sql" >}}
 
 ## Problem 7 : Get the final match for a given season
 Finals are one of the most watched match of the entire season regardless of teams playing. Try to retrieve the teams reaching the finals for any given season.
@@ -144,7 +144,7 @@ Finals are one of the most watched match of the entire season regardless of team
 
 {{<collapsible-img "Expected Output - (Column = 3, Row = 13)" "images/17.png" "P7 Bonus Output" 400>}}
 
-**Solution :** {{< newtabref title="/solutions/problem_7.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_7.sql" >}}
+**Solution :** {{<newtabref title="/solutions/problem_7.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_7.sql" >}}
 
 ## Problem 8 : Get league and playoffs (semi-finals and finals) for a given season 
 League matches are played and top 4 teams get to playoffs, where they play eliminator type matches to get to finals. Now, getting this information is slightly tricky considering the fact that format of this was different before 2010. Before 2010 there were only 2 playoffs being played, which changed and 4 playoff matches are being played since (this format is explained [above](#what-is-ipl-all-about)). 
@@ -158,7 +158,7 @@ Using this info, add an extra column `match_type` that tags each match as - 'Lea
 
 {{<collapsible-img "Expected Output - (Column = 4, Row = 14)" "images/19.png" "P8 Bonus Output" 400>}}
 
-**Solution :** {{< newtabref title="/solutions/problem_8.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_8.sql" >}}
+**Solution :** {{<newtabref title="/solutions/problem_8.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_8.sql" >}}
 
 ## Problem 9 : Get total matches played, matches won and win percentage per season
 In order to find the most consistent team of IPL. It is not enough to find who won the most number of seasons. Instead you will require a metric called `win_percentage`. Which is calculated as `matches_played`/`matches_won`*100. Instead of finding overall metric, try to group the same as per season.
@@ -177,7 +177,7 @@ You must just have to extend the solution of "Problem 8 - Bonus" question.
 
 {{<collapsible-img "Expected Output - (Column = 7, Row = 108)" "images/22.png" "P10 Preparation" 320>}}
 
-**Solution :** {{< newtabref title="/solutions/problem_9.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_9.sql" >}}
+**Solution :** {{<newtabref title="/solutions/problem_9.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_9.sql" >}}
 
 ## Problem 10 : Get a wide column view of win_percentage of teams over season
 Similar to getting `matches_won` in above bonus question, try to list `win_percentage`. You can use the above created VIEW `v_aggregated_ipl_m` for it.
@@ -196,7 +196,7 @@ Try to retrieve the difference between a season's `win_percentage` figure with l
 
 {{<collapsible-img "Expected Output - (Column = 14, Row = 14)" "images/25.png" "P10 Bonus 2 Output" 320>}}
 
-**Solution :** {{< newtabref title="/solutions/problem_10.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_10.sql" >}}
+**Solution :** {{<newtabref title="/solutions/problem_10.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_10.sql" >}}
 
 &nbsp;
 

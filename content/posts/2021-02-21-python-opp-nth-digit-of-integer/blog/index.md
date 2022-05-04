@@ -58,7 +58,7 @@ Input - Integer=`69` and N=`2`          | Output - `6`
 Here's an empty method description in python to get you started with. Just copy it over to your preferred editor, code in your solution and RUN IT! 
 
 
-🦥 Feeling Lazy? Same problem is available on {{< newtabref  href="https://www.codewars.com/kata/577b9960df78c19bca00007e" title="codewars.com - Find the nth Digit of a Number">}} with well defined test-cases.
+🦥 Feeling Lazy? Same problem is available on {{<newtabref  href="https://www.codewars.com/kata/577b9960df78c19bca00007e" title="codewars.com - Find the nth Digit of a Number">}} with well defined test-cases.
 
 
 ```python

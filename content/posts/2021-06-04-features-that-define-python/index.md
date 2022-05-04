@@ -40,7 +40,7 @@ This article focuses on really simple but useful features of Python. You can use
 <br>
 
 ## Generic \| Interpolated f-strings
-There are often times when you need to print/write certain variables to console, file or web. This generally includes formatting variables in-between strings - "e.g: Last Element in list `[1,2,3,4,5]` is `5`". There are several ways to do this - using {{< newtabref  href="https://realpython.com/python-string-split-concatenate-join/" title="string concatenation">}}, {{< newtabref  href="https://www.geeksforgeeks.org/python-format-function/" title="str.format() function">}} and {{< newtabref  href="https://www.geeksforgeeks.org/string-formatting-in-python-using/" title="% operator">}}. But most of the above listed approaches are extremely verbose or hard to maintain. In order to solve those problems, f-strings were introduced in python 3.6. 
+There are often times when you need to print/write certain variables to console, file or web. This generally includes formatting variables in-between strings - "e.g: Last Element in list `[1,2,3,4,5]` is `5`". There are several ways to do this - using {{<newtabref  href="https://realpython.com/python-string-split-concatenate-join/" title="string concatenation">}}, {{<newtabref  href="https://www.geeksforgeeks.org/python-format-function/" title="str.format() function">}} and {{<newtabref  href="https://www.geeksforgeeks.org/string-formatting-in-python-using/" title="% operator">}}. But most of the above listed approaches are extremely verbose or hard to maintain. In order to solve those problems, f-strings were introduced in python 3.6. 
 
 **Only supported in Python Version >= 3.6**, and is probably not the best way to go by if you are not sure about run-time python version of your deployment.
 
@@ -76,12 +76,12 @@ print(f'First Element in List {arr} is {arr[0]}')
 # Now that's the cleanest of the lot, isn't it?
 ```
 
-String formatting is not limited to just introducing a variable in-between string, you can do a variety of fancy things while formating. Here is a {{< newtabref  href="https://gist.github.com/gauthamchettiar/fa3f32758616611bfecf941809fd598b" title="Python String Formatting Mini Language Quick Reference">}} I made, in case you are curious.
+String formatting is not limited to just introducing a variable in-between string, you can do a variety of fancy things while formating. Here is a {{<newtabref  href="https://gist.github.com/gauthamchettiar/fa3f32758616611bfecf941809fd598b" title="Python String Formatting Mini Language Quick Reference">}} I made, in case you are curious.
 
 ### Reference Material:
-- {{< newtabref  href="https://realpython.com/python-f-strings/" title="https://realpython.com/python-f-strings/">}}
-- {{< newtabref  href="https://realpython.com/python-string-formatting/" title="https://realpython.com/python-string-formatting/">}}
-- {{< newtabref  href="https://www.python.org/dev/peps/pep-0498/" title="https://www.python.org/dev/peps/pep-0498/">}}
+- {{<newtabref  href="https://realpython.com/python-f-strings/" title="https://realpython.com/python-f-strings/">}}
+- {{<newtabref  href="https://realpython.com/python-string-formatting/" title="https://realpython.com/python-string-formatting/">}}
+- {{<newtabref  href="https://www.python.org/dev/peps/pep-0498/" title="https://www.python.org/dev/peps/pep-0498/">}}
 
 <br>
 
@@ -144,9 +144,9 @@ a,*b,c = [1,2,3,4] # a=1, b=[2,3] and c=4
 ```
 
 ### Reference Material:
-- {{< newtabref  href="https://treyhunner.com/2018/03/tuple-unpacking-improves-python-code-readability/" title="https://treyhunner.com/2018/03/tuple-unpacking-improves-python-code-readability/">}}
-- {{< newtabref  href="https://stackabuse.com/unpacking-in-python-beyond-parallel-assignment" title="https://stackabuse.com/unpacking-in-python-beyond-parallel-assignment">}}
-- {{< newtabref  href="https://www.python.org/dev/peps/pep-3132/" title="https://www.python.org/dev/peps/pep-3132/">}}
+- {{<newtabref  href="https://treyhunner.com/2018/03/tuple-unpacking-improves-python-code-readability/" title="https://treyhunner.com/2018/03/tuple-unpacking-improves-python-code-readability/">}}
+- {{<newtabref  href="https://stackabuse.com/unpacking-in-python-beyond-parallel-assignment" title="https://stackabuse.com/unpacking-in-python-beyond-parallel-assignment">}}
+- {{<newtabref  href="https://www.python.org/dev/peps/pep-3132/" title="https://www.python.org/dev/peps/pep-3132/">}}
 
 <br>
 
@@ -205,8 +205,8 @@ credit_card[12:] # Returns '5556'
 2. For striding - `arr[start_index:end_index:step]`, where *step - 1* elements will be **skipped in-between**.  
 
 ### Reference Material:
-- {{< newtabref  href="https://realpython.com/lessons/string-slicing/" title="https://realpython.com/lessons/string-slicing/">}}
-- {{< newtabref  href="https://www.datacamp.com/community/tutorials/python-string-tutorial" title="https://www.datacamp.com/community/tutorials/python-string-tutorial">}}
+- {{<newtabref  href="https://realpython.com/lessons/string-slicing/" title="https://realpython.com/lessons/string-slicing/">}}
+- {{<newtabref  href="https://www.datacamp.com/community/tutorials/python-string-tutorial" title="https://www.datacamp.com/community/tutorials/python-string-tutorial">}}
 
 <br>
 
@@ -263,8 +263,8 @@ While above example does seem far fetched, one might fall into this trap if they
 
 
 ### Reference Material:
-- {{< newtabref  href="https://www.quora.com/What-is-negative-index-in-Python" title="https://www.quora.com/What-is-negative-index-in-Python">}}
-- {{< newtabref  href="https://www.programiz.com/python-programming/methods/list/reverse" title="https://www.programiz.com/python-programming/methods/list/reverse">}}
+- {{<newtabref  href="https://www.quora.com/What-is-negative-index-in-Python" title="https://www.quora.com/What-is-negative-index-in-Python">}}
+- {{<newtabref  href="https://www.programiz.com/python-programming/methods/list/reverse" title="https://www.programiz.com/python-programming/methods/list/reverse">}}
 
 <br>
 
@@ -325,8 +325,8 @@ capitalize_words_with_o = [
 4. While it's possible to work with nested lists using list comprehensions, I would advice against it. As it can quickly get unreadable and really inconvenient.
 
 ### Reference Material: 
-- {{< newtabref  href="https://realpython.com/list-comprehension-python/" title="https://realpython.com/list-comprehension-python/">}}
-- {{< newtabref  href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions" title="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">}}
+- {{<newtabref  href="https://realpython.com/list-comprehension-python/" title="https://realpython.com/list-comprehension-python/">}}
+- {{<newtabref  href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions" title="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">}}
 
 
 <br><br>
