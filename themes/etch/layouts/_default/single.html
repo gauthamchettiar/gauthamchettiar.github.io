@@ -10,6 +10,11 @@
                 <time>{{ .Lastmod | time.Format (i18n "post.updated") }}</time>
             {{ end }}
         {{- end -}}
+        <br>
+        Tags: {{ range $i, $e := .Params.tags -}}
+        {{- if $i -}}, {{ end -}}
+        <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ $e }}</a>
+        {{- end -}}    
         </div>
     </header>
     {{- if isset .Params "cover" -}}
