@@ -62,7 +62,7 @@ Apart from category pages, there are other URLs that list products like -
 
 Some promotional links are short lived, some are frequently added and removed, thus scraping them daily had no real purpose other than keeping an archive of products that were in a particular promotional offer. 
 
-Final implementation does have provision to scrap both category and non-category pages.
+Final implementation does have provision to scrape both category and non-category pages.
 
 # Recognizing Scrapable Data
 Before we start we need to check the data that we can actually acquire. Our original motivation was to compare the prices of products, so we definetly need Product Name and Product Price, we also need one more metric that is Product Quantity. Reason? If listed quantity changes in future there cannot be a 1 to 1 comparison done purely based on price, you might have to somehow normalise it w.r.t quantity before comparison. 
