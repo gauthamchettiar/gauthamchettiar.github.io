@@ -13,7 +13,7 @@
         
         {{- if isset .Params "tags" -}}
             <br>
-            Tags: {{ range $i, $e := .Params.tags -}}
+            {{ range $i, $e := .Params.tags -}}
             {{- if $i -}}, {{ end -}}
             <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ $e }}</a>
             {{- end -}}    
@@ -24,6 +24,8 @@
     <br>
     <div>
         <img src={{ .Params.cover }} alt={{ .Params.coveralt }}/>
+        <span style="color:grey">Illustration Source: {{ .Params.coveralt }}</span>
+        <br>
     </div>
     {{ end }}
     {{- .Content -}}
