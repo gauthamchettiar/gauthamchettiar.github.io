@@ -5,6 +5,7 @@ date: 2022-01-11
 lastmod: 2022-05-02
 draft: false
 cover: images/cover.svg
+coveralt : "'Data' from undraw.co"
 tags: [data-engineering, sql]
 categories: ["Challenges"]
 ---

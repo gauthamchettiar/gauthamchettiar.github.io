@@ -5,6 +5,7 @@ date: 2021-06-12
 lastmod: 2022-05-01
 draft: false
 cover: images/cover.svg
+coveralt : "'Art' from undraw.co"
 tags: ["creative"]
 categories: ["Personal"]
 ---

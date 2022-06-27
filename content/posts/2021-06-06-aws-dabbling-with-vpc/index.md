@@ -5,6 +5,7 @@ date: 2021-06-06
 lastmod: 2022-05-01
 draft: false
 cover: images/cover.svg
+coveralt : "'Connected world' from undraw.co"
 tags: [cloud, aws]
 categories: ["Tutorials"]
 ---

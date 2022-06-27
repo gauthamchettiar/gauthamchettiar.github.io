@@ -5,6 +5,7 @@ date: 2022-05-04
 lastmod: 2022-05-04
 draft: false
 cover: images/cover.svg
+coveralt : "'Online groceries' from undraw.co"
 tags: [python, web-scraping]
 categories: ["Projects"]
 ---

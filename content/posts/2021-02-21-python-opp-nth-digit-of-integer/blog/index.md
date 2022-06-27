@@ -5,7 +5,7 @@ date : 2021-02-21
 lastmod : 2022-04-30
 draft : false
 cover : "images/cover.svg"
-coveralt : "Counting Stars from undraw.co"
+coveralt : "'Counting Stars' from undraw.co"
 tags : [
     "opp-series",
     "python"

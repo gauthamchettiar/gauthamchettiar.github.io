@@ -5,6 +5,7 @@ date: 2021-06-04
 lastmod: 2022-05-01
 draft: false
 cover: images/cover.svg
+coveralt : "'Reading List' from undraw.co"
 tags: [python, python-listed-series]
 categories: ["Tutorials"]
 ---
