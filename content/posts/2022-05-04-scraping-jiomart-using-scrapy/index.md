@@ -18,11 +18,11 @@ This article is more of an insight into how I figured out a way to scrape data o
 
 ---
 
-For those who have never heard of jiomart, it is an Indian e-commerce website by Reliance. As of now, Jiomart provides free delivery without any minimum purchase limit. Believe me, I have ordered for groceries as low as INR 20 and got it delivered.
+For those who have never heard of Jiomart, it is an Indian e-commerce website by Reliance. As of now, Jiomart provides free delivery without any minimum purchase limit. Believe me, I have ordered for groceries as low as INR 20 and got it delivered.
 
 ![free delivery, no minimum order promotion image](images/01.png)
 
-Being one of cheapest store to buy vegetables online it had become our goto store during pandemic. Infact, the habit has stuck with us till now - kudos to company! 
+Being one of cheapest store to buy vegetables online it had become our goto store during pandemic. In fact, the habit has stuck with us till now - kudos to company! 
 
 Since we still buy so frequently from the store, I thought it would be useful for us to have metrics that answered a few things - What is the cheapest product today? How the price of a particular product changed overtime? Is price increasing? - then it's hoarding time! 
 
@@ -30,8 +30,8 @@ While such questions may seem too much for grocery products like rice or wheat, 
 
 But before analysis, you need data. And jiomart won't provide me their daily data, even if I ask nicely. So, the only way to quench my curiosity was to scrape the data off their website. While I have performed analytics on a small set of data, this article focuses on the scraping part rather than on the analytical part. 
 
-Webscraping can usually be divided into 3 major steps,
-1. [Understanding the structure](#understanding-the-structure) and [Recognizing scrapable data](#recognizing-scrapable-data).
+Web scraping can usually be divided into 3 major steps,
+1. [Understanding the structure](#understanding-the-structure) and [Recognizing scrape-able data](#recognizing-scrape-able-data).
 2. [Testing your theory](#testing-your-theory) and [Writing script to actually scrape data](#writing-script-to-scrape-data).
 3. [Cleaning the scraped data](#cleaning-the-scraped-data).
 
@@ -64,32 +64,32 @@ Some promotional links are short lived, some are frequently added and removed, t
 
 Final implementation does have provision to scrape both category and non-category pages.
 
-# Recognizing Scrapable Data
-Before we start we need to check the data that we can actually acquire. Our original motivation was to compare the prices of products, so we definetly need Product Name and Product Price, we also need one more metric that is Product Quantity. Reason? If listed quantity changes in future there cannot be a 1 to 1 comparison done purely based on price, you might have to somehow normalise it w.r.t quantity before comparison. 
+# Recognizing Scrape-able Data
+Before we start we need to check the data that we can actually acquire. Our original motivation was to compare the prices of products, so we definitely need Product Name and Product Price, we also need one more metric that is Product Quantity. Reason? If listed quantity changes in future there cannot be a 1 to 1 comparison done purely based on price, you might have to somehow normalize it w.r.t quantity before comparison. 
 
 So we need 3 metrics,
 - Product name
 - Product Price
 - Product Quantity
 
-Product listing page does have list of products along with price... but there is'nt a seperate field for Quantity. 
+Product listing page does have list of products along with price... but there is'nt a separate field for Quantity. 
 
 {{<img-resize src="images/05.png" alt="watermelon product listing" height="300">}}
 
-What if you open individual product page? Does it have a seperate Quantity value?
+What if you open individual product page? Does it have a separate Quantity value?
 
 {{<img-resize src="images/06.png" alt="watermelon product page">}}
 
-Yes, it does have a seperate "Net Quantity" entry. But, same quantity information is also available in the name of product in previous product listing page.
+Yes, it does have a separate "Net Quantity" entry. But, same quantity information is also available in the name of product in previous product listing page.
 
-I had a decision to make here - If I can extract quantity and product name directly from listing page's name - "Watermelon Kiran Big 1 pc (Approx 2800 g - 4000 g)", is it worth parsing one more heirarchy of page just to get a more accurate bit of information?
+I had a decision to make here - If I can extract quantity and product name directly from listing page's name - "Watermelon Kiran Big 1 pc (Approx 2800 g - 4000 g)", is it worth parsing one more hierarchy of page just to get a more accurate bit of information?
 
-While it isn't hard to do crawl the product pages as well, I didn't think it was right to bombard the website with even more hits. So I settled, with only getting the name and quantity. Cleaing this data to then aquire Quantity and Name is a problem than can be handled later.
+While it isn't hard to do crawl the product pages as well, I didn't think it was right to bombard the website with even more hits. So I settled, with only getting the name and quantity. Cleaning this data to then acquire Quantity and Name is a problem than can be handled later.
 
 # Testing your theory
 Now since I had decided what to scrape, I did a quick {{<newtabref title="Inspect" href="https://developer.chrome.com/docs/devtools/open/">}} to get an idea of website's HTML elements. 
 
-I got to know, each product item was defined in below heirarchy -
+I got to know, each product item was defined in below hierarchy -
 ```html
 <div class="cat-item viewed">
     ...
@@ -192,11 +192,11 @@ There was one last bit of trial I had to do before I could start implementing a 
 On their website I could do it by setting my pincode here,
 ![pincode setting](images/07.png)
 
-But mimicing the same using requests was quite a task. So, after digging through the html, I found an interesting snippet of code related to pincode,
+But mimicking the same using requests was quite a task. So, after digging through the html, I found an interesting snippet of code related to pincode,
 ```js
 var login_pincode = localStorage.getItem('nms_mgo_pincode');
 ```
-I figured maybe setting a cookie item `nms_mgo_picode` would make it believe I was requesting from that particular region. 
+I figured maybe setting a cookie item `nms_mgo_pincode` would make it believe I was requesting from that particular region. 
 
 So tried adding it in previous queries,
 ```python
@@ -212,7 +212,7 @@ It's possible to write a custom script using just requests and beautifulsoup, Bu
 
 What's the benefit of using scrapy you ask?
 - It allows to add multiple destinations for your scraped data - {{<newtabref title="feeds" href="https://docs.scrapy.org/en/latest/topics/feed-exports.html">}}
-- Ouput file format chan be changes with a simple change of setting - {{<newtabref title="feeds" href="https://docs.scrapy.org/en/latest/topics/feed-exports.html">}}
+- Output file format chan be changes with a simple change of setting - {{<newtabref title="feeds" href="https://docs.scrapy.org/en/latest/topics/feed-exports.html">}}
 - It allows you to extend the functionality easily due to it's modularity - just add a new {{<newtabref title="spider" href="https://docs.scrapy.org/en/latest/topics/spiders.html">}}}. 
 
 
@@ -225,19 +225,19 @@ Most important piece of scrapy code is {{<newtabref title="jiomart/settings.py" 
 There are 3 spiders (as per scrapy these are classes that crawls websites and has logic to fetch data from the fetched html) written for fetching 3 different types of urls,
 1. jio-by-category : Refer {{<newtabref title="jiomart/spiders/category_spider.py" href="https://github.com/gauthamchettiar/scrapy-mini-crawlers/blob/main/jiomart/spiders/category_spider.py">}}
     ```python
-    # related settting @ jiomart/settings.py
+    # related setting @ jiomart/settings.py
     URL_CATEGORY = "https://www.jiomart.com/all-category"
     CATEGORIES_TO_PARSE = ["Fruits & Vegetables"]
     ```
     
 2. jio-by-top-deals : Refer {{<newtabref title="jiomart/spiders/top_deals_spider.py" href="https://github.com/gauthamchettiar/scrapy-mini-crawlers/blob/main/jiomart/spiders/top_deals_spider.py">}}
     ```python
-    # related settting @ jiomart/settings.py
+    # related setting @ jiomart/settings.py
     URL_TOP_DEALS = "https://www.jiomart.com/all-topdeals"
     ```
 3. jio-by-url : Refer {{<newtabref title="jiomart/spiders/url_spider.py" href="https://github.com/gauthamchettiar/scrapy-mini-crawlers/blob/main/jiomart/spiders/url_spider.py">}}
     ```python
-    # related settting @ jiomart/settings.py
+    # related setting @ jiomart/settings.py
     URLS = {
     "Hotspot Deals" : "https://www.jiomart.com/c/groceries/bestdeals/hotspot/706",
     "Hot Food Fest" : "https://www.jiomart.com/c/groceries/bestdeals/hot-food-fest-2022/4515"

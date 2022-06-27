@@ -86,7 +86,7 @@ When you are running an organization, there are often requirements for multiple 
 
 VPC has a physical boundary, *you cannot span VPCs across multiple Regions* (1 VPC 🔗 1 Region). All resources provisioned within a VPC will be created in the same Region only. Since a Region may include multiple AZs, a VPC may include multiple AZs (1 VPC 🔗 N AZ). Also, *a Region itself can have multiple VPCs under it* (1 Region 🔗 N VPC).
 
-If VPC is not enough for logical isolation of your resources, you can also create Subnets within any VPC. Subnets (or subnetworks) are just VPCs divided into smaller networks. 
+If VPC is not enough for logical isolation of your resources, you can also create Subnets within any VPC. Subnets (or sub-networks) are just VPCs divided into smaller networks. 
 
 Association between Subnets and AZ is similar to that of VPC and Regions, *you cannot span Subnet across multiple AZs* (1 Subnet 🔗 1 AZ), all resources provisioned within a Subnet will be created in the same AZ. Also, *an AZ itself can have multiple Subnets under it* (1 AZ 🔗 N Subnets)
 
@@ -147,7 +147,7 @@ Here are some examples to get started with,
 
 ![](images/04_04.svg)
 
-Hopefully, that made it clear. In case you want to quickly calculate this for any arbritary CIDR block, you can use this nifty tool – {{<newtabref title="Subnet Calculator" href="https://mxtoolbox.com/subnetcalculator.aspx" >}}. This makes it easier to calculate the range of your CIDR block.
+Hopefully, that made it clear. In case you want to quickly calculate this for any arbitrary CIDR block, you can use this nifty tool – {{<newtabref title="Subnet Calculator" href="https://mxtoolbox.com/subnetcalculator.aspx" >}}. This makes it easier to calculate the range of your CIDR block.
 
 As I said, while creating a VPC you have to assign a CIDR block to it. This block decides the IP Addresses of hosts that will be provisioned within that VPC. 
 

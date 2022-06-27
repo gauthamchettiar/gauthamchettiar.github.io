@@ -1,6 +1,6 @@
 ---
-title:  "🗄️ Data Engineering | Analysing IPL Data From Day Zero"
-slug: analysing-ipl-data-from-day-zero
+title:  "🗄️ Data Engineering | Analyzing IPL Data From Day Zero"
+slug: analyzing-ipl-data-from-day-zero
 date: 2022-01-11
 lastmod: 2022-05-02
 draft: false
@@ -39,8 +39,8 @@ Before we get to dataset, here are some rules to follow along while reading this
 
 1. {{<newtabref title="https://github.com/gauthamchettiar/ipl-data-analysis" href="https://github.com/gauthamchettiar/ipl-data-analysis" >}} - clone this repository and keep it with you. 
 2. **Make sure to look at solutions only after you have written yours down.** 
-3. Code provided is written in PostgreSQL, while you are free to work with your prefered flavor of SQL. I would suggest you to install {{<newtabref title="PostgreSQL" href="https://www.postgresql.org/download/" >}} for comparing solutions.
-4. Dataset is available as part of above repositoy at {{<newtabref title="data/" href="https://github.com/gauthamchettiar/ipl-data-analysis/tree/main/data" >}} directory. Provided data is a cleaned version of dataset taken from {{<newtabref title="kaggle" href="https://www.kaggle.com/patrickb1912/ipl-complete-dataset-20082020" >}}
+3. Code provided is written in PostgreSQL, while you are free to work with your preferred flavor of SQL. I would suggest you to install {{<newtabref title="PostgreSQL" href="https://www.postgresql.org/download/" >}} for comparing solutions.
+4. Dataset is available as part of above repository at {{<newtabref title="data/" href="https://github.com/gauthamchettiar/ipl-data-analysis/tree/main/data" >}} directory. Provided data is a cleaned version of dataset taken from {{<newtabref title="kaggle" href="https://www.kaggle.com/patrickb1912/ipl-complete-dataset-20082020" >}}
 5. You are free to look at the dataset and make sense of it on your own.
 6. You will be able to setup your PostgresSQL with required tables by following instructions in above github readme.
 7. Bonus questions are just as important as main question, try to solve both.
@@ -125,7 +125,7 @@ Get the Venue, Bat/Field Decision and corresponding win count for each decision 
 **Solution :** {{<newtabref title="/solutions/problem_5.sql" href="https://github.com/gauthamchettiar/ipl-data-analysis/blob/main/solutions/problem_5.sql" >}}
 
 ## Problem 6 : Get total matches played by each team
-While getting win_count for each team was easy, calculating total matches played by each team is slightly tricky. Each team has either played as team1 (home) or team2 (away). So you have to somehow combine data from 2 columns to aquire the required analytics.
+While getting win_count for each team was easy, calculating total matches played by each team is slightly tricky. Each team has either played as team1 (home) or team2 (away). So you have to somehow combine data from 2 columns to acquire the required analytics.
 
 {{<collapsible-img "Expected Output - (Column = 2, Row = 14)" "images/14.png" "P6 Output" 400>}}
 
@@ -165,7 +165,7 @@ In order to find the most consistent team of IPL. It is not enough to find who w
 
 {{<collapsible-img "Expected Output - (Column = 5, Row = 108)" "images/20.png" "P9 Output" 350>}}
 
-**Bonus :** Above data fetched is very difficult to analyse. It would have been much better if season were used as column names instead. Write a query that would display just `matches_won` for each team over seasons. 
+**Bonus :** Above data fetched is very difficult to analyze. It would have been much better if season were used as column names instead. Write a query that would display just `matches_won` for each team over seasons. 
 
 Looking at below output should make it clear. 
 
@@ -184,7 +184,7 @@ Similar to getting `matches_won` in above bonus question, try to list `win_perce
 
 {{<collapsible-img "Expected Output - (Column = 14, Row = 14)" "images/23.png" "P10 Output" 320>}}
 
-**Bonus :** Real improvement/detorioration in performance can only be calculated if it is compared with last season's performance. We can consider `win_percentage` as a performance factor for the same. 
+**Bonus :** Real improvement/deterioration in performance can only be calculated if it is compared with last season's performance. We can consider `win_percentage` as a performance factor for the same. 
 
 Try to retrieve the difference between a season's `win_percentage` figure with last season's figure. 
 

@@ -66,7 +66,7 @@ for index, score in enumerate(scores):
 for name, score in zip(names, scores):
   print(name, score)
 ```
-While zip is pretty cool, it has a small gotcha. If one of the list is longer than other, it cuts off the data in longer list *i.e: in above list `"Bear"` entry would have been omited while iterating.* 
+While zip is pretty cool, it has a small gotcha. If one of the list is longer than other, it cuts off the data in longer list *i.e: in above list `"Bear"` entry would have been omitted while iterating.* 
 
 ```python
 # Andy 99
@@ -156,7 +156,7 @@ movie_ratings["Toy Story 5"]
 # >>> KeyError: 'Toy Story 5'
 ```
 
-In case you need to return a default value instead of an error. It's possible to use try catch to have a this behaviour. But that's not a clean way to do it. 
+In case you need to return a default value instead of an error. It's possible to use try catch to have a this behavior. But that's not a clean way to do it. 
 
 In fact, there are 2 really good ways to handle this. One is defining a default value during dictionary definition and other defining a default value during access.
 
@@ -175,7 +175,7 @@ release_year = defaultdict(
 release_year["Toy Story"]  # -> 1995
 release_year["Shark Tale"]  # -> None
 ```
-First argument "lambda: None" of defaultdict() will set the default value as "None". This can be set to any arbritrary value instead.
+First argument "lambda: None" of defaultdict() will set the default value as "None". This can be set to any arbitrary value instead.
 
 Using {{<newtabref  href="https://pythonexamples.org/python-dictionary-get/" title="get()">}} method to define a default value on access.
 ```python

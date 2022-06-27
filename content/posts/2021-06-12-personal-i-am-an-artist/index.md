@@ -64,7 +64,7 @@ These were made before celebrity woman in the previous picture, I don't really r
 
 Then finally, I decided to draw the most influential woman of my life... My mom! I drew 2 because I was not happy with my first result.
 
-{{<img-01 "images/09.png" "Woman who is too possesive about Me!">}}
+{{<img-01 "images/09.png" "Woman who is too possessive about Me!">}}
 {{<img-01 "images/08.png" "Woman with a beautiful Heart!">}}
 
 
@@ -81,12 +81,12 @@ The next 2 are my last sketches...
 
 ...before I decided to start using colors!
 
-This is again a mistake on my part, I should have focused on improving my linework before I could fill them in with colors. 
+This is again a mistake on my part, I should have focused on improving my line-work before I could fill them in with colors. 
 
 Well, what's done is done. Here is my first sketch with colors!
 
 {{<img-01 "images/12.png" "Don't ask me her Number!">}}
-{{<img-01 "images/13.png" "She is definetly out of your league!">}}
+{{<img-01 "images/13.png" "She is definitely out of your league!">}}
 
 I am not sure what made me color it, but I felt like colors did bring a certain vibrance to the sketch. I decided to color all my sketches henceforth!
 

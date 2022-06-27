@@ -76,7 +76,7 @@ print(f'First Element in List {arr} is {arr[0]}')
 # Now that's the cleanest of the lot, isn't it?
 ```
 
-String formatting is not limited to just introducing a variable in-between string, you can do a variety of fancy things while formating. Here is a {{<newtabref  href="https://gist.github.com/gauthamchettiar/fa3f32758616611bfecf941809fd598b" title="Python String Formatting Mini Language Quick Reference">}} I made, in case you are curious.
+String formatting is not limited to just introducing a variable in-between string, you can do a variety of fancy things while formatting. Here is a {{<newtabref  href="https://gist.github.com/gauthamchettiar/fa3f32758616611bfecf941809fd598b" title="Python String Formatting Mini Language Quick Reference">}} I made, in case you are curious.
 
 ### Reference Material:
 - {{<newtabref  href="https://realpython.com/python-f-strings/" title="https://realpython.com/python-f-strings/">}}
@@ -113,7 +113,7 @@ a,_ = [4,6] # a=4 and 6 will be ignored
 a,_,c = [4,6,8] # a=4, c=8 and 6 will be ignored
 ```
 
-Suppose, you know a function can fail, but don't want to handle the error, instead return a default value on failure. Let's take an exmple of *division by zero error*, let's say you want to *return 0* on failure and also know if an error has occured or not, you can return a `Tuple ()` as `(return_value, error)`.
+Suppose, you know a function can fail, but don't want to handle the error, instead return a default value on failure. Let's take an example of *division by zero error*, let's say you want to *return 0* on failure and also know if an error has occurred or not, you can return a `Tuple ()` as `(return_value, error)`.
 
 ```python
 def get_division(a, b):
@@ -190,13 +190,13 @@ a[::2] # Returns [1,3,5], step=2 means skip every 1 value
 a[::3] # Returns [1,4], step=3 means skip every 2 values
 ```
 
-Slicing is especially useful if you want to extract certain characters from start or end of string. Let's say you need to return first 4 digits or last 4 digits of creditcard -
+Slicing is especially useful if you want to extract certain characters from start or end of string. Let's say you need to return first 4 digits or last 4 digits of credit-card -
 
 ```python
 credit_card = "4000056655665556"
 credit_card[:4] # Returns '4000'
 credit_card[12:] # Returns '5556'
-# Creditcard number length can differ based on length,
+# Credit-card number length can differ based on length,
 # -> So this is not really a robust solution
 ```
 

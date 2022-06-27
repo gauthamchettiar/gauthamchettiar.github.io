@@ -118,7 +118,7 @@ def nth_digit_of_integer(integer, n):
         # mod (%) operator returns remainder after
         #   dividing by the number to it's right - here it's 10
         last_digit = integer % 10
-        # math.floor() rounds any foating point value to
+        # math.floor() rounds any floating point value to
         #   an integer, such that integer is lower than the given float
         #   e.g: 
         #   math.floor(8.99) == 8
@@ -212,7 +212,7 @@ Input - Integer=`69` and N=`2`          | Output - `9`
 
 
 ## Problem : Sum of Squares of all Digits
-**Statement :** Given an Integer find the sum of sqaures of all the Digits  E.g: If `Integer=1975`, then output should be `156` (`1` + `square(9)` + `square(7)` + `square(5)` = `1` + `81` + `49` + `25` = `156`)
+**Statement :** Given an Integer find the sum of squares of all the Digits  E.g: If `Integer=1975`, then output should be `156` (`1` + `square(9)` + `square(7)` + `square(5)` = `1` + `81` + `49` + `25` = `156`)
 
 **Illustration :**
 ![Sum of Squares of all Digits](images/Problem3-Sum_of_Squares_of_all_Digits_Illustration.svg)
@@ -264,7 +264,7 @@ Input - Integer=`69`        | Output - `false`
 ```
 
 ## Problem : Implement Luhn Algorithm
-**Statement :** Luhn Alogorithm is a check used to validate whether a credit card number is valid or not. 
+**Statement :** Luhn Algorithm is a check used to validate whether a credit card number is valid or not. 
 
 Luhn algorithm has been explained in below illustration 👉
 
@@ -287,7 +287,7 @@ Some Python features are really unique to the language, Strings can be traversed
 ```python
 integer = 1975
 # string conversion in python is simple, just call str() function
-integer_str = str(integer) # integer_str containes '1975' string
+integer_str = str(integer) # integer_str contains '1975' string
 # characters in strings can be accessed just like an array
 integer_str[0] # this would return -> 1
 integer_str[1] # this would return -> 9
