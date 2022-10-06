@@ -1,5 +1,5 @@
 ---
-title : "🧩 OPP | Nth Digit of an Integer"
+title : "🧩 OPP | Nth Digit of an Integer + 6 Similar Problems"
 slug : "opp-nth-digit-of-an-integer"
 date : 2021-02-21
 lastmod : 2022-04-30
