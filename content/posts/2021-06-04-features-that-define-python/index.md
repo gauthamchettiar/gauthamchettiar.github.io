@@ -17,11 +17,11 @@ This article focuses on really simple but useful features of Python. You can use
 <br>
 
 # Index
-- [Generic \| Interpolated f-strings](#generic--interpolated-f-strings)
-- [Generic \| Multiple Assignment Unpacking](#generic--multiple-assignment-unpacking)
-- [List \| Slicing and Striding](#list--slicing-and-striding)
-- [List \| Negative Indexing](#list--negative-indexing)
-- [List \| List Comprehension](#list--list-comprehension)
+1. [Generic \| Interpolated f-strings](#generic--interpolated-f-strings)
+2. [Generic \| Multiple Assignment Unpacking](#generic--multiple-assignment-unpacking)
+3. [List \| Slicing and Striding](#list--slicing-and-striding)
+4. [List \| Negative Indexing](#list--negative-indexing)
+5. [List \| List Comprehension](#list--list-comprehension)
   
 [Next Part](/features-that-define-python-p2)
 

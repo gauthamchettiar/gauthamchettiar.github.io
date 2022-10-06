@@ -18,11 +18,11 @@ Let's just dive in!
 # Index
 [Previous Part](/features-that-define-python#index)
 
-- [List \| enumerate(), zip() and itertools.ziplongest() Functions](#list--enumerate-zip-and-itertoolsziplongest-functions)
-- [Dictionary \| items(), keys() and values() Functions](#dictionary--items-keys-and-values-functions)
-- [Dictionary \| Handling Key Errors](#dictionary--handling-key-errors)
-- [Functions \| Positional and Named Arguments](#functions--positional-and-named-arguments)
-- [Functions \| Variable Arguments](#functions--variable-arguments)
+6. [List \| enumerate(), zip() and itertools.ziplongest() Functions](#list--enumerate-zip-and-itertoolsziplongest-functions)
+7. [Dictionary \| items(), keys() and values() Functions](#dictionary--items-keys-and-values-functions)
+8. [Dictionary \| Handling Key Errors](#dictionary--handling-key-errors)
+9. [Functions \| Positional and Named Arguments](#functions--positional-and-named-arguments)
+10. [Functions \| Variable Arguments](#functions--variable-arguments)
 
 <br>
 
