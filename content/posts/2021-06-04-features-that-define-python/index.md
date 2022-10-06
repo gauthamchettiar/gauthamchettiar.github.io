@@ -17,25 +17,12 @@ This article focuses on really simple but useful features of Python. You can use
 <br>
 
 # Index
-- [Index](#index)
-  - [Generic \| Interpolated f-strings](#generic--interpolated-f-strings)
-    - [Code Example:](#code-example)
-    - [Reference Material:](#reference-material)
-  - [Generic \| Multiple Assignment Unpacking](#generic--multiple-assignment-unpacking)
-    - [Code Example:](#code-example-1)
-    - [Reference Material:](#reference-material-1)
-  - [List \| Slicing and Striding](#list--slicing-and-striding)
-    - [Code Example:](#code-example-2)
-      - [✍ Things to remember,](#-things-to-remember)
-    - [Reference Material:](#reference-material-2)
-  - [List \| Negative Indexing](#list--negative-indexing)
-    - [Code Example:](#code-example-3)
-    - [Reference Material:](#reference-material-3)
-  - [List \| List Comprehension](#list--list-comprehension)
-    - [Code Example:](#code-example-4)
-      - [✍ Things to Remember,](#-things-to-remember-1)
-    - [Reference Material:](#reference-material-4)
-
+- [Generic \| Interpolated f-strings](#generic--interpolated-f-strings)
+- [Generic \| Multiple Assignment Unpacking](#generic--multiple-assignment-unpacking)
+- [List \| Slicing and Striding](#list--slicing-and-striding)
+- [List \| Negative Indexing](#list--negative-indexing)
+- [List \| List Comprehension](#list--list-comprehension)
+  
 [Next Part](/features-that-define-python-p2)
 
 <br>

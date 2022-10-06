@@ -18,22 +18,11 @@ Let's just dive in!
 # Index
 [Previous Part](/features-that-define-python#index)
 
-- [Index](#index)
 - [List \| enumerate(), zip() and itertools.ziplongest() Functions](#list--enumerate-zip-and-itertoolsziplongest-functions)
-    - [Code Example:](#code-example)
-    - [Reference Material:](#reference-material)
 - [Dictionary \| items(), keys() and values() Functions](#dictionary--items-keys-and-values-functions)
-    - [Code Example:](#code-example-1)
-    - [Reference Material:](#reference-material-1)
 - [Dictionary \| Handling Key Errors](#dictionary--handling-key-errors)
-    - [Code Example:](#code-example-2)
-    - [Reference Material:](#reference-material-2)
 - [Functions \| Positional and Named Arguments](#functions--positional-and-named-arguments)
-    - [Code Example:](#code-example-3)
-    - [Reference Material:](#reference-material-3)
 - [Functions \| Variable Arguments](#functions--variable-arguments)
-    - [Code Example:](#code-example-4)
-    - [Reference Material:](#reference-material-4)
 
 <br>
 

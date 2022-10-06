@@ -23,19 +23,11 @@ Then, I took it personally and read through every material I had. During this pr
 <br>
 
 # Index
-- [Index](#index)
-  - [Where is my data being stored?](#where-is-my-data-being-stored)
-    - [✍ Remember](#-remember)
-  - [How to make sure my resources are isolated?](#how-to-make-sure-my-resources-are-isolated)
-    - [✍ Remember](#-remember-1)
-  - [What should I take care of before deploying any resource?](#what-should-i-take-care-of-before-deploying-any-resource)
-  - [How to identify my resource?](#how-to-identify-my-resource)
-    - [✍ Remember](#-remember-2)
-  - [How to reach my resource?](#how-to-reach-my-resource)
-    - [✍ Remember](#-remember-3)
-  - [What to do next?](#what-to-do-next)
-  - [That's it?](#thats-it)
-
+- [Where is my data being stored?](#where-is-my-data-being-stored)
+- [How to make sure my resources are isolated?](#how-to-make-sure-my-resources-are-isolated)
+- [What should I take care of before deploying any resource?](#what-should-i-take-care-of-before-deploying-any-resource)
+- [How to identify my resource?](#how-to-identify-my-resource)
+- [How to reach my resource?](#how-to-reach-my-resource)
 
 <br>
 
