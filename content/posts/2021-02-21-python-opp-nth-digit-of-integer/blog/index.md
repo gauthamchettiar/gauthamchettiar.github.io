@@ -1,13 +1,13 @@
 ---
-title : "🧩 OPP | Nth Digit of an Integer + 6 Similar Problems"
-slug : "opp-nth-digit-of-an-integer"
+title : "🧩 Coding | Nth Digit of an Integer + 6 Similar Problems"
+slug : "nth-digit-of-an-integer"
 date : 2021-02-21
-lastmod : 2022-04-30
+lastmod : 2022-11-25
 draft : false
 cover : "images/cover.svg"
 coveralt : "'Counting Stars' from undraw.co"
 tags : [
-    "opp-series",
+    "coding",
     "python"
 ]
 categories : [
