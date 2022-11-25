@@ -19,7 +19,7 @@ After refining, reframing, rearranging, reformatting, re-editing, reorganizing, 
 Person reading them would certainly not think -
 - why a box in one of my diagram is slightly crooked,
 - why I do not solutions to problems from opp series,
-- why is [opp](/opp-nth-digit-of-an-integer) even a series if only one post was supposed to be released,
+- why is [opp](/nth-digit-of-an-integer) even a series if only one post was supposed to be released,
 - why this post does not have a 'undraw.co' cover,
 - why is lady in cover image not centered, there is more white space to left,
 - or why all these questions are in bullet points instead of just being a paragraph...
@@ -64,11 +64,11 @@ In fact, it's the opposite. I have decided on some changes to my posting style a
 
 These, I hope will help me get more posts posted consistently!
 
-Consistency... I have fallen in this trap before, that's when I spewed out 2 really sub-par posts, "Features that Define Python [P1](/features-that-define-python) & [P2](/features-that-define-python-p2)". 
+Consistency... I have fallen in this trap before, that's when I spewed out a really sub-par post, "[Features that Define Python](/features-that-define-python)". 
 
 Not having something ready to post, made me write something which I didn't really believe in. 
 
-Old me would have quickly deleted those posts out of existence. But doing that would only make me delete posts further. So, I will keep them, it could still be useful to some. Even if that's 1 in 1000.
+Old me would have quickly deleted that post out of existence. But doing that would only make me delete posts further. So, I will keep it. It could still be useful to some, even if that's 1 in 1000.
 
 So, as a final note! to that imaginary person who stumbled upon this (not search engine optimized, not analytics linked, not advertized) blog -
 
