@@ -18,8 +18,7 @@ After refining, reframing, rearranging, reformatting, re-editing, reorganizing, 
 
 Person reading them would certainly not think -
 - why a box in one of my diagram is slightly crooked,
-- why I do not solutions to problems from opp series,
-- why is [opp](/nth-digit-of-an-integer) even a series if only one post was supposed to be released,
+- ~~why is [opp](/nth-digit-of-an-integer) even a series if only one post was supposed to be released~~ fixed it... it's no more a series,
 - why this post does not have a 'undraw.co' cover,
 - why is lady in cover image not centered, there is more white space to left,
 - or why all these questions are in bullet points instead of just being a paragraph...
@@ -75,4 +74,5 @@ So, as a final note! to that imaginary person who stumbled upon this (not search
 >  Expect more posts from me in future!
 
 <br>
+
 Have a Good Day! ❤️ (~That's one phrase that will definitely not change!)
