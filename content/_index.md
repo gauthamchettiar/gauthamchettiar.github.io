@@ -6,7 +6,7 @@ I am a data engineer who loves to scrape stuff, analyze and reach pointless conc
 
 ✨ &nbsp;  [Challenges ({{< categorycount category="challenges" >}})](categories/challenges/)<br>
 🚧 &nbsp; [Projects ({{< categorycount category="projects" >}})](categories/projects/)<br>
-📗 &nbsp; [Tutorials ({{< categorycount category="tutorials" >}})](categories/tutorials/)<br>
+📗 &nbsp; [Notes ({{< categorycount category="notes" >}})](categories/notes/)<br>
 ❤️ &nbsp; [Personal ({{< categorycount category="personal" >}})](categories/personal/)<br>
 
 🗞️ &nbsp; [RSS](index.xml)<br>

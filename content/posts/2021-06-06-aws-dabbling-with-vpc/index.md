@@ -7,7 +7,7 @@ draft: false
 cover: images/cover.svg
 coveralt : "'Connected world' from undraw.co"
 tags: [cloud, aws]
-categories: ["Tutorials"]
+categories: ["Notes"]
 ---
 
 I had decided to attempt AWS Solutions Architect Exam. So, after doing some initial learning, I went ahead and gave my first practice test. And... I bombed the VPC section! 

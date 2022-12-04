@@ -7,7 +7,7 @@ draft: false
 cover: images/cover.svg
 coveralt : "'Reading List' from undraw.co"
 tags: [python]
-categories: ["Tutorials"]
+categories: ["Notes"]
 ---
 <br>  
 
