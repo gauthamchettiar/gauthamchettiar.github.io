@@ -7,8 +7,8 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 
 [params]
-  description = "A Personal Blog, documentiong my experiences and learnings!"
-  copyright = 'Crafted with "Hugo" & "etch". Deployed with "Netlify".'
+  description = "A Personal Blog, documenting my experiences and learnings!"
+  copyright = 'Crafted with "Hugo". Themed with "etch". Deployed with "Netlify".'
   dark = "auto"
   highlight = true
 

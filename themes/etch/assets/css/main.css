@@ -255,11 +255,8 @@ main#content code {
 
 main#content p code,
 main#content li code{
-    color: #f92672
+    background-color: #303030;
 }
-
-
-
 
 main#content pre {
     display: block;
