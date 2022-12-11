@@ -19,7 +19,7 @@ After refining, reframing, rearranging, reformatting, re-editing, reorganizing, 
 Person reading them would certainly not think -
 - why a box in one of my diagram is slightly crooked,
 - ~~why is [opp](/nth-digit-of-an-integer) even a series if only one post was supposed to be released~~ fixed it... it's no more a series,
-- why this post does not have a 'undraw.co' cover,
+- ~~why this post does not have a 'undraw.co' cover~~ well none of them have now,
 - why is lady in cover image not centered, there is more white space to left,
 - or why all these questions are in bullet points instead of just being a paragraph...
 
