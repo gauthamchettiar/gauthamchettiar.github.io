@@ -403,7 +403,7 @@ This code will create a new turtle object and use it to draw an outline of Narut
 You can customize the appearance of the drawing by changing the pen color, pen size, and other turtle properties. You can also add more details to the drawing, such as Naruto's whisker marks or his headband, by using additional turtle drawing commands.
 
 I hope this helps! Let me know if you have any questions.
-x
+
 ---
 
 which draws this interesting image,
