@@ -10,24 +10,8 @@
                 <time>{{ .Lastmod | time.Format (i18n "post.updated") }}</time>
             {{ end }}
         {{- end -}}
-        
-        {{- if isset .Params "tags" -}}
-            <br>
-            {{ range $i, $e := .Params.tags -}}
-            {{- if $i -}}, {{ end -}}
-            <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ $e }}</a>
-            {{- end -}}    
-        {{- end -}}
         </div>
     </header>
-    {{- if isset .Params "cover" -}}
-    <br>
-    <div>
-        <img src={{ .Params.cover }} alt={{ .Params.coveralt }}/>
-        <span style="color:grey">Illustration Source: {{ .Params.coveralt }}</span>
-        <br>
-    </div>
-    {{ end }}
     {{- .Content -}}
 </article>
 {{ end }}

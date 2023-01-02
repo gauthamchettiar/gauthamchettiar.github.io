@@ -1,7 +1,6 @@
-<h3> Posts </h3>
-
+<h3>{{ i18n "posts.title" }}</h3>
 <ul id="posts">
-{{- range ( where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.unlisted" "!=" "true") }}
-        {{ .Render "li" }}
+{{- range where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{ .Render "li" }}
 {{- end }}
 </ul>

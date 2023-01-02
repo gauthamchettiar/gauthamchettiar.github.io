@@ -4,7 +4,7 @@
 [posts]
 
 [posts.title]
-other = "posts"
+other = "Posts"
 
 [posts.date]
 other = "Jan 2, 2006"
