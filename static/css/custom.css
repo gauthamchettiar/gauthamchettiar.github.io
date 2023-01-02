@@ -1,11 +1,11 @@
 html {
-    /* font-size: 58.6%; */
+    font-size: 58.6%;
     scrollbar-color: #6c6c6c #2e2e2e;
 }
 
 @media (min-width: 770px) { 
     body {
-        width: 750px;
+        width: 765px;
         line-height: 1.5;
         overflow-x: hidden;
     }
