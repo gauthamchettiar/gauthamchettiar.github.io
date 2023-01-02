@@ -4,17 +4,18 @@ slug: "so-who-cares"
 date: 2022-11-24
 lastmod: 2022-11-24
 draft: false
-cover: images/cover.jpg
-coveralt : "'Confused' by RobinHiggins, pixabay.com"
+unlisted: true
 tags: [thoughts]
 categories: ["Personal"]
 ---
 
-<br>
+{{<banner  src="images/cover.jpg" caption="'Confused' by RobinHiggins, pixabay.com">}}
 
 After refining, reframing, rearranging, reformatting, re-editing, reorganizing, restructuring my post for the gazillionth time. I thought -
 
-> who really cares?
+<div class="block-note bn-grey">
+who really cares?
+</div>
 
 Person reading them would certainly not think -
 - why a box in one of my diagram is slightly crooked,
@@ -63,7 +64,7 @@ In fact, it's the opposite. I have decided on some changes to my posting style a
 
 These, I hope will help me get more posts posted consistently!
 
-Consistency... I have fallen in this trap before, that's when I spewed out a really sub-par post, "[Features that Define Python](/features-that-define-python)". 
+Consistency... I have fallen in this trap before, that's when I spewed out a really unoriginal post - [Features that Define Python](/ten-things-python). 
 
 Not having something ready to post, made me write something which I didn't really believe in. 
 
@@ -71,8 +72,8 @@ Old me would have quickly deleted that post out of existence. But doing that wou
 
 So, as a final note! to that imaginary person who stumbled upon this (not search engine optimized, not analytics linked, not advertized) blog -
 
->  Expect more posts from me in future!
-
-<br>
+<div class="block-note bn-pink">
+Expect more posts from me in future!
+</div>
 
 Have a Good Day! ❤️ (~That's one phrase that will definitely not change!)

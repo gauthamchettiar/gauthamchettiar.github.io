@@ -1,4 +1,4 @@
-baseURL = 'http://gauthamchettiar.com/'
+baseURL = 'https://gauthamchettiar.com/'
 languageCode = 'en-us'
 title = 'Gautham Chettiar'
 theme = "etch"
@@ -8,8 +8,9 @@ pygmentsUseClasses = true
 
 [params]
   description = "A Personal Blog, documenting my experiences and learnings!"
-  dark = "auto"
+  dark = "false"
   highlight = true
+  custom_css = ["css/custom.css"]
 
 [menu]
 
