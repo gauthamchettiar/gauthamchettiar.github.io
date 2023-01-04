@@ -38,6 +38,11 @@ html {
     }
 }
 
+main#content .banner-caption {
+    margin-top: 0px;
+    color: #6c6c6c;
+}
+
 main#content .block-note {
     border-left:5px solid;
     padding-left:25px;
