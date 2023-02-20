@@ -1,11 +1,11 @@
 ---
-title:  "🧚 Creative | Storytelling with DALL·E"
+title:  "🧚 AI | Storytelling with DALL·E"
 slug: "storytelling-with-dall-e"
 date: 2022-08-04
 lastmod: 2022-08-04
 draft: false
-tags: [creative]
-categories: ["Personal"]
+tags: [ai]
+categories: ["Projects"]
 ---
 <style>
     .prompt {

@@ -8,6 +8,7 @@ I am a data engineer by profession & curious by nature. I like to try out stuff 
 🚧 &nbsp; [Projects ({{< categorycount category="projects" >}})](categories/projects/)<br>
 📗 &nbsp; [Notes ({{< categorycount category="notes" >}})](categories/notes/)<br>
 ❤️ &nbsp; [Personal ({{< categorycount category="personal" >}})](categories/personal/)<br>
+📁 &nbsp; [Archived ({{< categorycount category="archived" >}})](categories/archived/)<br>
 
 🗞️ &nbsp; [RSS](index.xml)<br>
 ✉️ &nbsp; [Contact](/contact)<br>

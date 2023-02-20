@@ -6,10 +6,14 @@ lastmod: 2022-11-24
 draft: false
 unlisted: true
 tags: [thoughts]
-categories: ["Personal"]
+categories: ["Archived"]
 ---
 
 {{<banner  src="images/cover.jpg" caption="'Confused' by RobinHiggins, pixabay.com">}}
+
+<div class="block-note bn-pink">
+This is an Archived Post! This will not be updated further.
+</div>
 
 After refining, reframing, rearranging, reformatting, re-editing, reorganizing, restructuring my post for the gazillionth time. I thought -
 
