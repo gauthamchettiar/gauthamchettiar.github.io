@@ -93,7 +93,6 @@ main#content table {
     border-collapse: collapse;
     position: sticky;
     scroll-behavior: calc();
-    width: 100%;
 }
 
 main#content td, th {
