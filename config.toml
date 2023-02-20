@@ -1,4 +1,4 @@
-baseURL = 'https://gauthamchettiar.com/'
+baseURL = 'https://blog.gauthamchettiar.com/'
 languageCode = 'en-us'
 title = 'gauthamchettiar'
 theme = "etch"
