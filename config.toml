@@ -1,6 +1,6 @@
 baseURL = 'https://gauthamchettiar.com/'
 languageCode = 'en-us'
-title = 'Gautham Chettiar'
+title = 'gauthamchettiar'
 theme = "etch"
 enableInlineShortcodes = true
 pygmentsCodeFences = true
