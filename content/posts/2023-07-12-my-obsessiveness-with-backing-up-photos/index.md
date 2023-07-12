@@ -11,7 +11,7 @@ I recently made a post on mastodon on my media backup situation -
 
 <a href="https://mastodon.social/@gauthamchettiar/110689920549878511">![Mastodon toot](images/01_mastodon_toot.png)</a>
 
-That was your tldr; and this post is an expansion on to why & how I am doing it. 
+That was your tldr; and this post is an expansion on why & how I am doing it. 
 
 I have had a bad experience of losing some of my childhood photos due to a corrupted external hard drive. 
 
@@ -85,7 +85,7 @@ I knew, I wanted to back them up to a cloud storage like S3. I knew I want to us
 
 Number of individual media files I had were in thousands. If I were to back them up individually It will cost me a lot more in PUT/GET requests *(believe me I have been burnt before by this)* along with storage costs. So compressing them into a single tar file and uploading them made sense. 
 
-I took a middle ground approach and decided to zip each individual Year/Month folder. This offered some flexibility while not burning by wallet.
+Actually, I took a middle ground approach and decided to zip each individual Year/Month folder. This offered some flexibility while not burning my wallet.
 
 ```bash
 cd "<local-path-to-pictures-folder>/gphotos-sync/"
@@ -136,7 +136,7 @@ So, this backup solution should have provided me with some peace of mind right?
 
 Actually...
 
-![My mastodon toot on my anxiety over backups!](images/03_mastodon_toot2.png)
+<a href="https://mastodon.social/@gauthamchettiar/110689920549878511"> ![My mastodon toot on my anxiety over backups](images/03_mastodon_toot2.png)</a>
 
 Sigh... x2
 
