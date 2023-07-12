@@ -1,5 +1,5 @@
 ---
-title:  "✨ Data Engineering | Structured Streaming Using Delta Table"
+title:  "✨ Structured Streaming Using Delta Table"
 slug: "spark-delta-streaming-reference"
 date: 2022-12-11
 lastmod: 2022-12-11

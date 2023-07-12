@@ -1,5 +1,5 @@
 ---
-title : "🧩 Coding | Nth Digit of an Integer + 6 Similar Problems"
+title : "🧩 Nth Digit of an Integer + 6 Similar Problems"
 slug : "nth-digit-of-an-integer"
 date : 2021-02-21
 lastmod : 2022-11-25

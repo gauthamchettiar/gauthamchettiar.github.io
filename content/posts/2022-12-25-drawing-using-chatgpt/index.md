@@ -1,5 +1,5 @@
 ---
-title:  "🖌️ AI | Drawing with ChatGPT"
+title:  "🖌️ Drawing with ChatGPT"
 slug: "drawing-with-chatgpt"
 date: 2022-12-25
 lastmod: 2022-12-25

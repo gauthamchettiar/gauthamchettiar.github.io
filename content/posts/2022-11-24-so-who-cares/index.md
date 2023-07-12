@@ -1,5 +1,5 @@
 ---
-title:  "💭 Thoughts | So... Who Cares?"
+title:  "💭 So... Who Cares?"
 slug: "so-who-cares"
 date: 2022-11-24
 lastmod: 2022-11-24

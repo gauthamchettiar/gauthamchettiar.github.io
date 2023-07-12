@@ -1,5 +1,5 @@
 ---
-title:  "📝 Python | 10 things I wish I knew when I started with Python"
+title:  "📝 10 things I wish I knew when I started with Python"
 slug: "ten-things-python"
 date: 2021-06-04
 lastmod: 2022-05-01

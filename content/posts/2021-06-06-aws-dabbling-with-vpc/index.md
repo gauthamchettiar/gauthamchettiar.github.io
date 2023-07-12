@@ -1,5 +1,5 @@
 ---
-title:  "☁️ AWS | Dabbling with VPC"
+title:  "☁️ Dabbling with VPC"
 slug: "aws-dabbling-with-vpc"
 date: 2021-06-06
 lastmod: 2022-05-01

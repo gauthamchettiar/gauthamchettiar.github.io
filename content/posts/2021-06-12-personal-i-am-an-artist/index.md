@@ -1,5 +1,5 @@
 ---
-title:  "🎨 Sketching | My 'I am an Artist!' Phase"
+title:  "🎨 My 'I am an Artist!' Phase"
 slug: "my-i-am-an-artist-phase"
 date: 2021-06-12
 lastmod: 2022-05-01

@@ -1,5 +1,5 @@
 ---
-title:  "🗄️ SQL | Analyzing IPL Data From Day Zero"
+title:  "🗄️ Analyzing IPL Data From Day Zero"
 slug: analyzing-ipl-data-from-day-zero
 date: 2022-01-11
 lastmod: 2022-05-02

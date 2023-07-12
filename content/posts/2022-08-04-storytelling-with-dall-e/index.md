@@ -1,5 +1,5 @@
 ---
-title:  "🧚 AI | Storytelling with DALL·E"
+title:  "🧚 Storytelling with DALL·E"
 slug: "storytelling-with-dall-e"
 date: 2022-08-04
 lastmod: 2022-08-04

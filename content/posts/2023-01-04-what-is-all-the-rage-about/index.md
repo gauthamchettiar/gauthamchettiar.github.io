@@ -1,5 +1,5 @@
 ---
-title:  "🎬 Personal | What's all the 'Rage' about?"
+title:  "🎬 What's all the 'Rage' about?"
 slug: "what-is-all-the-rage-about"
 date: 2023-01-04
 lastmod: 2023-01-04
