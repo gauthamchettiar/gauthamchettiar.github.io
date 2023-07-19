@@ -9,7 +9,7 @@ tags: [thoughts]
 categories: ["Archived"]
 ---
 
-{{<banner  src="images/cover.jpg" caption="'Confused' by RobinHiggins, pixabay.com">}}
+<!-- {{<banner  src="images/cover.jpg" caption="'Confused' by RobinHiggins, pixabay.com">}} -->
 
 <div class="block-note bn-pink">
 This is an Archived Post! This will not be updated further.
