@@ -71,6 +71,11 @@ main#content .bn-pink {
     background-color: #FF149330;
 }
 
+main#content .bn-red {
+    border-color: #ff0000;
+    background-color: #ff000030;
+}
+
 main#content .enable-darkmode {
     filter: brightness(.75) contrast(1.2);
 }
@@ -100,4 +105,8 @@ main#content td, th {
     border-width: 1px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+#post-header {
+    margin-bottom: 20px;
 }
