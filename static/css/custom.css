@@ -98,6 +98,7 @@ main#content table {
     border-collapse: collapse;
     position: sticky;
     scroll-behavior: calc();
+    background-color: #6c6c6c30;
 }
 
 main#content td, th {
