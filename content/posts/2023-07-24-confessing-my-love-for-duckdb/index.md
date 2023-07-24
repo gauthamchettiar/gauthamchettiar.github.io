@@ -1,8 +1,8 @@
 ---
 title:  "🦆 Confessing My Love for DuckDB"
 slug: "confessing-my-love-for-duckdb"
-date: 2023-07-23
-lastmod: 2023-07-23
+date: 2023-07-24
+lastmod: 2023-07-24
 draft: false
 tags: []
 categories: ["Project"]
