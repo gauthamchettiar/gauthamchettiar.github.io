@@ -5,7 +5,7 @@ date: 2022-08-04
 lastmod: 2022-08-04
 draft: false
 tags: [ai]
-categories: ["Projects"]
+categories: ["Fun"]
 ---
 <style>
     .prompt {

@@ -5,7 +5,7 @@ date: 2023-07-24
 lastmod: 2023-07-24
 draft: false
 tags: []
-categories: ["Project"]
+categories: ["Notes"]
 ---
 
 Recently, I had to do a transformation which involved converting a json struct into individual rows. While on face of it this might seem very simple, I quickly realized this was not one of those quick rodeos. 
