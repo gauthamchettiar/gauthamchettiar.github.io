@@ -1,7 +1,0 @@
-<h3> Posts </h3>
-
-<ul id="posts">
-{{- range ( where (where site.RegularPages "Type" "in" site.Params.mainSections) ".Params.unlisted" "!=" "true") }}
-        {{ .Render "li" }}
-{{- end }}
-</ul>

@@ -1,0 +1,7 @@
+baseURL = 'https://blog.gauthamchettiar.com/'
+languageCode = 'en-us'
+title = "gthmchttr"
+theme = 'hugo-bearblog'
+
+[markup.goldmark.renderer]
+unsafe = true
