@@ -3,7 +3,7 @@
 
 <b>Recent posts</b>    
 <ul class="blog-posts">
-{{ range ( where .Site.RegularPages "Type" "blog" ).ByDate | first 5 }}
+{{ range ( where .Site.RegularPages "Type" "blog" ).ByDate.Reverse | first 5 }}
 <li>
     <span>
     <i>
