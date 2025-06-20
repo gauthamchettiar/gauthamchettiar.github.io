@@ -3,5 +3,15 @@ languageCode = 'en-us'
 title = "gthmchttr"
 theme = 'hugo-bearblog'
 
+[params]
+hideMadeWithLine = true
+
 [markup.goldmark.renderer]
 unsafe = true
+
+[markup]
+  [markup.highlight]
+    style = 'friendly'
+    lineNos = true
+    lineNumbersInTable = false
+    codeFences = true
