@@ -7,7 +7,7 @@ draft = false
 +++
 
 
-> tldr; Ideated a group team game inspired from “[Schengen Showdown](https://youtube.com/playlist?list=PLB7ZcpBcwdC64gYhvs3PyyM_fRKpjq1l0&si=36q165d5nEBDQ5HT)” played by [Jet Lag : The Game](https://www.youtube.com/@jetlagthegame) team. 
+> tldr; Ideated a group team game inspired from “[Schengen Showdown](https://youtube.com/playlist?list=PLB7ZcpBcwdC64gYhvs3PyyM_fRKpjq1l0&si=36q165d5nEBDQ5HT)”.
 
 
 ## Setup
