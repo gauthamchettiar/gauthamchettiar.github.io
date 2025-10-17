@@ -47,13 +47,13 @@ If you would rather prefer a more straightforward & less involved way to blog, c
 **Theming**
 1. Choose a theme from - [themes.gohugo.io](https://themes.gohugo.io/) (e.g: this blog uses [hugo-bearblog](https://themes.gohugo.io/themes/hugo-bearblog/))
 2. Go to git repository of that theme using download button - 
-    ![hugo download button](/blog/20251106_publising_using_hugo/hugo_download_button.png)
+    ![hugo download button](/blog/20251106_publishing_using_hugo/hugo_download_button.png)
 3. Now there are 2 ways to use this in your blog [[?](https://stackoverflow.com/questions/61505790/hugo-theme-submodule-marked-as-dirty-doesnt-update)] -  
    1. Simple but sometimes restrictive -  directly add above git project as a submodule :  
    `git submodule add https://github.com/janraasch/hugo-bearblog.git`.  
    2. **(recommended)** Slight maintainance overhead but highly customizable -
       - Fork the project :  
-     ![git fork button](/blog/20251106_publising_using_hugo/git_fork_button.png)
+     ![git fork button](/blog/20251106_publishing_using_hugo/git_fork_button.png)
       - Add forked project as a submodule :  
       `git submodule add https://github.com/gauthamchettiar/hugo-bearblog.git`
 4. Add above theme to hugo.toml -  
@@ -63,7 +63,7 @@ If you would rather prefer a more straightforward & less involved way to blog, c
 1. Run below command to create a new post *(⚠️ this is dependent on theme implementation, check theme specific [README](https://github.com/janraasch/hugo-bearblog/blob/master/README.md) first)* -   
 `hugo new blog/<post-subject>.md`
 2. A new markdown file would be created at - `content/blog/<post-subject>.md`
-    ![hugo md file](/blog/20251106_publising_using_hugo/hugo_md_file.png)
+    ![hugo md file](/blog/20251106_publishing_using_hugo/hugo_md_file.png)
     Again, your file might look slightly different based on theme you choose.
 3. Edit this markdown file to include your post content. 
 4. Preview your blog locally :   
@@ -83,7 +83,7 @@ If you would rather prefer a more straightforward & less involved way to blog, c
         ...
         Change detected, rebuilding site (#36).
         2025-10-06 13:43:53.971 +0100
-        Source changed /blog/20251106_publising_using_hugo.md
+        Source changed /blog/20251106_publishing_using_hugo.md
         Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
         Total in 4 ms
     ```
@@ -105,21 +105,21 @@ If you would rather prefer a more straightforward & less involved way to blog, c
 
 1. Signup for [Cloudflare Pages](https://dash.cloudflare.com/sign-up/workers-and-pages) account, if you have not done it yet.
 2. Search for "Workers & Pages", and go to that page : 
-    ![Cloudflare - Workers & Pages Seach](/blog/20251106_publising_using_hugo/cf_workers_and_pages.png)
+    ![Cloudflare - Workers & Pages Seach](/blog/20251106_publishing_using_hugo/cf_workers_and_pages.png)
     As of writing this post, this is at *Compute (Workers) > Workers & Pages*
 3. Click on "Create Application" :
-    ![Cloudflare - Create Application](/blog/20251106_publising_using_hugo/cf_create_application.png)
-4. Select repository : ![Cloudflare - Deploy 1](/blog/20251106_publising_using_hugo/cf_hugo_deploy_1.png)
+    ![Cloudflare - Create Application](/blog/20251106_publishing_using_hugo/cf_create_application.png)
+4. Select repository : ![Cloudflare - Deploy 1](/blog/20251106_publishing_using_hugo/cf_hugo_deploy_1.png)
     - Link your github account to cloudflare pages using "Add Account", then 
     - Choose the repository where hugo blog is pushed to, and
     - Click on "Begin Setup".
-5. Setup builds and deployments: ![Cloudflare - Deploy 2](/blog/20251106_publising_using_hugo/cf_hugo_deploy_2.png)
+5. Setup builds and deployments: ![Cloudflare - Deploy 2](/blog/20251106_publishing_using_hugo/cf_hugo_deploy_2.png)
    - Choose a name for your project, this will be deployed as:  
         `https://<project-name>.pages.dev`
    - Choose "Production branch" as "master", then
    - Choose "Framework Preset" as "Hugo", and
    - Click on "Save and Deploy"
-6. Your deployment would finish and you would be given a link where your app is deployed : ![Cloudflare - Deploy 3](/blog/20251106_publising_using_hugo/cf_hugo_deploy_3.png)
+6. Your deployment would finish and you would be given a link where your app is deployed : ![Cloudflare - Deploy 3](/blog/20251106_publishing_using_hugo/cf_hugo_deploy_3.png)
 7. This is a WWW link that you can immediately start sharing with everyone. 
 
 ## Step 5 (Optional) : Setting up custom domain
