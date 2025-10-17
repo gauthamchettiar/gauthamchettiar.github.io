@@ -3,7 +3,7 @@ title = '📟 Publishing a blog using Hugo'
 date = '2025-08-25T00:00:00+00:00'
 description = ""
 tags = ["blogging"]
-draft = true
+draft = false
 +++
 
 A no-nonsense opinionated guide to get your blog published using [hugo](https://gohugo.io/), [github](https://github.com/), [cloudflare pages](https://pages.cloudflare.com/) and [godaddy](https://www.godaddy.com/).
