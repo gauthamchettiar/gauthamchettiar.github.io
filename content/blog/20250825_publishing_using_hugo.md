@@ -39,7 +39,7 @@ If you would rather prefer a more straightforward & less involved way to blog, c
     ```bash {lineNos=false}
         # Mac / Linux 
         cd ~/Documents/Projects/<your-name>-blog
-        #Windows 
+        # Windows 
         cd %USERPROFILE%\Documents\Projects<your-name>-blog
     ```
 7. Initialize git repository : `git init`
