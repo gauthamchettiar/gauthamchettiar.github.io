@@ -1,0 +1,20 @@
+[
+    {
+        "product_code": "100",
+        "name": "onion",
+        "price": {"chennai":{"cp":23,"sp":28},"mumbai":{"cp":25,"sp":28},"bangalore":{"cp":27,"sp":30}},
+        "quantity": {"min":850,"max":980,"qty":"g"}
+    },
+    {
+        "product_code": "101",
+        "name": "potato",
+        "price": {"chennai":{"cp":19,"sp":23},"bangalore":{"cp":21,"sp":25}},
+        "quantity": {"min":1,"max":5, "qty":"kg"}
+    },
+    {
+        "product_code": "102",
+        "name": "tomato",
+        "price": {"chennai":{"cp":75,"sp":79},"mumbai":{"cp":70,"sp":75}},
+        "quantity": {"min":400,"max":560,"qty":"g"}
+    }
+]
