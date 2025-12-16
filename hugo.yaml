@@ -1,0 +1,25 @@
+baseURL: 'https://blog.gauthamchettiar.com/'
+languageCode: 'en-us'
+title: "gthmchttr"
+theme: 'freedom'
+
+menu:
+  main:
+    - identifier: "blog"
+      name: "Blog"
+      url: "/blog/"
+      weight: 1
+    
+    - identifier: "code"
+      name: "Code"
+      url: "/code/"
+      weight: 2
+
+params:
+  author: "Gautham Chettiar"
+  kind:
+    home:
+      showPostList: true
+
+markup:
+  _merge: shallow
