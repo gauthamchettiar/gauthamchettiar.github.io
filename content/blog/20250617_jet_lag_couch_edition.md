@@ -1,10 +1,10 @@
-+++
-title = '🛩️ Jet Lag - Couch Edition'
-date = '2025-06-17T00:00:00+00:00'
-description = ""
-tags = ["fun", "game"]
-draft = false
-+++
+---
+title: "🛩️ Jet Lag - Couch Edition"
+date: "2025-06-17T00:00:00+00:00"
+description: ""
+tags: ["fun", "game"]
+draft: false
+---
 
 > [!NOTE] tldr;
 > Ideated a group team game inspired from “[Schengen Showdown](https://youtube.com/playlist?list=PLB7ZcpBcwdC64gYhvs3PyyM_fRKpjq1l0&si=36q165d5nEBDQ5HT)”.

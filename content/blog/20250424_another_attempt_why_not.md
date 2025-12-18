@@ -1,10 +1,10 @@
-+++
-title = "~ Another ~~blog~~ attempt, why not?"
-date = "2025-04-24T08:31:59+01:00"
-description = ""
-tags = ["personal"]
-draft = false
-+++
+---
+title: "~ Another ~~blog~~ attempt, why not?"
+date: "2025-04-24T08:31:59+01:00"
+description: ""
+tags: ["personal"]
+draft: false
+---
 
 This is  [yet another attempt](https://web.archive.org/web/20250425113517/https://blog.gauthamchettiar.com/") to create a simpler, faster, elegant looking blog. 
 
