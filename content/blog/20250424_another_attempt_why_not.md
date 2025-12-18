@@ -1,14 +1,14 @@
 +++
-title = "~ Another <del>blog</del> attempt, why not?"
+title = "~ Another ~~blog~~ attempt, why not?"
 date = "2025-04-24T08:31:59+01:00"
 description = ""
 tags = ["personal"]
 draft = false
 +++
 
-This is  <a href="https://web.archive.org/web/20250425113517/https://blog.gauthamchettiar.com/" target="_blank">yet another attempt</a> to create a simpler, faster, elegant looking blog. 
+This is  [yet another attempt](https://web.archive.org/web/20250425113517/https://blog.gauthamchettiar.com/") to create a simpler, faster, elegant looking blog. 
 
-Infact this is my <a href="https://github.com/gauthamchettiar/gauthamchettiar.github.io/branches" target="_blank">3rd attempt</a>. My excuse last time was I had decided to move from [Jekyll](https://jekyllrb.com/) to [Hugo](https://gohugo.io/). This time around my excuse is well... <span title="I want to push my long term inactivity & inconsistency under the rug. Also it is an attempt to remove my low quality / low effort posts from last time."> nothing in particular</span>. 
+Infact this is my ~~[3rd attempt](https://github.com/gauthamchettiar/gauthamchettiar.github.io/branches)~~ [4th attempt](https://github.com/gauthamchettiar/freedom) (yes, I created my own theme). My excuse last time was I had decided to move from [Jekyll](https://jekyllrb.com/) to [Hugo](https://gohugo.io/). This time around my excuse is well... nothing in particular. 
 
 My motto last time - *churn out content baby!*  
 My motto this time - *go tiny! how tiny? this article tiny!*
@@ -18,7 +18,7 @@ Other actually meaningful changes I have made -
 - less custom css/html stuff, let me put more effort in content itself *(snort!!!)*
 - changed theme *(bear hug anyone?)*
 
-Also <del>I promise that</del> I will make no promises.
+Also ~~I promise that~~ I will make no promises.
 
 Update schedule - none!  
 Meaningful quality content always - nahi!  

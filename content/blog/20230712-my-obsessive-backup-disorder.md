@@ -6,13 +6,13 @@ tags: ["Personal"]
 
 I recently made a post on mastodon on my media backup situation - 
 
-<a href="https://mastodon.social/@gauthamchettiar/110689920549878511">![Mastodon toot](/blog/20230712-my-obsessive-backup-disorder/01_mastodon_toot.png)</a>
+[![Mastodon toot](/blog/20230712-my-obsessive-backup-disorder/01_mastodon_toot.png)](https://mastodon.social/@gauthamchettiar/110689920549878511)
 
 That was your tldr; and this post is an expansion on why & how I am doing it. 
 
 I have had a bad experience of losing some of my childhood photos due to a corrupted external hard drive. 
 
-<img src="/blog/20230712-my-obsessive-backup-disorder/02_broken_hdd.jpg" alt="photo of broken ext hdd" style="max-width:500px; width: 100%;height:auto;"/>
+![photo of broken ext hdd](/blog/20230712-my-obsessive-backup-disorder/02_broken_hdd.jpg)
 
 I have tried my best to recover the same, but to no avail. Since then, I had made it a habit to backup every single media I own on multiple locations. 
 
@@ -133,7 +133,7 @@ So, this backup solution should have provided me with some peace of mind right?
 
 Actually...
 
-<a href="https://mastodon.social/@gauthamchettiar/110689920549878511"> ![My mastodon toot on my anxiety over backups](/blog/20230712-my-obsessive-backup-disorder/03_mastodon_toot2.png)</a>
+[![My mastodon toot on my anxiety over backups](/blog/20230712-my-obsessive-backup-disorder/03_mastodon_toot2.png)](https://mastodon.social/@gauthamchettiar/110689920549878511)
 
 Sigh... x2
 
