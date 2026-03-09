@@ -1,12 +1,12 @@
 ---
-title:  "⛏️Scraping Jiomart For Daily Product Prices"
+title:  "⛏️ Scraping Jiomart For Daily Product Prices"
 slug: "scraping-jiomart-using-scrapy"
 date: 2022-05-04
 lastmod: 2022-05-04
 tags: [python, web-scraping]
 ---
 
-> [!WARNING]
+> [!NOTE]
 > This does not work anymore. I will keep this post up for educational purpose.
 
 
@@ -272,12 +272,13 @@ More details on usage is available in the github repo [github.com/gauthamchettia
 One of the paramount task in this project was that of cleaning the acquired data. Primarily due to inconsistency and diversity in listed products -
 
 1. Difference in Quantity Measure (Piece & Kg) for same Product  
-    ![muskmelon-1pc](code/20220504-scraping-jiomart-using-scrapy/08.png)
-    ![muskmelon-1kg](code/20220504-scraping-jiomart-using-scrapy/09.png)
+    {{< image src="code/20220504-scraping-jiomart-using-scrapy/08.png" alt="muskmelon-1pc" height="400" >}} 
+    {{< image src="code/20220504-scraping-jiomart-using-scrapy/09.png" alt="muskmelon-1kg" height="400" >}}
 2. Difference in Quantity (1 Kg & 5 Kg) for same Product  
-    ![onion-1kg](code/20220504-scraping-jiomart-using-scrapy/10.png) ![onion-5kg](code/20220504-scraping-jiomart-using-scrapy/11.png)
+    {{<image src="code/20220504-scraping-jiomart-using-scrapy/10.png" alt="onion-1kg" height="400" >}} 
+    {{< image src="code/20220504-scraping-jiomart-using-scrapy/11.png" alt="onion-5kg" height="400" >}}
 3. Different Varieties (Robusta & Yellaki) of Same Product  
-    ![banana-robusta](code/20220504-scraping-jiomart-using-scrapy/12.png) ![banana-yellaki](code/20220504-scraping-jiomart-using-scrapy/13.png)
+    {{< image src="code/20220504-scraping-jiomart-using-scrapy/12.png" alt="banana-robusta" height="400" >}} {{< image src="code/20220504-scraping-jiomart-using-scrapy/13.png" alt="banana-yellaki" height="400" >}}
 
 My end goal, after cleaning, was to achieve something like this -
 ```json

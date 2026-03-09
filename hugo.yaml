@@ -1,7 +1,7 @@
-baseURL: 'https://blog.gauthamchettiar.com/'
-languageCode: 'en-us'
+baseURL: "https://blog.gauthamchettiar.com/"
+languageCode: "en-us"
 title: "gthmchttr"
-theme: 'freedom'
+theme: "hugo-freedom"
 
 menu:
   main:
@@ -9,12 +9,12 @@ menu:
       name: "Blog"
       url: "/blog/"
       weight: 1
-    
+
     - identifier: "code"
       name: "Code"
       url: "/code/"
       weight: 2
-    
+
     - identifier: "contact"
       name: "Contact"
       url: "/contact/"

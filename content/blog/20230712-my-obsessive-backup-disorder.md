@@ -6,7 +6,7 @@ tags: ["Personal"]
 
 I recently made a post on mastodon on my media backup situation - 
 
-[![Mastodon toot](/blog/20230712-my-obsessive-backup-disorder/01_mastodon_toot.png)](https://mastodon.social/@gauthamchettiar/110689920549878511)
+![Mastodon toot](/blog/20230712-my-obsessive-backup-disorder/01_mastodon_toot.png "Mastodon [toot](https://mastodon.social/@gauthamchettiar/110689920549878511)")
 
 That was your tldr; and this post is an expansion on why & how I am doing it. 
 
@@ -133,7 +133,7 @@ So, this backup solution should have provided me with some peace of mind right?
 
 Actually...
 
-[![My mastodon toot on my anxiety over backups](/blog/20230712-my-obsessive-backup-disorder/03_mastodon_toot2.png)](https://mastodon.social/@gauthamchettiar/110689920549878511)
+![My mastodon toot on my anxiety over backups](/blog/20230712-my-obsessive-backup-disorder/03_mastodon_toot2.png "Mastodon [toot](https://mastodon.social/@gauthamchettiar/110689927882405713)")
 
 Sigh... x2
 

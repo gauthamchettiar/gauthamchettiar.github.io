@@ -7,7 +7,7 @@ draft: false
 ---
 
 > [!NOTE] tldr;
-> Ideated a group team game inspired from “[Schengen Showdown](https://youtube.com/playlist?list=PLB7ZcpBcwdC64gYhvs3PyyM_fRKpjq1l0&si=36q165d5nEBDQ5HT)”.
+> Ideated a group team game inspired from [Schengen Showdown](https://youtube.com/playlist?list=PLB7ZcpBcwdC64gYhvs3PyyM_fRKpjq1l0&si=36q165d5nEBDQ5HT).
 
 ## Setup
 1. Requires at least 4 players and 1 Game Master (GM)
@@ -71,4 +71,4 @@ Whoever has claimed + locked most number of regions at end of game, will win the
 7. ==`FROM`== & ==`TO`== = ?? , a good value should be from 7AM to 7PM. If going across timezones, this should be adhered to local time, making players loose or gain time. 
    GM should choose not to reveal a team's plan beyond ==`To`== time to other team, making it hard to guess the next move of a team. 
 8. ==`N`== & ==`M`== = ?? , again ==`N`== being around 1/2 total turns and ==`M`== being around 1/4 total turns should be good. e.g: For total turns = 10, ==`N`== = 5 & ==`M`== = 2.
-9. All the above rules / restrictions are present to make players make interesting choices, they are not strict and you may modify the rules to play as you see fit. 
+9. All the above rules / restrictions are present to make players make interesting choices, they are not strict and you may modify the rules to play as you see fit.
