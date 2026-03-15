@@ -22,9 +22,8 @@ menu:
 
 params:
   author: "Gautham Chettiar"
-  kind:
-    home:
-      showPostList: true
+  page:
+    showAuthor: false
 
 markup:
   _merge: shallow

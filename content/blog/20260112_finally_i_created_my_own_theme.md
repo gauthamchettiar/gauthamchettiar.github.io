@@ -36,38 +36,38 @@ Okay, I don't want it to turn into a technical post, instead I want to showcase 
 Starting with [homepage](/) : 
 
 ![Homepage Dark](blog/20251225_finally_i_created_my_own_theme/home-dark.png)
-{ hideinlight = "true" }
+{ hideinlight = "true" border = "true" }
 ![Homepage Dark](blog/20251225_finally_i_created_my_own_theme/home-light.png)
-{ hideindark = "true" }
+{ hideindark = "true" border = "true" }
 
 Clicking on "More >" link at the end of recent post takes you to [archive](/archive) :
 
 ![Archive Dark](blog/20251225_finally_i_created_my_own_theme/archive-dark.png)
-{ hideinlight = "true" }
+{ hideinlight = "true" border = "true" }
 ![Archive Light](blog/20251225_finally_i_created_my_own_theme/archive-light.png)
-{ hideindark = "true" }
+{ hideindark = "true" border = "true" }
 
 Section pages like [Blog](/blog) & [Code](/code) : 
 
 ![Section Dark](blog/20251225_finally_i_created_my_own_theme/section-dark.png)
-{ hideinlight = "true" }
+{ hideinlight = "true" border = "true" }
 ![Section Light](blog/20251225_finally_i_created_my_own_theme/section-light.png)
-{ hideindark = "true" }
+{ hideindark = "true" border = "true" }
 
 
 All links with a `#` prepended to them are [tags](/tags/personal) :
 
 ![Tags Dark](blog/20251225_finally_i_created_my_own_theme/tags-dark.png)
-{ hideinlight = "true" }
+{ hideinlight = "true" border = "true" }
 ![Tags Light](blog/20251225_finally_i_created_my_own_theme/tags-light.png)
-{ hideindark = "true" }
+{ hideindark = "true" border = "true" }
 
 Individual [post](/code/20250825_publishing_using_hugo/) page, with title and meta details about post: 
 
 ![Post Dark](blog/20251225_finally_i_created_my_own_theme/post-dark.png)
-{ hideinlight = "true" }
+{ hideinlight = "true" border = "true" }
 ![Post Light](blog/20251225_finally_i_created_my_own_theme/post-light.png)
-{ hideindark = "true" }
+{ hideindark = "true" border = "true" }
 
 Also a few other quirks in theme that makes it kinda interesting are :
 - Support for [various blockquotes styles](https://hugo-freedom.gauthamchettiar.com/authoring/elements/blockquotes/#example-4-styled-blockquote-with-variation) and [alert blockquotes](https://hugo-freedom.gauthamchettiar.com/authoring/elements/blockquotes/#example-5-alert-blockquote-with-variation).
